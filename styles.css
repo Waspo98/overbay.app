@@ -4,7 +4,7 @@
    ═══════════════════════════════════════════════ */
 
 /* ── Font Import ── */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+/* Font loaded via <link> in HTML for non-blocking rendering */
 
 /* ── Tokens ── */
 :root {
@@ -75,14 +75,17 @@ a:hover { color: var(--pink); }
   z-index: 0;
 }
 
-/* Floating gradient orbs */
+/* Floating gradient orbs — GPU-promoted for smooth animation */
 .orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.5;
+  filter: blur(60px);
+  opacity: 0.45;
   z-index: 1;
+  will-change: transform;
+  transform: translateZ(0);
   animation: orbFloat 8s ease-in-out infinite;
+  contain: layout style paint;
 }
 .orb-1 { width: 500px; height: 500px; background: var(--purple); top: -10%; left: -10%; animation-duration: 10s; }
 .orb-2 { width: 400px; height: 400px; background: var(--cyan); bottom: -15%; right: -10%; animation-delay: -3s; animation-duration: 12s; }
@@ -150,10 +153,9 @@ a:hover { color: var(--pink); }
   color: white;
 }
 .btn-secondary {
-  background: var(--bg-card);
+  background: rgba(18, 18, 40, 0.85);
   color: var(--text);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
 }
 .btn-secondary:hover {
   background: var(--bg-card-hover);
@@ -165,16 +167,19 @@ a:hover { color: var(--pink); }
 
 /* ── Glass Cards ── */
 .card {
-  background: var(--bg-card);
-  backdrop-filter: blur(16px);
+  background: rgba(18, 18, 40, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius);
   padding: 36px;
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+              background 0.4s ease,
+              border-color 0.4s ease,
+              box-shadow 0.4s ease;
+  will-change: transform;
 }
 .card:hover {
   transform: translateY(-8px);
-  background: var(--bg-card-hover);
+  background: rgba(28, 28, 56, 0.9);
   border-color: rgba(255, 255, 255, 0.18);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
@@ -230,15 +235,14 @@ a:hover { color: var(--pink); }
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: var(--bg-card);
-  backdrop-filter: blur(12px);
+  background: rgba(18, 18, 40, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 60px;
   padding: 8px 24px 8px 8px;
   margin-bottom: 32px;
   font-size: 0.9rem;
   color: var(--text-muted);
-  transition: all 0.3s;
+  transition: border-color 0.3s, color 0.3s;
 }
 .app-badge:hover { border-color: var(--purple); color: var(--text); }
 .app-badge-dot {
@@ -261,11 +265,10 @@ a:hover { color: var(--pink); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: all 0.4s;
+  transition: background 0.4s, padding 0.4s, border-color 0.4s;
 }
 .nav.scrolled {
-  background: rgba(10, 10, 26, 0.85);
-  backdrop-filter: blur(20px);
+  background: rgba(10, 10, 26, 0.95);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   padding: 12px 24px;
 }

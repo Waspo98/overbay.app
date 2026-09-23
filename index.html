@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Overbay — Apps Crafted with Care</title>
   <meta name="description" content="Beautiful, thoughtfully crafted apps by Overbay. Starting with Luma Reader — the most elegant way to read on Android.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
   <link rel="stylesheet" href="/styles.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
 </head>
@@ -16,6 +19,7 @@
     <ul class="nav-links">
       <li><a href="#apps">Apps</a></li>
       <li><a href="/lumareader/">Luma Reader</a></li>
+      <li><a href="/orbitmoney/">Orbit Money</a></li>
       <li><a href="/privacy/">Privacy</a></li>
     </ul>
   </nav>
@@ -33,11 +37,8 @@
       <h1 class="hero-title">Overbay</h1>
       <p class="hero-tagline">Apps crafted with care. Built to feel alive.</p>
       <div class="btn-group">
-        <a href="/lumareader/" class="btn btn-primary">
-          📖 Discover Luma Reader
-        </a>
-        <a href="#apps" class="btn btn-secondary">
-          See All Apps
+        <a href="#apps" class="btn btn-primary">
+          See Our Apps
         </a>
       </div>
     </div>
@@ -72,19 +73,19 @@
           </div>
         </a>
 
-        <!-- Coming Soon Card -->
-        <div class="card reveal reveal-delay-3" style="opacity: 0.6;">
-          <div class="card-icon" style="background: linear-gradient(135deg, rgba(108, 92, 231, 0.2), rgba(0, 207, 253, 0.2));">
-            ✦
+        <!-- Orbit Money Card -->
+        <a href="/orbitmoney/" class="card reveal reveal-delay-3" style="text-decoration: none; color: inherit;">
+          <div class="card-icon" style="background: linear-gradient(135deg, rgba(0, 184, 148, 0.2), rgba(0, 207, 253, 0.2));">
+            💰
           </div>
-          <h3 class="card-title">More Coming Soon</h3>
+          <h3 class="card-title">Orbit Money</h3>
           <p class="card-text">
-            We're working on something new. Beautiful, thoughtful, and built with the same obsessive attention to detail.
+            Self-hosted personal finance tracker. Bank sync, budgets, goals, net worth tracking, and retirement planning — all in a Docker-powered PWA you control.
           </p>
-          <div style="margin-top: 20px; display: flex; align-items: center; gap: 8px; color: var(--text-muted); font-weight: 600; font-size: 0.9rem;">
-            Stay tuned
+          <div style="margin-top: 20px; display: flex; align-items: center; gap: 8px; color: var(--cyan); font-weight: 600; font-size: 0.9rem;">
+            Learn more →
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
