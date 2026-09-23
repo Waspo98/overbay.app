@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luma Reader — Your Books, Beautifully Read</title>
+  <meta name="description" content="The most elegant EPUB reader on Android. Beautiful typography, seamless Google Drive sync, and a reading experience that feels alive.">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+  <style>
+    /* Luma-specific hero overrides */
+    .luma-hero::before {
+      background: linear-gradient(135deg, #0a0a1a 0%, #1a0f0a 25%, #1a0a1e 50%, #0a0a1a 100%);
+    }
+    .luma-hero .orb-1 { background: var(--amber); }
+    .luma-hero .orb-2 { background: var(--pink); }
+    .luma-hero .orb-3 { background: var(--purple); }
+
+    .luma-title {
+      background: linear-gradient(135deg, var(--amber), var(--coral), var(--pink), var(--purple));
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientShift 6s ease-in-out infinite;
+    }
+
+    .app-icon {
+      width: 120px;
+      height: 120px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, var(--amber), var(--coral));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      margin: 0 auto 28px;
+      box-shadow: 0 12px 40px rgba(255, 107, 107, 0.3);
+      animation: iconFloat 4s ease-in-out infinite;
+    }
+
+    @keyframes iconFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .feature-emoji {
+      font-size: 3.5rem;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+    }
+
+    .stats-row {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 48px;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat-value {
+      font-size: 2.2rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--cyan), var(--purple));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <a href="/" class="nav-brand">✦ Overbay</a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="/privacy/">Privacy</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero luma-hero">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="hero-content">
+      <div class="app-icon">📖</div>
+      <h1 class="hero-title luma-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem);">Luma Reader</h1>
+      <p class="hero-tagline">Your books, beautifully read.</p>
+      <p style="color: var(--text-muted); margin-bottom: 36px; max-width: 520px; margin-left: auto; margin-right: auto; font-size: 1.05rem;">
+        The most elegant EPUB reader on Android. Stunning typography, seamless cloud sync, 
+        and a reading experience that feels alive in your hands.
+      </p>
+      <div class="btn-group">
+        <a href="https://github.com/Waspo98/luma-reader/releases/download/debug-latest/LumaReader-debug.apk" class="btn btn-primary">
+          ⬇ Download APK
+        </a>
+        <a href="#features" class="btn btn-secondary">
+          See Features
+        </a>
+      </div>
+      <div class="stats-row">
+        <div class="stat">
+          <div class="stat-value">∞</div>
+          <div class="stat-label">Books Supported</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">0</div>
+          <div class="stat-label">Ads, Ever</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">100%</div>
+          <div class="stat-label">Private</div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Explore</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section" id="features">
+    <div class="container">
+      <h2 class="section-title reveal">Everything You Need.<br>Nothing You Don't.</h2>
+      <p class="section-subtitle reveal reveal-delay-1">
+        Luma strips away the clutter and lets you focus on what matters — the words on the page.
+      </p>
+
+      <div class="cards-grid">
+        <div class="card reveal reveal-delay-1">
+          <div class="card-icon" style="background: linear-gradient(135deg, rgba(0, 207, 253, 0.2), rgba(108, 92, 231, 0.2));">
+            ☁️
+          </div>
+          <h3 class="card-title">Cloud Sync</h3>
+          <p class="card-text">
+            Reading positions, bookmarks, shelves, and entire books sync across all your devices via your own Google Drive. Your data never touches our servers.
+          </p>
+        </div>
+
+        <div class="card reveal reveal-delay-2">
+          <div class="card-icon" style="background: linear-gradient(135deg, rgba(255, 165, 2, 0.2), rgba(255, 107, 107, 0.2));">
+            🎨
+          </div>
+          <h3 class="card-title">Beautiful Reader</h3>
+          <p class="card-text">
+            Material Design 3 Expressive with dynamic theming, customizable fonts, margins, line heights, and themes that adapt to your book's mood.
+          </p>
+        </div>
+
+        <div class="card reveal reveal-delay-3">
+          <div class="card-icon" style="background: linear-gradient(135deg, rgba(0, 184, 148, 0.2), rgba(0, 207, 253, 0.2));">
+            📚
+          </div>
+          <h3 class="card-title">Smart Library</h3>
+          <p class="card-text">
+            Organize with shelves, search your collection, sort by title, author, or recency. Import EPUBs with a tap — individually or in bulk.
+          </p>
+        </div>
+
+        <div class="card reveal reveal-delay-4">
+          <div class="card-icon" style="background: linear-gradient(135deg, rgba(253, 121, 168, 0.2), rgba(108, 92, 231, 0.2));">
+            ✨
+          </div>
+          <h3 class="card-title">Fluid Animations</h3>
+          <p class="card-text">
+            Physics-based spring transitions, smooth page turns, and kinetic scrolling that makes every interaction feel natural and responsive.
+          </p>
+        </div>
+
+        <div class="card reveal reveal-delay-5">
+          <div class="card-icon" style="background: linear-gradient(135deg, rgba(108, 92, 231, 0.2), rgba(255, 165, 2, 0.2));">
+            📝
+          </div>
+          <h3 class="card-title">Annotations</h3>
+          <p class="card-text">
+            Highlight passages, add notes, and bookmark pages. Everything syncs across devices so your thoughts travel with your books.
+          </p>
+        </div>
+
+        <div class="card reveal reveal-delay-5">
+          <div class="card-icon" style="background: linear-gradient(135deg, rgba(255, 107, 107, 0.2), rgba(0, 184, 148, 0.2));">
+            🔒
+          </div>
+          <h3 class="card-title">Privacy First</h3>
+          <p class="card-text">
+            No accounts on our servers. No tracking. No analytics. Cloud sync uses your own Google Drive's hidden app folder — only you can access it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Big Feature Rows -->
+  <section class="section" style="padding-top: 20px;">
+    <div class="container">
+      <div class="feature-row reveal">
+        <div class="feature-row-visual">
+          <span class="feature-emoji">☁️📱➡️📱</span>
+        </div>
+        <div class="feature-row-content">
+          <h3>Sync That Just Works</h3>
+          <p>
+            Start reading on your phone, pick up on your tablet. Luma syncs your reading position, 
+            bookmarks, annotations, shelves, and even your EPUB files across devices — all through 
+            your own Google Drive. No accounts. No servers. Just your books, everywhere.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-row reveal">
+        <div class="feature-row-visual">
+          <span class="feature-emoji">🌙☀️🎭</span>
+        </div>
+        <div class="feature-row-content">
+          <h3>Read Your Way</h3>
+          <p>
+            Light, dark, sepia, or let your phone's dynamic colors set the mood. Adjust font family, 
+            size, weight, line spacing, margins — every detail of your reading experience is tunable. 
+            Luma remembers your preferences per-book or globally.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <h2 class="section-title reveal">Simple, Honest Pricing</h2>
+      <p class="section-subtitle reveal reveal-delay-1">
+        Free to start. One small payment to unlock everything forever. No subscriptions, no tricks.
+      </p>
+
+      <div class="reveal reveal-delay-2">
+        <div class="pricing-card">
+          <div class="pricing-free">Free to Start • 5 Books</div>
+          <div class="pricing-amount">$4.99</div>
+          <div class="pricing-label">One-time purchase · Unlimited library</div>
+          <ul class="pricing-features">
+            <li>Unlimited book storage</li>
+            <li>Full cloud sync across devices</li>
+            <li>All reading customizations</li>
+            <li>Annotations & bookmarks</li>
+            <li>All future updates included</li>
+            <li>No ads. No subscriptions. Ever.</li>
+          </ul>
+          <a href="https://github.com/Waspo98/luma-reader/releases/download/debug-latest/LumaReader-debug.apk" class="btn btn-primary" style="width: 100%; justify-content: center;">
+            ⬇ Try Luma Reader Free
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section" style="padding-bottom: 60px;">
+    <div class="container" style="text-align: center;">
+      <h2 class="section-title reveal">Ready to Read?</h2>
+      <p class="section-subtitle reveal reveal-delay-1">
+        Download Luma Reader and discover what a reading app should feel like.
+      </p>
+      <div class="reveal reveal-delay-2">
+        <a href="https://github.com/Waspo98/luma-reader/releases/download/debug-latest/LumaReader-debug.apk" class="btn btn-primary" style="font-size: 1.15rem; padding: 20px 48px;">
+          ⬇ Download Luma Reader
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <nav class="footer-links">
+        <a href="/">Overbay Home</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+        <a href="https://github.com/Waspo98/luma-reader" target="_blank">GitHub</a>
+      </nav>
+      <p>© 2025 Overbay. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
