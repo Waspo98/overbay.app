@@ -1,7 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" rx="14" fill="#FFFFFF"/>
-  <path d="M32 10L51 21V43L32 54L13 43V21L32 10Z" fill="#111316"/>
-  <path d="M32 10L51 21L32 32L13 21L32 10Z" fill="#272D36"/>
-  <path d="M32 32L51 21V43L32 54V32Z" fill="#0D7C66"/>
-  <path d="M32 22.5L40.5 27.4V37.2L32 42.1L23.5 37.2V27.4L32 22.5Z" fill="#FFFFFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="128" height="128" fill="none" role="img" aria-label="Overbay.app">
+  <defs>
+    <clipPath id="fav-bowl">
+      <circle cx="256" cy="232" r="170"/>
+    </clipPath>
+  </defs>
+  <rect x="0" y="0" width="512" height="512" rx="116" fill="#1D4ED8"/>
+  
+    <g transform="translate(256,260) scale(1.18) translate(-256,-256)">
+      <circle cx="256" cy="204" r="96" fill="#FFFFFF"/>
+      <g clip-path="url(#fav-bowl)">
+        <path d="M220 296 C282 248, 346 226, 438 248 L438 362 L220 362 Z" fill="#38BDF8" stroke="#1D4ED8" stroke-width="26" stroke-linejoin="round"/>
+        <path d="M72 246 C154 244, 214 298, 284 318 C348 336, 398 312, 438 282 L438 424 L72 424 Z" fill="#E0F2FE" stroke="#1D4ED8" stroke-width="26" stroke-linejoin="round"/>
+      </g>
+    </g>
 </svg>

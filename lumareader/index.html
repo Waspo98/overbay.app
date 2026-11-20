@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Luma Reader — EPUB &amp; PDF Reader for Android | Overbay.app</title>
-  <meta name="description" content="Luma Reader is a local-first Android EPUB and PDF reader built on Readium 3.4.0 with Android text-to-speech, foldable two-page spreads, and private Google Drive sync.">
+  <meta name="description" content="Luma Reader is an offline-first Android EPUB and PDF reader built on Readium 3.4.0 with Android text-to-speech, foldable two-page spreads, and private Google Drive sync.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://overbay.app/lumareader/">
   <meta property="og:type" content="website">
@@ -13,10 +13,21 @@
   <meta property="og:description" content="Read DRM-free EPUBs and PDFs without accounts or ads. Free up to 5 active books; $4.99 once for unlimited.">
   <meta property="og:url" content="https://overbay.app/lumareader/">
   <meta property="og:image" content="https://overbay.app/assets/brand/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Overbay.app — Luma Reader for Android">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Luma Reader — EPUB &amp; PDF Reader for Android">
+  <meta name="twitter:description" content="Read DRM-free EPUBs and PDFs without accounts or ads. Free up to 5 active books; $4.99 once for unlimited.">
+  <meta name="twitter:image" content="https://overbay.app/assets/brand/og-image.png">
+  <meta name="twitter:image:alt" content="Overbay.app — Luma Reader for Android">
   <link rel="icon" type="image/svg+xml" href="/assets/brand/favicon.svg">
-  <link rel="stylesheet" href="/css/tokens.css">
-  <link rel="stylesheet" href="/css/base.css">
-  <link rel="stylesheet" href="/css/pages.css">
+  <link rel="icon" href="/assets/brand/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/styles.css?v=2">
+  <noscript><link rel="stylesheet" href="/css/noscript.css?v=2"></noscript>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -26,7 +37,6 @@
         "name": "Luma Reader",
         "applicationCategory": "BooksAndReferenceApplication",
         "operatingSystem": "Android",
-        "softwareVersion": "1.x",
         "identifier": "app.overbay.lumareader",
         "url": "https://overbay.app/lumareader/",
         "downloadUrl": "https://github.com/Waspo98/overbay.app/releases/download/downloads/LumaReader-debug.apk",
@@ -35,7 +45,7 @@
           "https://overbay.app/assets/screenshots/lumareader/library.png",
           "https://overbay.app/assets/screenshots/lumareader/customizable.png",
           "https://overbay.app/assets/screenshots/lumareader/sync.png",
-          "https://overbay.app/assets/screenshots/lumareader/pricing.png"
+          "https://overbay.app/assets/screenshots/lumareader/welcome.png"
         ],
         "offers": [
           {
@@ -62,26 +72,26 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "Does Luma Reader work completely offline without signing in?",
+            "name": "Does Luma Reader work completely offline?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. You can import local EPUB and PDF files, read, bookmark, and use Android text-to-speech with zero network access and zero accounts."
+              "text": "Yes. Importing local EPUBs and PDFs, reading, bookmarking, and Android TTS narration work offline without network calls. Network access is only used if you turn on Google Drive sync or check Play Billing purchases."
             }
           },
           {
             "@type": "Question",
-            "name": "What does the $4.99 upgrade unlock?",
+            "name": "What happens when I hit the 5-book limit on the free tier?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The free tier supports up to 5 active books with full typography, read-aloud, and Drive sync included. A single $4.99 Google Play Billing purchase removes the 5-book cap permanently with no subscription."
+              "text": "You keep full access to all reading features, themes, TTS, and Drive sync for up to 5 active books in your library. You can remove finished books anytime, or unlock an unlimited shelf permanently with a one-time $4.99 Play Billing purchase (SKU: luma_unlimited_lifetime)."
             }
           },
           {
             "@type": "Question",
-            "name": "What Google Drive permissions does Luma Reader ask for?",
+            "name": "Can Luma Reader read my other files on Google Drive?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Only the narrow drive.appdata scope, which lets the app read and write its own hidden app-data folder for your bookmarks and reading progress. It cannot browse or read your personal Drive files."
+              "text": "No. Luma Reader requests only drive.appdata, which isolates the app to its own hidden application folder inside your Google Drive account."
             }
           },
           {
@@ -90,6 +100,14 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "No. Luma Reader opens standard DRM-free EPUB and PDF files from your device storage."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I delete my data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Clear app storage or uninstall Luma Reader to remove all local library records, revoke Luma Reader access in your Google Account third-party permissions if you connected Drive, or follow the Data Deletion guide."
             }
           }
         ]
@@ -104,7 +122,7 @@
   <header class="site-header">
     <div class="container nav-bar">
       <a class="brand-link" href="/">
-        <img class="brand-mark" src="/assets/brand/overbay-mark.svg" alt="" width="24" height="24">
+        <img class="brand-mark" src="/assets/brand/overbay-mark.svg" alt="" width="30" height="30">
         <span>Overbay.app</span>
       </a>
       <nav class="nav-menu" aria-label="Main navigation">
@@ -115,12 +133,12 @@
         <a href="/privacy/">Privacy</a>
       </nav>
       <div class="nav-actions">
-        <a class="nav-pill-btn" href="https://github.com/Waspo98" rel="noopener">
-          <svg class="icon icon--sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/></svg>
+        <a class="nav-pill-btn" href="https://github.com/Waspo98">
+          <svg class="icon icon--sm icon--fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/></svg>
           <span>GitHub</span>
         </a>
         <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+          <svg class="icon" viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
         </button>
       </div>
     </div>
@@ -142,10 +160,13 @@
       <div class="container page-hero-grid">
         <div class="page-hero-copy">
           <div class="page-hero-title">
-            <img src="/assets/screenshots/lumareader/icon-512.png" alt="Luma Reader icon" width="48" height="48" style="border-radius:12px;border:1px solid var(--border-hairline);">
+            <picture>
+              <source srcset="/assets/screenshots/lumareader/icon-96.webp" type="image/webp">
+              <img class="app-icon app-icon--lg" src="/assets/screenshots/lumareader/icon-96.png" alt="Luma Reader icon" width="48" height="48">
+            </picture>
             <h1>Luma Reader</h1>
           </div>
-          <p class="page-hero-lead">A straightforward Android EPUB and PDF reader built on Readium 3.4.0. Bring your own books, customize typography and margins, listen with system text-to-speech, and optionally keep reading progress synced through your own Google Drive app folder.</p>
+          <p class="page-hero-lead">An Android EPUB and PDF reader built on Readium 3.4.0. Open your own books offline, adjust fonts and themes, listen with Android text-to-speech, and optionally sync reading progress via your private Google Drive app folder.</p>
 
           <dl class="spec-strip">
             <div><dt>Package</dt><dd><code>app.overbay.lumareader</code></dd></div>
@@ -155,20 +176,27 @@
             <div><dt>Pricing</dt><dd>5 books free · $4.99 once</dd></div>
           </dl>
 
-          <!-- When live on Google Play, add alongside Download APK:
+          <!-- When live on Google Play, add alongside Download preview APK:
                <a class="btn btn--primary" href="https://play.google.com/store/apps/details?id=app.overbay.lumareader">Get on Google Play</a> -->
           <div class="btn-row">
-            <a class="btn btn--primary" href="https://github.com/Waspo98/overbay.app/releases/download/downloads/LumaReader-debug.apk">Download Android APK</a>
+            <a class="btn btn--primary" href="https://github.com/Waspo98/overbay.app/releases/download/downloads/LumaReader-debug.apk">Download preview APK</a>
             <a class="btn btn--outline" href="/privacy/lumareader/">Privacy Policy</a>
           </div>
+          <p class="apk-note">Preview APKs use a debug signature while Play Store release builds are finalized. Moving to a future release or Play Store install requires a fresh install.</p>
         </div>
 
         <div class="page-hero-stage">
           <figure class="device-phone device-phone--light">
-            <img src="/assets/screenshots/lumareader/library.png" alt="Luma Reader Android library screen with local book covers" width="304" height="640">
+            <picture>
+              <source srcset="/assets/screenshots/lumareader/library.webp" type="image/webp">
+              <img src="/assets/screenshots/lumareader/library.png" alt="Luma Reader dark-mode library view with search bar, status filter chips, author filter tag, and a three-column grid of book covers" width="304" height="640" fetchpriority="high">
+            </picture>
           </figure>
           <figure class="device-phone device-phone--light">
-            <img src="/assets/screenshots/lumareader/customizable.png" alt="Luma Reader typography controls and display themes" width="304" height="640">
+            <picture>
+              <source srcset="/assets/screenshots/lumareader/customizable.webp" type="image/webp">
+              <img src="/assets/screenshots/lumareader/customizable.png" alt="Luma Reader App Customization screen in Sepia theme showing a live Alice in Wonderland preview card, theme options, and accent color swatches" width="304" height="640" fetchpriority="high">
+            </picture>
           </figure>
         </div>
       </div>
@@ -178,75 +206,79 @@
       <div class="container">
         <div class="section-header">
           <h2 id="gallery-heading">Inside the app</h2>
-          <p>Screenshots from the current Android build running across foldable and phone screen sizes.</p>
+          <p>Screenshots from the current Android build across foldable and phone screens.</p>
         </div>
 
         <div class="gallery-tabs" role="tablist" aria-label="Luma Reader screenshots" data-tabs>
           <button class="gallery-tab" type="button" role="tab" id="luma-tab-1" aria-selected="true" aria-controls="luma-shot-1">Two-page spread</button>
-          <button class="gallery-tab" type="button" role="tab" id="luma-tab-2" aria-selected="false" aria-controls="luma-shot-2" tabindex="-1">Library &amp; continue reading</button>
-          <button class="gallery-tab" type="button" role="tab" id="luma-tab-3" aria-selected="false" aria-controls="luma-shot-3" tabindex="-1">Typography &amp; themes</button>
+          <button class="gallery-tab" type="button" role="tab" id="luma-tab-2" aria-selected="false" aria-controls="luma-shot-2" tabindex="-1">Library &amp; filters</button>
+          <button class="gallery-tab" type="button" role="tab" id="luma-tab-3" aria-selected="false" aria-controls="luma-shot-3" tabindex="-1">Themes &amp; accents</button>
           <button class="gallery-tab" type="button" role="tab" id="luma-tab-4" aria-selected="false" aria-controls="luma-shot-4" tabindex="-1">Drive sync</button>
-          <button class="gallery-tab" type="button" role="tab" id="luma-tab-5" aria-selected="false" aria-controls="luma-shot-5" tabindex="-1">Pricing &amp; upgrade</button>
-          <button class="gallery-tab" type="button" role="tab" id="luma-tab-6" aria-selected="false" aria-controls="luma-shot-6" tabindex="-1">Welcome</button>
+          <button class="gallery-tab" type="button" role="tab" id="luma-tab-5" aria-selected="false" aria-controls="luma-shot-5" tabindex="-1">Welcome</button>
         </div>
 
         <div class="screenshot-stage" role="tabpanel" id="luma-shot-1" aria-labelledby="luma-tab-1">
           <figure class="device-foldable">
-            <img src="/assets/screenshots/lumareader/foldable-spread.png" alt="Luma Reader two-page foldable book spread with chapter scrub bar" width="1280" height="800">
+            <picture>
+              <source srcset="/assets/screenshots/lumareader/foldable-spread.webp" type="image/webp">
+              <img src="/assets/screenshots/lumareader/foldable-spread.png" alt="Luma Reader showing a two-page EPUB book spread with red chapter ornament, serif body text, and page numbers 1/42 and 2/42" width="760" height="788" loading="lazy" decoding="async">
+            </picture>
           </figure>
           <div>
             <h3>Two-page spread on foldables and tablets</h3>
-            <p style="color:var(--ink-secondary);margin-top:8px;">When unfolded or held horizontally on a tablet, Luma Reader lays out facing pages side by side with configurable column margins and a fast bottom scrubber for jumping across chapters.</p>
+            <p>On tablets and unfolded screens, Luma Reader displays facing pages side by side with page counts and chapter progress along the bottom.</p>
           </div>
         </div>
 
         <div class="screenshot-stage" role="tabpanel" id="luma-shot-2" aria-labelledby="luma-tab-2" hidden>
           <figure class="device-phone">
-            <img src="/assets/screenshots/lumareader/library.png" alt="Luma Reader library screen showing EPUB cover grid and Continue Reading banner" width="304" height="640">
+            <picture>
+              <source srcset="/assets/screenshots/lumareader/library.webp" type="image/webp">
+              <img src="/assets/screenshots/lumareader/library.png" alt="Luma Reader dark-mode library view with search bar, status filter chips, author filter tag, and a three-column grid of book covers" width="304" height="640" loading="lazy" decoding="async">
+            </picture>
           </figure>
           <div>
-            <h3>Focused local library</h3>
-            <p style="color:var(--ink-secondary);margin-top:8px;">Open the app straight to a Continue Reading card and a grid of cover thumbnails pulled directly from your EPUB and PDF files. No storefront carousels or book recommendations pushed onto your home tab.</p>
+            <h3>Library &amp; filters</h3>
+            <p>Browse your local EPUB and PDF collection in a cover grid with instant search, reading-status filters, and author or series tags. Your books stay on your device without any storefront shelves.</p>
           </div>
         </div>
 
         <div class="screenshot-stage" role="tabpanel" id="luma-shot-3" aria-labelledby="luma-tab-3" hidden>
           <figure class="device-phone">
-            <img src="/assets/screenshots/lumareader/customizable.png" alt="Luma Reader typography controls showing font selection, line height, and paper theme options" width="304" height="640">
+            <picture>
+              <source srcset="/assets/screenshots/lumareader/customizable.webp" type="image/webp">
+              <img src="/assets/screenshots/lumareader/customizable.png" alt="Luma Reader App Customization screen in Sepia theme showing a live Alice in Wonderland preview card, theme options, and accent color swatches" width="304" height="640" loading="lazy" decoding="async">
+            </picture>
           </figure>
           <div>
-            <h3>Typography &amp; theme controls</h3>
-            <p style="color:var(--ink-secondary);margin-top:8px;">Adjust type size, line spacing, margins, alignment, and light, warm sepia, or dark themes without fighting tiny hidden menus. Settings apply cleanly across EPUB books via Readium stylesheets.</p>
+            <h3>Themes &amp; accents</h3>
+            <p>Pick System, Light, Sepia, Slate, or AMOLED dark mode alongside custom accent colors, with a live preview of how chapter text looks before you start reading. Inside the reader, you can also tune font family, size, line spacing, and margins.</p>
           </div>
         </div>
 
         <div class="screenshot-stage" role="tabpanel" id="luma-shot-4" aria-labelledby="luma-tab-4" hidden>
           <figure class="device-phone">
-            <img src="/assets/screenshots/lumareader/sync.png" alt="Luma Reader settings showing private Google Drive app-folder sync" width="304" height="640">
+            <picture>
+              <source srcset="/assets/screenshots/lumareader/sync.webp" type="image/webp">
+              <img src="/assets/screenshots/lumareader/sync.png" alt="Luma Reader Google Drive Cloud Sync onboarding screen showing what syncs and explaining the private AppData sandbox" width="304" height="640" loading="lazy" decoding="async">
+            </picture>
           </figure>
           <div>
             <h3>Sync through your own Google Drive</h3>
-            <p style="color:var(--ink-secondary);margin-top:8px;">If you read across a phone and a tablet, sign into Google once and Luma Reader backs up reading positions and bookmarks inside Drive's hidden <code>drive.appdata</code> folder. There is no Overbay account server sitting in the middle.</p>
+            <p>Connect Google Drive during setup or anytime in Settings to keep reading positions, shelves, bookmarks, and theme preferences synced across devices. Luma Reader uses the private <code>drive.appdata</code> sandbox and cannot see any other files in your Drive.</p>
           </div>
         </div>
 
         <div class="screenshot-stage" role="tabpanel" id="luma-shot-5" aria-labelledby="luma-tab-5" hidden>
           <figure class="device-phone">
-            <img src="/assets/screenshots/lumareader/pricing.png" alt="Luma Reader upgrade sheet showing 5 free books and single $4.99 lifetime unlock" width="304" height="640">
+            <picture>
+              <source srcset="/assets/screenshots/lumareader/welcome.webp" type="image/webp">
+              <img src="/assets/screenshots/lumareader/welcome.png" alt="Luma Reader welcome onboarding screen summarizing adaptive layout, EPUB and PDF support, reader customization, and optional Google Drive sync" width="304" height="640" loading="lazy" decoding="async">
+            </picture>
           </figure>
           <div>
-            <h3>5 books free, or $4.99 once for everything</h3>
-            <p style="color:var(--ink-secondary);margin-top:8px;">Every feature — PDF support, read-aloud TTS, themes, and Drive sync — works on the free tier for up to 5 active books. Removing that shelf cap is a single <code>$4.99</code> purchase through Google Play Billing.</p>
-          </div>
-        </div>
-
-        <div class="screenshot-stage" role="tabpanel" id="luma-shot-6" aria-labelledby="luma-tab-6" hidden>
-          <figure class="device-phone">
-            <img src="/assets/screenshots/lumareader/welcome.png" alt="Luma Reader welcome screen inviting user to open their first EPUB or PDF" width="304" height="640">
-          </figure>
-          <div>
-            <h3>No account wall before your first book</h3>
-            <p style="color:var(--ink-secondary);margin-top:8px;">Pick any EPUB or PDF file from Android's document picker and start reading right away. Linking Google Drive is optional and tucked in settings whenever you want it.</p>
+            <h3>Skip setup anytime</h3>
+            <p>Setup takes four short screens, or tap Skip Setup at the top right to jump straight to your library and open a local EPUB or PDF file without signing into anything.</p>
           </div>
         </div>
       </div>
@@ -255,27 +287,27 @@
     <section class="section" aria-labelledby="luma-architecture">
       <div class="container two-col-split">
         <div>
-          <h2 id="luma-architecture">Built around how reading actually works</h2>
-          <p style="color:var(--ink-secondary);margin-top:12px;">Most mobile readers either tie you into their bookstore catalog or lock basic progress sync behind a yearly subscription. I built Luma Reader so my own DRM-free EPUBs and PDFs would open fast, remember my page across devices, and play nicely with Android's built-in text-to-speech when I'm driving.</p>
-          <p style="color:var(--ink-secondary);margin-top:12px;">Under the hood it uses the Readium 3.4.0 Kotlin toolkit rather than a fragile homebrew HTML parser, so footnotes, tables of contents, embedded fonts, and fixed-layout PDFs behave properly.</p>
+          <h2 id="luma-architecture">Why I built another reader</h2>
+          <p>Most Android readers either wrap a bookstore storefront or lock basic progress sync behind a subscription. I built Luma Reader so my own DRM-free EPUBs and PDFs open fast, keep my page across a phone and foldable, and work with Android's built-in text-to-speech when I'm driving.</p>
+          <p>Instead of writing a fragile HTML parser from scratch, the reader is built on the Readium 3.4.0 Kotlin toolkit so footnotes, tables of contents, embedded fonts, and fixed-layout PDFs render reliably.</p>
         </div>
 
         <ul class="detail-list">
           <li>
             <h3>Readium 3.4.0 EPUB &amp; PDF Engine</h3>
-            <p>Full chapter navigation, bookmarks, cover extraction, and responsive single or dual-page rendering across phone, tablet, and foldable screens.</p>
+            <p>Chapter navigation, bookmarks, cover extraction, and responsive single or dual-page rendering across phone, tablet, and foldable screens.</p>
           </li>
           <li>
             <h3>Background Android Read-Aloud (TTS)</h3>
             <p>Uses Android's local system text-to-speech engine with foreground media controls and wake lock so narration keeps playing with your screen off.</p>
           </li>
           <li>
-            <h3>Least-Privilege Google Drive Sync</h3>
-            <p>Requests only the <code>https://www.googleapis.com/auth/drive.appdata</code> scope. Luma Reader never requests access to your personal Drive folders, photos, or documents.</p>
+            <h3>Scoped Google Drive Sync</h3>
+            <p>Requests only the <code>https://www.googleapis.com/auth/drive.appdata</code> scope. Luma Reader cannot view or edit your personal Drive folders, photos, or documents.</p>
           </li>
           <li>
-            <h3>Exact Manifest Permissions</h3>
-            <p><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>, <code>POST_NOTIFICATIONS</code>, <code>WAKE_LOCK</code>, and foreground service flags strictly for Drive sync jobs and lock-screen audio controls.</p>
+            <h3>Android Manifest Permissions</h3>
+            <p><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>, <code>POST_NOTIFICATIONS</code>, <code>WAKE_LOCK</code>, and foreground service flags used only for Drive sync jobs and lock-screen audio controls.</p>
           </li>
         </ul>
       </div>
@@ -289,19 +321,23 @@
         <div class="faq-list">
           <details class="faq-item">
             <summary>Does Luma Reader work completely offline?</summary>
-            <p>Yes. Importing local EPUBs and PDFs, reading, bookmarking, and Android TTS narration work offline with zero network calls. Network access is only used if you choose to enable Google Drive sync or check Play Billing purchases.</p>
+            <p>Yes. Importing local EPUBs and PDFs, reading, bookmarking, and Android TTS narration work offline without network calls. Network access is only used if you turn on Google Drive sync or check Play Billing purchases.</p>
           </details>
           <details class="faq-item">
             <summary>What happens when I hit the 5-book limit on the free tier?</summary>
-            <p>You keep full access to all reading features, themes, TTS, and Drive sync for up to 5 active books in your library. You can archive or remove books at any time, or unlock an unlimited shelf permanently for a one-time $4.99 Play Billing purchase (SKU: <code>luma_unlimited_lifetime</code>).</p>
+            <p>You keep full access to all reading features, themes, TTS, and Drive sync for up to 5 active books in your library. You can remove finished books anytime, or unlock an unlimited shelf permanently with a one-time $4.99 Play Billing purchase (SKU: <code>luma_unlimited_lifetime</code>).</p>
           </details>
           <details class="faq-item">
             <summary>Can Luma Reader read my other files on Google Drive?</summary>
-            <p>No. Luma Reader requests strictly <code>drive.appdata</code>, which isolates the app to its own hidden application folder inside your Google Drive account.</p>
+            <p>No. Luma Reader requests only <code>drive.appdata</code>, which isolates the app to its own hidden application folder inside your Google Drive account.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does Luma Reader open DRM-protected Kindle or Adobe books?</summary>
+            <p>No. Luma Reader opens standard DRM-free EPUB and PDF files from your device storage.</p>
           </details>
           <details class="faq-item">
             <summary>How do I delete my data?</summary>
-            <p>Clear your app storage or uninstall Luma Reader to remove all local library records, revoke Luma Reader access in your Google Account third-party permissions if you connected Drive, or visit our <a href="/data-deletion/">Data Deletion guide</a>.</p>
+            <p>Clear app storage or uninstall Luma Reader to remove all local library records, revoke Luma Reader access in your Google Account third-party permissions if you connected Drive, or follow the <a href="/data-deletion/">Data Deletion guide</a>.</p>
           </details>
         </div>
       </div>
@@ -313,10 +349,10 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a class="brand-link" href="/">
-            <img class="brand-mark" src="/assets/brand/overbay-mark.svg" alt="" width="22" height="22">
+            <img class="brand-mark" src="/assets/brand/overbay-mark.svg" alt="" width="30" height="30">
             <span>Overbay.app</span>
           </a>
-          <p>Independent software built by Overbay. Local-first tools with clear privacy boundaries and plain pricing.</p>
+          <p>Independent software by Overbay. Local-first tools with no subscriptions or tracking.</p>
         </div>
         <div class="footer-col">
           <p class="footer-heading">Apps</p>
@@ -328,9 +364,9 @@
           </ul>
         </div>
         <div class="footer-col">
-          <p class="footer-heading">Privacy &amp; Play Console</p>
+          <p class="footer-heading">Legal &amp; Privacy</p>
           <ul>
-            <li><a href="/privacy/">Privacy Hub</a></li>
+            <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/privacy/lumareader/">Luma Reader Privacy</a></li>
             <li><a href="/privacy/allnotes/">AllNotes Privacy</a></li>
             <li><a href="/privacy/orbitmoney/">Orbit Money Privacy</a></li>
@@ -339,23 +375,23 @@
           </ul>
         </div>
         <div class="footer-col">
-          <p class="footer-heading">Discovery &amp; Source</p>
+          <p class="footer-heading">Source &amp; Contact</p>
           <ul>
-            <li><a href="https://github.com/Waspo98" rel="noopener">GitHub (@Waspo98)</a></li>
-            <li><a href="/llms.txt">llms.txt</a></li>
-            <li><a href="/llms-full.txt">llms-full.txt</a></li>
-            <li><a href="/sitemap.xml">sitemap.xml</a></li>
+            <li><a href="https://github.com/Waspo98">GitHub (@Waspo98)</a></li>
+            <li><a href="https://github.com/Waspo98/Orbit-Money">Orbit Money Source</a></li>
+            <li><a href="https://github.com/Waspo98/overbay-twitter">Twitter Wrapper Source</a></li>
             <li><a href="mailto:privacy@overbay.app">privacy@overbay.app</a></li>
+            <li><a href="mailto:legal@overbay.app">legal@overbay.app</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 Overbay. All rights reserved.</span>
-        <span>Built as static HTML without third-party analytics or cookies.</span>
+        <span>&copy; 2026 Overbay</span>
+        <span>No cookies, ads, or analytics.</span>
       </div>
     </div>
   </footer>
 
-  <script src="/js/main.js" defer></script>
+  <script src="/js/main.js?v=2" defer></script>
 </body>
 </html>

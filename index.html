@@ -13,14 +13,21 @@
   <meta property="og:description" content="Local-first Android, desktop, and self-hosted apps without ads, accounts, or recurring subscriptions: Luma Reader, AllNotes, Orbit Money, and Overbay Labs.">
   <meta property="og:url" content="https://overbay.app/">
   <meta property="og:image" content="https://overbay.app/assets/brand/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Overbay.app — Everyday apps built without subscriptions or tracking">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Overbay.app — Small indie software built for everyday use">
   <meta name="twitter:description" content="Local-first indie software: Luma Reader, AllNotes, Orbit Money, and open-source Overbay Labs.">
   <meta name="twitter:image" content="https://overbay.app/assets/brand/og-image.png">
+  <meta name="twitter:image:alt" content="Overbay.app — Everyday apps built without subscriptions or tracking">
   <link rel="icon" type="image/svg+xml" href="/assets/brand/favicon.svg">
-  <link rel="stylesheet" href="/css/tokens.css">
-  <link rel="stylesheet" href="/css/base.css">
-  <link rel="stylesheet" href="/css/pages.css">
+  <link rel="icon" href="/assets/brand/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/styles.css?v=2">
+  <noscript><link rel="stylesheet" href="/css/noscript.css?v=2"></noscript>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -84,7 +91,7 @@
   <header class="site-header">
     <div class="container nav-bar">
       <a class="brand-link" href="/">
-        <img class="brand-mark" src="/assets/brand/overbay-mark.svg" alt="" width="24" height="24">
+        <img class="brand-mark" src="/assets/brand/overbay-mark.svg" alt="" width="30" height="30">
         <span>Overbay.app</span>
       </a>
       <nav class="nav-menu" aria-label="Main navigation">
@@ -95,12 +102,12 @@
         <a href="/privacy/">Privacy</a>
       </nav>
       <div class="nav-actions">
-        <a class="nav-pill-btn" href="https://github.com/Waspo98" rel="noopener">
-          <svg class="icon icon--sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/></svg>
+        <a class="nav-pill-btn" href="https://github.com/Waspo98">
+          <svg class="icon icon--sm icon--fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/></svg>
           <span>GitHub</span>
         </a>
         <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+          <svg class="icon" viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
         </button>
       </div>
     </div>
@@ -120,8 +127,8 @@
   <main id="main">
     <section class="studio-hero">
       <div class="container">
-        <h1>Everyday apps built without the catch.</h1>
-        <p class="studio-lead">I build small, local-first software that stays out of your way. No mandatory accounts, no ad SDKs, and no monthly rent on tools you should just own.</p>
+        <h1>Small apps without accounts or subscriptions.</h1>
+        <p class="studio-lead">I build software that runs on your own phone, desktop, or home server. No ad SDKs, no tracking, and no recurring fees on tools you should own.</p>
 
         <div class="stage-tabs" role="tablist" aria-label="Featured applications" data-tabs>
           <button class="stage-tab" type="button" role="tab" id="tab-luma" aria-selected="true" aria-controls="panel-luma">Luma Reader</button>
@@ -138,24 +145,30 @@
             <!-- Panel 1: Luma Reader -->
             <div class="stage-panel" role="tabpanel" id="panel-luma" aria-labelledby="tab-luma">
               <div class="stage-copy">
-                <h2>Luma Reader — EPUB &amp; PDF without ads or tracking</h2>
+                <h2>Luma Reader</h2>
                 <div class="stage-badge-row">
                   <span class="stage-app-badge">Android</span>
                   <span class="stage-app-badge">Readium 3.4.0</span>
                 </div>
-                <p class="stage-desc">Open local EPUB and PDF files, customize typography, read two-page spreads on foldables, listen with Android text-to-speech, and optionally sync progress to your private Google Drive app folder.</p>
-                <div class="stage-meta">Free up to 5 active books · $4.99 once for unlimited · Zero telemetry</div>
+                <p class="stage-desc">Read DRM-free EPUB books and PDFs offline. Pick your theme and layout, view two-page spreads on foldables, listen with Android text-to-speech, and optionally sync reading progress to your private Google Drive app folder.</p>
+                <div class="stage-meta">5 books free · $4.99 once for unlimited</div>
                 <div class="btn-row">
                   <a class="btn btn--primary" href="/lumareader/">Explore Luma Reader</a>
-                  <a class="btn btn--outline" href="https://github.com/Waspo98/overbay.app/releases/download/downloads/LumaReader-debug.apk">Download APK</a>
+                  <a class="btn btn--outline" href="https://github.com/Waspo98/overbay.app/releases/download/downloads/LumaReader-debug.apk">Download preview APK</a>
                 </div>
               </div>
               <div class="stage-visuals">
                 <figure class="device-foldable">
-                  <img src="/assets/screenshots/lumareader/foldable-spread.png" alt="Luma Reader two-page EPUB spread on a foldable screen with progress slider and serif typography" width="1280" height="800">
+                  <picture>
+                    <source srcset="/assets/screenshots/lumareader/foldable-spread.webp" type="image/webp">
+                    <img src="/assets/screenshots/lumareader/foldable-spread.png" alt="Luma Reader showing a two-page EPUB book spread with red chapter ornament, serif body text, and page numbers 1/42 and 2/42" width="760" height="788" fetchpriority="high">
+                  </picture>
                 </figure>
                 <figure class="device-phone">
-                  <img src="/assets/screenshots/lumareader/library.png" alt="Luma Reader Android library screen showing EPUB cover grid and Continue Reading banner" width="304" height="640">
+                  <picture>
+                    <source srcset="/assets/screenshots/lumareader/library.webp" type="image/webp">
+                    <img src="/assets/screenshots/lumareader/library.png" alt="Luma Reader dark-mode library view with search bar, status filter chips, author filter tag, and a three-column grid of book covers" width="304" height="640" fetchpriority="high">
+                  </picture>
                 </figure>
               </div>
             </div>
@@ -163,41 +176,41 @@
             <!-- Panel 2: AllNotes -->
             <div class="stage-panel" role="tabpanel" id="panel-allnotes" aria-labelledby="tab-allnotes" hidden>
               <div class="stage-copy">
-                <h2>AllNotes — Notebooks with readable page margins</h2>
+                <h2>AllNotes</h2>
                 <div class="stage-badge-row">
-                  <span class="stage-app-badge">Android · Desktop coming soon</span>
+                  <span class="stage-app-badge">Android</span>
                   <span class="stage-app-badge">SQLDelight</span>
                 </div>
-                <p class="stage-desc">Notebooks, Sections, and Section Groups paired with clean bounded pages instead of a freeform 2D canvas. Works completely offline, with optional self-hosted Ktor sync when you want it.</p>
-                <div class="stage-meta">Offline SQLite · Android APK live · Windows x64/ARM64 coming soon</div>
+                <p class="stage-desc">Notebooks, Section Groups, and Sections paired with normal bounded pages instead of a freeform 2D canvas. Notes stay offline in SQLite first, with optional self-hosted sync on the roadmap alongside Windows builds.</p>
+                <div class="stage-meta">Free · Android preview APK live · Windows x64/ARM64 coming soon</div>
                 <div class="btn-row">
                   <a class="btn btn--primary" href="/allnotes/">Explore AllNotes</a>
-                  <a class="btn btn--outline" href="https://github.com/Waspo98/overbay.app/releases/download/downloads/AllNotes-debug.apk">Download Android APK</a>
+                  <a class="btn btn--outline" href="https://github.com/Waspo98/overbay.app/releases/download/downloads/AllNotes-debug.apk">Download preview APK</a>
                 </div>
               </div>
               <div class="stage-visuals" data-screenshot-slot="allnotes-hero">
                 <div class="ui-specimen">
                   <div class="ui-specimen__bar">
-                    <span>AllNotes Workspace</span>
-                    <span class="ui-specimen__tag">Placeholder UI</span>
+                    <span>AllNotes · Home Lab</span>
+                    <span class="ui-specimen__tag">UI preview</span>
                   </div>
                   <div class="ui-specimen__body">
                     <div class="notes-mock-layout">
                       <aside class="notes-mock-rail" aria-label="Sample notebook sidebar">
                         <div class="notes-mock-item">Personal</div>
-                        <div class="notes-mock-item is-active"><span class="notes-mock-dot" style="background:var(--allnotes-ink);"></span>Projects</div>
-                        <div class="notes-mock-item">Home &amp; Taxes</div>
+                        <div class="notes-mock-item is-active"><span class="notes-mock-dot notes-mock-dot--accent"></span>Home Lab</div>
+                        <div class="notes-mock-item">Taxes &amp; Receipts</div>
                         <div class="notes-mock-item">Reading Notes</div>
                       </aside>
                       <div class="notes-mock-page">
-                        <p class="specimen-title">Server Maintenance Runbook</p>
+                        <p class="specimen-title">Home Server Backup Checklist</p>
                         <div class="notes-callout">
-                          <strong>Check before deploy:</strong> verify reverse-proxy certs and SQLite snapshot backup before restarting the stack.
+                          <strong>Reminder:</strong> Check SMART drive health before pulling bay 2.
                         </div>
                         <ul class="notes-checklist">
-                          <li><span class="check-box is-checked"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2.5 6.5 5 9 9.5 3.5"/></svg></span><span>Verify Cloudflare Tunnel health check</span></li>
-                          <li><span class="check-box is-checked"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2.5 6.5 5 9 9.5 3.5"/></svg></span><span>Archive nightly SQLDelight snapshot</span></li>
-                          <li><span class="check-box"></span><span>Update release notes on overbay.app</span></li>
+                          <li><span class="check-box is-checked"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2.5 6.5 5 9 9.5 3.5"/></svg></span><span>Run weekly SQLite snapshot</span></li>
+                          <li><span class="check-box is-checked"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2.5 6.5 5 9 9.5 3.5"/></svg></span><span>Test WireGuard fallback route</span></li>
+                          <li><span class="check-box"></span><span>Label spare 8 TB drive</span></li>
                         </ul>
                       </div>
                     </div>
@@ -209,23 +222,23 @@
             <!-- Panel 3: Orbit Money -->
             <div class="stage-panel" role="tabpanel" id="panel-orbit" aria-labelledby="tab-orbit" hidden>
               <div class="stage-copy">
-                <h2>Orbit Money — Household finance kept on your terms</h2>
+                <h2>Orbit Money</h2>
                 <div class="stage-badge-row">
                   <span class="stage-app-badge">Android · Web PWA · Docker</span>
                   <span class="stage-app-badge">Open Source</span>
                 </div>
-                <p class="stage-desc">Track accounts, category budgets, and recurring bills in exact integer cents with edit provenance. Run locally on Android with biometric lock or self-host shared ledgers with Docker and SQLite.</p>
-                <div class="stage-meta">Local-first · Rocket Money CSV import · Optional SimpleFIN</div>
+                <p class="stage-desc">Track balances, category budgets, and recurring bills in integer cents while keeping original bank names intact. Run it locally on Android with biometric lock, or self-host for your household with Docker.</p>
+                <div class="stage-meta">Free · Open source · Rocket Money CSV import</div>
                 <div class="btn-row">
                   <a class="btn btn--primary" href="/orbitmoney/">Explore Orbit Money</a>
-                  <a class="btn btn--outline" href="https://github.com/Waspo98/Orbit-Money/releases/download/debug-latest/OrbitMoney-debug.apk">Download Android APK</a>
+                  <a class="btn btn--outline" href="https://github.com/Waspo98/Orbit-Money/releases/download/debug-latest/OrbitMoney-debug.apk">Download preview APK</a>
                 </div>
               </div>
               <div class="stage-visuals" data-screenshot-slot="orbit-hero">
                 <div class="ui-specimen">
                   <div class="ui-specimen__bar">
                     <span>Orbit Money · Household Ledger</span>
-                    <span class="ui-specimen__tag">Sample Data Preview</span>
+                    <span class="ui-specimen__tag">Sample data</span>
                   </div>
                   <div class="ui-specimen__body">
                     <div class="orbit-mock-grid">
@@ -234,7 +247,7 @@
                           <small>Checking &amp; Savings</small>
                           <div class="orbit-balance-val">$14,280.42</div>
                         </div>
-                        <span class="stage-app-badge">Local SQLite · Cents exact</span>
+                        <span class="stage-app-badge">Local SQLite · Integer cents</span>
                       </div>
                       <table class="orbit-ledger" aria-label="Sample ledger preview">
                         <thead>
@@ -246,7 +259,7 @@
                         </thead>
                         <tbody>
                           <tr>
-                            <td>Trader Joe's</td>
+                            <td>Corner Market</td>
                             <td>Groceries</td>
                             <td>-$84.19</td>
                           </tr>
@@ -256,7 +269,7 @@
                             <td>-$118.40</td>
                           </tr>
                           <tr>
-                            <td>Direct Deposit</td>
+                            <td>Employer Direct Deposit</td>
                             <td>Payroll</td>
                             <td>+$2,640.00</td>
                           </tr>
@@ -271,23 +284,23 @@
             <!-- Panel 4: Overbay Labs: Twitter -->
             <div class="stage-panel" role="tabpanel" id="panel-labs" aria-labelledby="tab-labs" hidden>
               <div class="stage-copy">
-                <h2>Twitter (Overbay Labs) — Ad-free open-source wrapper</h2>
+                <h2>Twitter (Overbay Labs)</h2>
                 <div class="stage-badge-row">
                   <span class="stage-app-badge">MIT Open Source</span>
                   <span class="stage-app-badge">Sideload APK only</span>
                 </div>
-                <p class="stage-desc">Prunes promoted tweets and carousels out of GraphQL payloads, hides Grok and Premium upsells, restores classic bird accents, unwraps <code>t.co</code> links, and downloads full-res media.</p>
+                <p class="stage-desc">An Android WebView client that drops promoted posts from GraphQL feeds before they render, hides Grok and Premium menus, restores classic blue accents, strips t.co redirects, and saves full-res media.</p>
                 <div class="stage-meta">Never on Google Play · Not affiliated with X Corp.</div>
                 <div class="btn-row">
                   <a class="btn btn--dark" href="/labs/twitter/">Inspect Overbay Labs</a>
-                  <a class="btn btn--outline" href="https://github.com/Waspo98/overbay-twitter" rel="noopener">Source on GitHub</a>
+                  <a class="btn btn--outline" href="https://github.com/Waspo98/overbay-twitter">Source on GitHub</a>
                 </div>
               </div>
               <div class="stage-visuals" data-screenshot-slot="twitter-hero">
                 <div class="ui-specimen">
                   <div class="ui-specimen__bar">
                     <span>Overbay Labs · Mobile Feed</span>
-                    <span class="ui-specimen__tag">Placeholder UI</span>
+                    <span class="ui-specimen__tag">UI preview</span>
                   </div>
                   <div class="ui-specimen__body">
                     <div class="twitter-mock-app">
@@ -302,16 +315,16 @@
                       </div>
                       <div class="twitter-mock-post">
                         <div class="twitter-mock-author">
-                          <span><strong>Alex Mercer</strong> @alex_dev · Sample</span>
+                          <span><strong>Dan K.</strong> @dank_notes · Sample</span>
                           <span>12m</span>
                         </div>
-                        <p>Switched to a quiet mobile wrapper for morning reading: zero promoted cards in my timeline, direct links instead of tracking redirects, and clean .mp4 downloads.</p>
+                        <p>Finished swapping the bearings on my old commuter bike tonight. Runs like new again after sitting in the shed since April.</p>
                         <div class="twitter-mock-actions">
                           <span>Reply · Retweet · Like</span>
                           <span class="twitter-save-chip">Save .mp4 / :orig</span>
                         </div>
                       </div>
-                      <div class="twitter-mock-filter">GraphQL filter active: 2 promoted posts &amp; Grok drawer stripped · t.co unwrapped</div>
+                      <div class="twitter-mock-filter">Filtered: 2 promoted posts hidden · Grok drawer off · t.co unwrapped</div>
                     </div>
                   </div>
                 </div>
@@ -328,7 +341,7 @@
       <div class="container">
         <div class="section-header">
           <h2 id="data-table-heading">Where your data lives</h2>
-          <p>Every Overbay app keeps its files on your own hardware first. Cloud sync is optional and always uses storage you control.</p>
+          <p>Every app keeps its database on your hardware first. Sync is optional and uses either your Google Drive app folder or a server you run.</p>
         </div>
 
         <div class="table-wrap">
@@ -351,16 +364,16 @@
                 <td data-label="Platforms">Android</td>
                 <td data-label="Default Storage">Local library &amp; Readium database</td>
                 <td data-label="Optional Sync">Google Drive app folder (<code>drive.appdata</code>)</td>
-                <td data-label="Pricing &amp; Source">5 books free · $4.99 one-time unlock</td>
+                <td data-label="Pricing &amp; Source">5 books free · $4.99 once · Closed source</td>
               </tr>
               <tr>
                 <td data-label="App">
                   <a class="app-cell-link" href="/allnotes/">AllNotes</a>
                   <code class="pkg-code">app.overbay.allnotes</code>
                 </td>
-                <td data-label="Platforms">Android · Windows &amp; Linux coming soon</td>
+                <td data-label="Platforms">Android (Windows &amp; Linux planned)</td>
                 <td data-label="Default Storage">Local SQLDelight SQLite database</td>
-                <td data-label="Optional Sync">Self-hosted Ktor sync server</td>
+                <td data-label="Optional Sync">Self-hosted Ktor sync (planned)</td>
                 <td data-label="Pricing &amp; Source">Free · Closed source</td>
               </tr>
               <tr>
@@ -371,7 +384,7 @@
                 <td data-label="Platforms">Android · Web PWA · Docker</td>
                 <td data-label="Default Storage">On-device storage or self-hosted SQLite</td>
                 <td data-label="Optional Sync">Google Drive snapshots or your Docker server</td>
-                <td data-label="Pricing &amp; Source"><span class="status-dot">Open source on GitHub</span></td>
+                <td data-label="Pricing &amp; Source"><span class="status-dot">Free · Open source (GitHub)</span></td>
               </tr>
               <tr>
                 <td data-label="App">
@@ -381,7 +394,7 @@
                 <td data-label="Platforms">Android (sideload APK only)</td>
                 <td data-label="Default Storage">Local DataStore settings &amp; WebView cache</td>
                 <td data-label="Optional Sync">None — talks directly to x.com</td>
-                <td data-label="Pricing &amp; Source"><span class="status-dot">Open source (MIT)</span></td>
+                <td data-label="Pricing &amp; Source"><span class="status-dot">Free · Open source (MIT)</span></td>
               </tr>
             </tbody>
           </table>
@@ -394,7 +407,7 @@
       <div class="container">
         <div class="section-header">
           <h2 id="catalog-heading">Core apps</h2>
-          <p>Built for long reading sessions, structured note-taking, and quiet personal finances without vendor lock-in.</p>
+          <p>Reading, structured notes, and personal finances without mandatory cloud accounts.</p>
         </div>
 
         <div class="spotlight-list">
@@ -402,14 +415,17 @@
           <article class="spotlight-row">
             <div class="spotlight-copy">
               <div class="stage-app-name">
-                <img src="/assets/screenshots/lumareader/icon-512.png" alt="Luma Reader icon" width="44" height="44" style="border-radius:10px;border:1px solid var(--border-hairline);" loading="lazy">
-                <h3 style="margin-bottom:0;">Luma Reader</h3>
+                <picture>
+                  <source srcset="/assets/screenshots/lumareader/icon-96.webp" type="image/webp">
+                  <img class="app-icon" src="/assets/screenshots/lumareader/icon-96.png" alt="Luma Reader icon" width="44" height="44" loading="lazy" decoding="async">
+                </picture>
+                <h3>Luma Reader</h3>
               </div>
-              <p>Read DRM-free EPUB books and PDF documents with customizable margins, line height, and reading themes. Use two-page spreads on larger screens, jump cleanly through chapters and bookmarks, or let Android text-to-speech read chapters aloud while your screen is locked.</p>
+              <p>Open DRM-free EPUB books and PDFs with adjustable margins, line height, and light, sepia, or dark themes. Read two-page spreads on foldables, track chapters and bookmarks, or listen with Android text-to-speech while your screen is locked.</p>
               <ul class="fact-list">
                 <li>Built on the official Readium 3.4.0 Kotlin toolkit</li>
-                <li>Syncs reading position &amp; bookmarks in Google Drive <code>drive.appdata</code></li>
-                <li>Free for up to 5 active books; single $4.99 Play Billing upgrade</li>
+                <li>Syncs reading progress and bookmarks inside Google Drive <code>drive.appdata</code></li>
+                <li>Free up to 5 active books, or $4.99 once via Play Billing</li>
               </ul>
               <div class="btn-row">
                 <a class="btn btn--primary" href="/lumareader/">Luma Reader details</a>
@@ -418,10 +434,16 @@
             </div>
             <div class="spotlight-media">
               <figure class="device-phone device-phone--light">
-                <img src="/assets/screenshots/lumareader/customizable.png" alt="Luma Reader typography and display theme controls" width="304" height="640" loading="lazy">
+                <picture>
+                  <source srcset="/assets/screenshots/lumareader/customizable.webp" type="image/webp">
+                  <img src="/assets/screenshots/lumareader/customizable.png" alt="Luma Reader App Customization screen in Sepia theme showing a live Alice in Wonderland preview card, theme options, and accent color swatches" width="304" height="640" loading="lazy" decoding="async">
+                </picture>
               </figure>
               <figure class="device-phone device-phone--light">
-                <img src="/assets/screenshots/lumareader/sync.png" alt="Luma Reader Google Drive cross-device progress sync" width="304" height="640" loading="lazy">
+                <picture>
+                  <source srcset="/assets/screenshots/lumareader/sync.webp" type="image/webp">
+                  <img src="/assets/screenshots/lumareader/sync.png" alt="Luma Reader Google Drive Cloud Sync onboarding screen showing what syncs and explaining the private AppData sandbox" width="304" height="640" loading="lazy" decoding="async">
+                </picture>
               </figure>
             </div>
           </article>
@@ -430,39 +452,39 @@
           <article class="spotlight-row">
             <div class="spotlight-copy">
               <h3>AllNotes</h3>
-              <p>If you like how OneNote organizes Notebooks, Sections, and Section Groups, but miss clean document formatting and readable line widths, AllNotes puts both together. Everything lives offline in SQLDelight first, with a lightweight Ktor server when you want your notes on another device.</p>
+              <p>OneNote nailed notebook organization—Notebooks, Section Groups, and Sections—but its infinite 2D canvas gets awkward on phones and wide monitors. I built AllNotes with the same notebook hierarchy and normal bounded pages that wrap properly on any screen.</p>
               <ul class="fact-list">
-                <li>Rich structured blocks: checklists, callouts, code blocks, and tables</li>
-                <li>Bounded page width avoids horizontal scrolling on wide monitors</li>
-                <li>No third-party cloud custody — sync stays on your own server</li>
+                <li>Headings, interactive checklists, callouts, tables, and code blocks</li>
+                <li>Bounded column width prevents horizontal panning while writing</li>
+                <li>SQLDelight SQLite storage works offline with no account wall</li>
               </ul>
               <div class="btn-row">
                 <a class="btn btn--primary" href="/allnotes/">AllNotes details</a>
-                <a class="btn btn--outline" href="https://github.com/Waspo98/overbay.app/releases/download/downloads/AllNotes-debug.apk">Android APK</a>
+                <a class="btn btn--outline" href="https://github.com/Waspo98/overbay.app/releases/download/downloads/AllNotes-debug.apk">Download preview APK</a>
               </div>
             </div>
             <div class="spotlight-media" data-screenshot-slot="allnotes-spotlight">
               <div class="ui-specimen">
                 <div class="ui-specimen__bar">
-                  <span>AllNotes · Section &amp; Page Structure</span>
-                  <span class="ui-specimen__tag">Placeholder Preview</span>
+                  <span>AllNotes · House Projects</span>
+                  <span class="ui-specimen__tag">UI preview</span>
                 </div>
                 <div class="ui-specimen__body">
                   <div class="notes-mock-layout">
                     <div class="notes-mock-rail">
-                      <div class="notes-mock-item">Notebooks</div>
-                      <div class="notes-mock-item is-active"><span class="notes-mock-dot" style="background:var(--allnotes-ink);"></span>Architecture</div>
-                      <div class="notes-mock-item">Meeting Log</div>
-                      <div class="notes-mock-item">Snippets</div>
+                      <div class="notes-mock-item">Work</div>
+                      <div class="notes-mock-item is-active"><span class="notes-mock-dot notes-mock-dot--accent"></span>House Projects</div>
+                      <div class="notes-mock-item">Recipes</div>
+                      <div class="notes-mock-item">Book Notes</div>
                     </div>
                     <div class="notes-mock-page">
-                      <p class="specimen-title">Local-first Sync Design</p>
+                      <p class="specimen-title">Fall Cabin Trip</p>
                       <div class="notes-callout">
-                        <strong>Zero account gate:</strong> Create notebooks locally in seconds; link a self-hosted endpoint only when you want sync.
+                        <strong>Reminder:</strong> Pick up firewood on Highway 12 before turning onto the gravel road.
                       </div>
                       <ul class="notes-checklist">
-                        <li><span class="check-box is-checked"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2.5 6.5 5 9 9.5 3.5"/></svg></span><span>SQLDelight schema stored offline</span></li>
-                        <li><span class="check-box"></span><span>Bearer or Authentik OIDC auth ready</span></li>
+                        <li><span class="check-box is-checked"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2.5 6.5 5 9 9.5 3.5"/></svg></span><span>Pack headlamp and spare batteries</span></li>
+                        <li><span class="check-box"></span><span>Download offline trail map</span></li>
                       </ul>
                     </div>
                   </div>
@@ -475,22 +497,22 @@
           <article class="spotlight-row">
             <div class="spotlight-copy">
               <h3>Orbit Money</h3>
-              <p>Keep track of accounts, category budgets, recurring expenses, and net worth without handing your financial life to an ad-funded aggregator. Orbit Money works offline on Android with biometric lock, or runs as a Docker container for household sharing and Rocket Money CSV imports.</p>
+              <p>Track accounts, category budgets, recurring bills, and net worth without feeding your financial history to an ad-funded app. Run Orbit Money offline on Android behind biometric lock, or spin up the Docker container at home for shared household budgets and Rocket Money CSV imports.</p>
               <ul class="fact-list">
-                <li>Integer-cent arithmetic prevents floating-point rounding drift</li>
-                <li>Preserves raw merchant names alongside your cleaned labels</li>
-                <li>Optional encrypted SimpleFIN sync in self-hosted mode</li>
+                <li>Integer-cent math avoids floating-point rounding errors</li>
+                <li>Keeps raw <code>original_*</code> bank merchant strings next to your edited labels</li>
+                <li>Optional AES-256-GCM encrypted SimpleFIN sync in Docker mode</li>
               </ul>
               <div class="btn-row">
                 <a class="btn btn--primary" href="/orbitmoney/">Orbit Money details</a>
-                <a class="btn btn--outline" href="https://github.com/Waspo98/Orbit-Money" rel="noopener">Source on GitHub</a>
+                <a class="btn btn--outline" href="https://github.com/Waspo98/Orbit-Money">Source on GitHub</a>
               </div>
             </div>
             <div class="spotlight-media" data-screenshot-slot="orbit-spotlight">
               <div class="ui-specimen">
                 <div class="ui-specimen__bar">
-                  <span>Orbit Money · Clean Ledger</span>
-                  <span class="ui-specimen__tag">Sample Data</span>
+                  <span>Orbit Money · Monthly Bills</span>
+                  <span class="ui-specimen__tag">Sample data</span>
                 </div>
                 <div class="ui-specimen__body">
                   <div class="orbit-mock-grid">
@@ -516,7 +538,7 @@
                           <td>-$1,920.00</td>
                         </tr>
                         <tr>
-                          <td>Internet Fiber</td>
+                          <td>Fiber Internet</td>
                           <td>14th</td>
                           <td>-$65.00</td>
                         </tr>
@@ -537,16 +559,16 @@
         <div class="labs-band">
           <div>
             <h2 id="labs-heading">Overbay Labs: Open-source mods &amp; tools</h2>
-            <p>Alongside Play Store software, Overbay Labs publishes standalone Android mods on GitHub. These packages are distributed strictly as MIT open-source APKs outside the Play Store.</p>
-            <p class="disclaimer-note">Overbay Labs projects are independent tools and are not affiliated with, endorsed by, or sponsored by X Corp. or any third-party platform.</p>
+            <p>Alongside regular apps, I publish small Android utilities and clients under Overbay Labs on GitHub. These are distributed only as MIT open-source sideload APKs and never go on Google Play.</p>
+            <p class="disclaimer-note">Overbay Labs projects are independent open-source tools and are not affiliated with, endorsed by, or sponsored by X Corp. or any third party.</p>
           </div>
           <div>
-            <h3>Twitter for Android (No Ads, Classic Look)</h3>
-            <p>A lightweight Kotlin/WebView wrapper (<code>app.overbay.twitter</code>) that strips ads at the GraphQL response boundary, hides Grok and Premium menus, gives you full-resolution media downloads, and lets you filter your timeline with regex.</p>
-            <div class="btn-row" style="margin-top:20px;">
+            <h3>Twitter for Android (Ad-free, classic blue)</h3>
+            <p>A Kotlin WebView wrapper (<code>app.overbay.twitter</code>) that strips promoted posts out of GraphQL feeds before layout, hides Grok and Premium prompts, unwraps <code>t.co</code> links, saves full-res images and <code>.mp4</code> videos, and filters timelines with regex.</p>
+            <div class="btn-row">
               <a class="btn btn--dark" href="/labs/twitter/">Inspect Overbay Labs</a>
-              <a class="btn btn--outline" href="https://github.com/Waspo98/overbay-twitter/releases/download/debug-latest/Twitter-debug.apk">Download Sideload APK</a>
-              <a class="btn btn--link" href="https://github.com/Waspo98/overbay-twitter" rel="noopener">View MIT Source &rarr;</a>
+              <a class="btn btn--outline" href="https://github.com/Waspo98/overbay-twitter/releases/download/debug-latest/Twitter-debug.apk">Download sideload APK</a>
+              <a class="btn btn--link" href="https://github.com/Waspo98/overbay-twitter">View MIT source <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
             </div>
           </div>
         </div>
@@ -559,10 +581,10 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a class="brand-link" href="/">
-            <img class="brand-mark" src="/assets/brand/overbay-mark.svg" alt="" width="22" height="22">
+            <img class="brand-mark" src="/assets/brand/overbay-mark.svg" alt="" width="30" height="30">
             <span>Overbay.app</span>
           </a>
-          <p>Independent software built by Overbay. Local-first tools with clear privacy boundaries and plain pricing.</p>
+          <p>Independent software by Overbay. Local-first tools with no subscriptions or tracking.</p>
         </div>
         <div class="footer-col">
           <p class="footer-heading">Apps</p>
@@ -574,9 +596,9 @@
           </ul>
         </div>
         <div class="footer-col">
-          <p class="footer-heading">Privacy &amp; Play Console</p>
+          <p class="footer-heading">Legal &amp; Privacy</p>
           <ul>
-            <li><a href="/privacy/">Privacy Hub</a></li>
+            <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/privacy/lumareader/">Luma Reader Privacy</a></li>
             <li><a href="/privacy/allnotes/">AllNotes Privacy</a></li>
             <li><a href="/privacy/orbitmoney/">Orbit Money Privacy</a></li>
@@ -585,23 +607,23 @@
           </ul>
         </div>
         <div class="footer-col">
-          <p class="footer-heading">Discovery &amp; Source</p>
+          <p class="footer-heading">Source &amp; Contact</p>
           <ul>
-            <li><a href="https://github.com/Waspo98" rel="noopener">GitHub (@Waspo98)</a></li>
-            <li><a href="/llms.txt">llms.txt</a></li>
-            <li><a href="/llms-full.txt">llms-full.txt</a></li>
-            <li><a href="/sitemap.xml">sitemap.xml</a></li>
+            <li><a href="https://github.com/Waspo98">GitHub (@Waspo98)</a></li>
+            <li><a href="https://github.com/Waspo98/Orbit-Money">Orbit Money Source</a></li>
+            <li><a href="https://github.com/Waspo98/overbay-twitter">Twitter Wrapper Source</a></li>
             <li><a href="mailto:privacy@overbay.app">privacy@overbay.app</a></li>
+            <li><a href="mailto:legal@overbay.app">legal@overbay.app</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 Overbay. All rights reserved.</span>
-        <span>Built as static HTML without third-party analytics or cookies.</span>
+        <span>&copy; 2026 Overbay</span>
+        <span>No cookies, ads, or analytics.</span>
       </div>
     </div>
   </footer>
 
-  <script src="/js/main.js" defer></script>
+  <script src="/js/main.js?v=2" defer></script>
 </body>
 </html>

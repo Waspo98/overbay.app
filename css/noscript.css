@@ -1,0 +1,43 @@
+/* Fallback layout when JavaScript is disabled */
+
+.stage-tabs,
+.gallery-tabs,
+.nav-toggle,
+.copy-btn {
+  display: none;
+}
+
+.stage-panel[hidden] {
+  display: grid;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-hairline);
+}
+
+.stage-panel:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.screenshot-stage[hidden] {
+  display: grid;
+  margin-top: 20px;
+}
+
+@media (max-width: 920px) {
+  .mobile-drawer {
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 12px;
+  }
+  .mobile-drawer ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .mobile-drawer a {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+}

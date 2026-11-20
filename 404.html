@@ -6,9 +6,12 @@
   <title>Page Not Found — Overbay.app</title>
   <meta name="robots" content="noindex">
   <link rel="icon" type="image/svg+xml" href="/assets/brand/favicon.svg">
-  <link rel="stylesheet" href="/css/tokens.css">
-  <link rel="stylesheet" href="/css/base.css">
-  <link rel="stylesheet" href="/css/pages.css">
+  <link rel="icon" href="/assets/brand/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/styles.css?v=2">
+  <noscript><link rel="stylesheet" href="/css/noscript.css?v=2"></noscript>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -16,7 +19,7 @@
   <header class="site-header">
     <div class="container nav-bar">
       <a class="brand-link" href="/">
-        <img class="brand-mark" src="/assets/brand/overbay-mark.svg" alt="" width="24" height="24">
+        <img class="brand-mark" src="/assets/brand/overbay-mark.svg" alt="" width="30" height="30">
         <span>Overbay.app</span>
       </a>
       <nav class="nav-menu" aria-label="Main navigation">
@@ -27,12 +30,12 @@
         <a href="/privacy/">Privacy</a>
       </nav>
       <div class="nav-actions">
-        <a class="nav-pill-btn" href="https://github.com/Waspo98" rel="noopener">
-          <svg class="icon icon--sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/></svg>
+        <a class="nav-pill-btn" href="https://github.com/Waspo98">
+          <svg class="icon icon--sm icon--fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/></svg>
           <span>GitHub</span>
         </a>
         <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+          <svg class="icon" viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
         </button>
       </div>
     </div>
@@ -53,14 +56,14 @@
     <div class="container container--narrow">
       <div class="gallery-stage">
         <h1>404 — Page not found</h1>
-        <p style="color:var(--ink-secondary);margin-top:12px;">The link you followed may have moved during the Overbay.app overhaul. Jump directly to any app or policy below.</p>
-        <div class="btn-row" style="margin-top:24px;">
+        <p class="not-found-lead">Nothing lives at this URL. Pick an app or policy page below.</p>
+        <div class="btn-row not-found-actions">
           <a class="btn btn--primary" href="/">Overbay Home</a>
           <a class="btn btn--outline" href="/lumareader/">Luma Reader</a>
           <a class="btn btn--outline" href="/allnotes/">AllNotes</a>
           <a class="btn btn--outline" href="/orbitmoney/">Orbit Money</a>
           <a class="btn btn--outline" href="/labs/twitter/">Labs: Twitter</a>
-          <a class="btn btn--link" href="/privacy/">Privacy Hub &rarr;</a>
+          <a class="btn btn--link" href="/privacy/">Privacy Policy <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
         </div>
       </div>
     </div>
@@ -68,13 +71,52 @@
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-bottom" style="margin-top:0;padding-top:0;border-top:none;">
-        <span>&copy; 2026 Overbay. All rights reserved.</span>
-        <span><a href="/">overbay.app</a></span>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand-link" href="/">
+            <img class="brand-mark" src="/assets/brand/overbay-mark.svg" alt="" width="30" height="30">
+            <span>Overbay.app</span>
+          </a>
+          <p>Independent software by Overbay. Local-first tools with no subscriptions or tracking.</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Apps</p>
+          <ul>
+            <li><a href="/lumareader/">Luma Reader</a></li>
+            <li><a href="/allnotes/">AllNotes</a></li>
+            <li><a href="/orbitmoney/">Orbit Money</a></li>
+            <li><a href="/labs/twitter/">Overbay Labs: Twitter</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Legal &amp; Privacy</p>
+          <ul>
+            <li><a href="/privacy/">Privacy Policy</a></li>
+            <li><a href="/privacy/lumareader/">Luma Reader Privacy</a></li>
+            <li><a href="/privacy/allnotes/">AllNotes Privacy</a></li>
+            <li><a href="/privacy/orbitmoney/">Orbit Money Privacy</a></li>
+            <li><a href="/data-deletion/">Data Deletion</a></li>
+            <li><a href="/terms/">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Source &amp; Contact</p>
+          <ul>
+            <li><a href="https://github.com/Waspo98">GitHub (@Waspo98)</a></li>
+            <li><a href="https://github.com/Waspo98/Orbit-Money">Orbit Money Source</a></li>
+            <li><a href="https://github.com/Waspo98/overbay-twitter">Twitter Wrapper Source</a></li>
+            <li><a href="mailto:privacy@overbay.app">privacy@overbay.app</a></li>
+            <li><a href="mailto:legal@overbay.app">legal@overbay.app</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Overbay</span>
+        <span>No cookies, ads, or analytics.</span>
       </div>
     </div>
   </footer>
 
-  <script src="/js/main.js" defer></script>
+  <script src="/js/main.js?v=2" defer></script>
 </body>
 </html>
