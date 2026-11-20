@@ -1,302 +1,324 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Orbit Money — Self-Hosted Personal Finance Tracker</title>
-  <meta name="description" content="A self-hosted personal finance tracker. Import from Rocket Money, sync banks with SimpleFIN, track budgets, goals, net worth, and more — all in a beautiful installable PWA.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
-  <style>
-    .orbit-hero::before {
-      background: linear-gradient(135deg, #0a0a1a 0%, #0a1a12 25%, #0a0f1a 50%, #0a0a1a 100%);
-    }
-    .orbit-hero .orb-1 { background: var(--green); }
-    .orbit-hero .orb-2 { background: var(--amber); }
-    .orbit-hero .orb-3 { background: var(--cyan); }
-
-    .orbit-title {
-      background: linear-gradient(135deg, var(--green), var(--cyan), var(--amber), var(--green));
-      background-size: 300% 300%;
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: gradientShift 6s ease-in-out infinite;
-    }
-
-    .app-icon {
-      width: 120px;
-      height: 120px;
-      border-radius: 28px;
-      background: linear-gradient(135deg, var(--green), #2ecc71);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3.5rem;
-      margin: 0 auto 28px;
-      box-shadow: 0 12px 40px rgba(0, 184, 148, 0.3);
-      animation: iconFloat 4s ease-in-out infinite;
-    }
-
-    @keyframes iconFloat {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-12px); }
-    }
-
-    .stats-row {
-      display: flex;
-      gap: 40px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 48px;
-    }
-    .stat { text-align: center; }
-    .stat-value {
-      font-size: 2.2rem;
-      font-weight: 900;
-      background: linear-gradient(135deg, var(--green), var(--cyan));
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .stat-label {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-top: 4px;
-    }
-
-    .docker-cmd {
-      background: rgba(0, 184, 148, 0.08);
-      border: 1px solid rgba(0, 184, 148, 0.2);
-      border-radius: var(--radius-sm);
-      padding: 20px 24px;
-      font-family: 'JetBrains Mono', 'Fira Code', monospace;
-      font-size: 0.9rem;
-      color: var(--green);
-      overflow-x: auto;
-      margin: 24px auto;
-      max-width: 600px;
-      text-align: left;
-    }
-    .docker-cmd .comment { color: var(--text-muted); }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orbit Money — Personal &amp; Household Finance Ledger | Overbay.app</title>
+  <meta name="description" content="Orbit Money is an open-source, local-first finance tracker for Android, Web PWA, and self-hosted Docker. Supports biometric lock, Google Drive backup, Rocket Money CSV imports, and optional SimpleFIN sync.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://overbay.app/orbitmoney/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Overbay.app">
+  <meta property="og:title" content="Orbit Money — Personal &amp; Household Finance Ledger">
+  <meta property="og:description" content="Track budgets, recurring bills, and net worth in exact integer cents on Android or self-hosted Docker.">
+  <meta property="og:url" content="https://overbay.app/orbitmoney/">
+  <meta property="og:image" content="https://overbay.app/assets/brand/og-image.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/brand/favicon.svg">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Orbit Money",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Android, Web, Docker",
+        "identifier": "app.overbay.orbit",
+        "url": "https://overbay.app/orbitmoney/",
+        "downloadUrl": "https://github.com/Waspo98/Orbit-Money/releases/download/debug-latest/OrbitMoney-debug.apk",
+        "codeRepository": "https://github.com/Waspo98/Orbit-Money",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Overbay",
+          "url": "https://overbay.app/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I run Orbit Money completely offline on Android without Docker?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Orbit Money runs standalone on Android with local storage, optional BiometricPrompt lock, and optional encrypted snapshot backup to your Google Drive account."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I import my history from Rocket Money or similar apps?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Orbit Money includes a Rocket Money CSV importer alongside manual entry and optional SimpleFIN bank sync in self-hosted mode."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Overbay have access to my bank credentials or SimpleFIN tokens?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Overbay runs no hosted multi-tenant Orbit Money servers. In self-hosted mode, your SimpleFIN Access URL stays encrypted with AES-256-GCM inside your own SQLite database."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- Nav -->
-  <nav class="nav">
-    <a href="/" class="nav-brand">✦ Overbay</a>
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#setup">Get Started</a></li>
-      <li><a href="https://github.com/Waspo98/Orbit-Money" target="_blank">GitHub</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero -->
-  <section class="hero orbit-hero">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-    <div class="hero-content">
-      <div class="app-icon">💰</div>
-      <h1 class="hero-title orbit-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem);">Orbit Money</h1>
-      <p class="hero-tagline">Your finances. Your server. Your rules.</p>
-      <p style="color: var(--text-muted); margin-bottom: 36px; max-width: 560px; margin-left: auto; margin-right: auto; font-size: 1.05rem;">
-        A self-hosted personal finance tracker that runs on Docker. Import from Rocket Money, 
-        sync your banks with SimpleFIN, track budgets, goals, and net worth — all in a 
-        beautiful installable PWA you control.
-      </p>
-      <div class="btn-group">
-        <a href="https://github.com/Waspo98/Orbit-Money" target="_blank" class="btn btn-primary">
-          ⭐ View on GitHub
-        </a>
-        <a href="#setup" class="btn btn-secondary">
-          Quick Start
-        </a>
-      </div>
-      <div class="stats-row">
-        <div class="stat">
-          <div class="stat-value">100%</div>
-          <div class="stat-label">Self-Hosted</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value">0</div>
-          <div class="stat-label">Cloud Dependencies</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value">PWA</div>
-          <div class="stat-label">Works Offline</div>
-        </div>
-      </div>
-    </div>
-    <div class="scroll-indicator">
-      <span>Explore</span>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M12 5v14M5 12l7 7 7-7"/>
-      </svg>
-    </div>
-  </section>
-
-  <!-- Features -->
-  <section class="section" id="features">
-    <div class="container">
-      <h2 class="section-title reveal">Everything You Need to<br>Master Your Money</h2>
-      <p class="section-subtitle reveal reveal-delay-1">
-        A full-featured finance tracker that doesn't phone home. Your data stays on your hardware.
-      </p>
-
-      <div class="cards-grid">
-        <div class="card reveal reveal-delay-1">
-          <div class="card-icon" style="background: linear-gradient(135deg, rgba(0, 184, 148, 0.2), rgba(0, 207, 253, 0.2));">
-            📊
-          </div>
-          <h3 class="card-title">Powerful Dashboard</h3>
-          <p class="card-text">
-            Configurable cards showing recent transactions, budgets, goals, subscriptions, 
-            net worth, retirement projections, and mortgage snapshots — all at a glance.
-          </p>
-        </div>
-
-        <div class="card reveal reveal-delay-2">
-          <div class="card-icon" style="background: linear-gradient(135deg, rgba(255, 165, 2, 0.2), rgba(255, 107, 107, 0.2));">
-            🏦
-          </div>
-          <h3 class="card-title">Bank Sync</h3>
-          <p class="card-text">
-            Connect your bank accounts through SimpleFIN with encrypted access URL storage. 
-            Import existing data from Rocket Money CSV exports.
-          </p>
-        </div>
-
-        <div class="card reveal reveal-delay-3">
-          <div class="card-icon" style="background: linear-gradient(135deg, rgba(108, 92, 231, 0.2), rgba(253, 121, 168, 0.2));">
-            🎯
-          </div>
-          <h3 class="card-title">Budgets & Goals</h3>
-          <p class="card-text">
-            Set spending budgets by category, create savings goals, track subscriptions, 
-            and manage upcoming bills. See spending trends over time.
-          </p>
-        </div>
-
-        <div class="card reveal reveal-delay-4">
-          <div class="card-icon" style="background: linear-gradient(135deg, rgba(0, 207, 253, 0.2), rgba(108, 92, 231, 0.2));">
-            📱
-          </div>
-          <h3 class="card-title">Installable PWA</h3>
-          <p class="card-text">
-            Install Orbit Money on your phone's home screen like a native app. Works offline 
-            after the first load with cached data and push notifications.
-          </p>
-        </div>
-
-        <div class="card reveal reveal-delay-5">
-          <div class="card-icon" style="background: linear-gradient(135deg, rgba(0, 184, 148, 0.2), rgba(255, 165, 2, 0.2));">
-            👨‍👩‍👧‍👦
-          </div>
-          <h3 class="card-title">Household Sharing</h3>
-          <p class="card-text">
-            Multi-user support with household-scoped data. Share finances with family members 
-            via OIDC invite. Local or SSO authentication.
-          </p>
-        </div>
-
-        <div class="card reveal reveal-delay-5">
-          <div class="card-icon" style="background: linear-gradient(135deg, rgba(253, 121, 168, 0.2), rgba(0, 184, 148, 0.2));">
-            🔒
-          </div>
-          <h3 class="card-title">Fully Private</h3>
-          <p class="card-text">
-            SQLite database stored in a Docker volume on your hardware. No cloud accounts, 
-            no third-party analytics, no data leaving your network.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Feature Rows -->
-  <section class="section" style="padding-top: 20px;">
-    <div class="container">
-      <div class="feature-row reveal">
-        <div class="feature-row-visual" style="background: linear-gradient(135deg, var(--bg-card), rgba(0, 184, 148, 0.1));">
-          <span style="font-size: 3.5rem;">📊📈💹</span>
-        </div>
-        <div class="feature-row-content">
-          <h3>Your Complete Financial Picture</h3>
-          <p>
-            Track accounts, transactions, credit cards, net worth, and spending trends. 
-            Plan for retirement with built-in calculators. Monitor your mortgage. 
-            Categorize transactions with smart rules that learn your patterns.
-          </p>
-        </div>
-      </div>
-
-      <div class="feature-row reveal">
-        <div class="feature-row-visual" style="background: linear-gradient(135deg, var(--bg-card), rgba(255, 165, 2, 0.1));">
-          <span style="font-size: 3.5rem;">🐳📦🔧</span>
-        </div>
-        <div class="feature-row-content">
-          <h3>Deploy in 60 Seconds</h3>
-          <p>
-            One Docker Compose file. One <code>.env</code> config. Pull and run — you're 
-            tracking finances in under a minute. Update with a single <code>docker compose pull</code>. 
-            Back up by snapshotting the Docker volume.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Quick Start -->
-  <section class="section" id="setup">
-    <div class="container" style="text-align: center;">
-      <h2 class="section-title reveal">Up and Running in Seconds</h2>
-      <p class="section-subtitle reveal reveal-delay-1">
-        All you need is Docker. Copy the env file, set your password, and go.
-      </p>
-
-      <div class="reveal reveal-delay-2">
-        <div class="docker-cmd">
-          <span class="comment"># Clone the repo</span><br>
-          git clone https://github.com/Waspo98/Orbit-Money.git<br>
-          cd Orbit-Money<br><br>
-          <span class="comment"># Configure your environment</span><br>
-          cp .env.example .env<br><br>
-          <span class="comment"># Start Orbit Money</span><br>
-          docker compose pull<br>
-          docker compose up -d<br><br>
-          <span class="comment"># Open http://localhost:5008 🎉</span>
-        </div>
-      </div>
-
-      <div class="reveal reveal-delay-3" style="margin-top: 40px;">
-        <a href="https://github.com/Waspo98/Orbit-Money" target="_blank" class="btn btn-primary" style="font-size: 1.15rem; padding: 20px 48px;">
-          ⭐ Get Orbit Money on GitHub
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <nav class="footer-links">
-        <a href="/">Overbay Home</a>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="brand-link" href="/">
+        <img class="brand-mark" src="/assets/brand/overbay-mark.svg" alt="" width="24" height="24">
+        <span>Overbay.app</span>
+      </a>
+      <nav class="nav-menu" aria-label="Main navigation">
         <a href="/lumareader/">Luma Reader</a>
-        <a href="/privacy/">Privacy Policy</a>
-        <a href="/terms/">Terms of Service</a>
-        <a href="https://github.com/Waspo98/Orbit-Money" target="_blank">GitHub</a>
+        <a href="/allnotes/">AllNotes</a>
+        <a href="/orbitmoney/" aria-current="page">Orbit Money</a>
+        <a href="/labs/twitter/">Labs</a>
+        <a href="/privacy/">Privacy</a>
       </nav>
-      <p>© 2025 Overbay. All rights reserved.</p>
+      <div class="nav-actions">
+        <a class="nav-pill-btn" href="https://github.com/Waspo98/Orbit-Money" rel="noopener">
+          <svg class="icon icon--sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/></svg>
+          <span>GitHub</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="mobile-drawer" aria-label="Mobile navigation">
+      <ul>
+        <li><a href="/lumareader/">Luma Reader</a></li>
+        <li><a href="/allnotes/">AllNotes</a></li>
+        <li><a href="/orbitmoney/" aria-current="page">Orbit Money</a></li>
+        <li><a href="/labs/twitter/">Overbay Labs (Twitter)</a></li>
+        <li><a href="/privacy/">Privacy Policy</a></li>
+        <li><a href="/data-deletion/">Data Deletion</a></li>
+        <li><a href="/terms/">Terms of Service</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container page-hero-grid">
+        <div class="page-hero-copy">
+          <h1>Orbit Money</h1>
+          <p class="page-hero-lead">Track budgets, recurring bills, and net worth in exact integer cents without handing your financial history to a third-party data broker. Use standalone on Android, install as a Web PWA, or run a self-hosted household instance with Docker.</p>
+
+          <dl class="spec-strip">
+            <div><dt>Package</dt><dd><code>app.overbay.orbit</code></dd></div>
+            <div><dt>Platforms</dt><dd>Android · Web PWA · Docker</dd></div>
+            <div><dt>Google Play</dt><dd>Coming soon</dd></div>
+            <div><dt>Security</dt><dd>BiometricPrompt + Drive sync</dd></div>
+          </dl>
+
+          <!-- When live on Google Play, add alongside Download APK:
+               <a class="btn btn--primary" href="https://play.google.com/store/apps/details?id=app.overbay.orbit">Get on Google Play</a> -->
+          <div class="btn-row">
+            <a class="btn btn--primary" href="https://github.com/Waspo98/Orbit-Money/releases/download/debug-latest/OrbitMoney-debug.apk">Download Android APK</a>
+            <a class="btn btn--outline" href="https://github.com/Waspo98/Orbit-Money" rel="noopener">Source on GitHub</a>
+            <a class="btn btn--outline" href="/privacy/orbitmoney/">Privacy Policy</a>
+          </div>
+          <p class="disclaimer-note">Orbit Money is a personal bookkeeping tool — not a bank, lender, payment processor, or licensed financial advisor.</p>
+        </div>
+
+        <div class="page-hero-stage" data-screenshot-slot="orbit-hero">
+          <div class="ui-specimen">
+            <div class="ui-specimen__bar">
+              <span>Orbit Money · Checking &amp; Category Ledger</span>
+              <span class="ui-specimen__tag">Sample Data Preview</span>
+            </div>
+            <div class="ui-specimen__body">
+              <div class="orbit-mock-grid">
+                <div class="orbit-balance-bar">
+                  <div>
+                    <small>Net Household Liquid</small>
+                    <div class="orbit-balance-val">$14,280.42</div>
+                  </div>
+                  <span class="stage-app-badge">Integer cents · Audit trail</span>
+                </div>
+                <table class="orbit-ledger" aria-label="Sample transaction table">
+                  <thead>
+                    <tr>
+                      <th>Merchant</th>
+                      <th>Category</th>
+                      <th>Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Trader Joe's (orig: TJ #0412)</td>
+                      <td>Groceries</td>
+                      <td>-$84.19</td>
+                    </tr>
+                    <tr>
+                      <td>City Electric Co.</td>
+                      <td>Utilities</td>
+                      <td>-$118.40</td>
+                    </tr>
+                    <tr>
+                      <td>Acme Payroll Direct Dep</td>
+                      <td>Income</td>
+                      <td>+$2,640.00</td>
+                    </tr>
+                    <tr>
+                      <td>Vanguard Index Transfer</td>
+                      <td>Savings</td>
+                      <td>-$500.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="orbit-modes">
+      <div class="container two-col-split">
+        <div>
+          <h2 id="orbit-modes">Two storage modes, same clean ledger</h2>
+          <p style="color:var(--ink-secondary);margin-top:12px;">Not everyone wants to run a home server just to log groceries, and not everyone wants their household budget stuck on a single phone. Orbit Money supports both cleanly.</p>
+          <p style="color:var(--ink-secondary);margin-top:12px;">When you tidy up bank merchant names or split receipts, Orbit Money preserves immutable <code>original_*</code> bank columns next to your <code>edited_*</code> labels so re-importing CSV statements never overwrites your cleanup work.</p>
+        </div>
+
+        <ul class="detail-list">
+          <li>
+            <h3>On-Device Local Mode (Android &amp; PWA)</h3>
+            <p>Keeps your full ledger locally on your device. Protect opening the app with Android's <code>BiometricPrompt</code> (<code>USE_BIOMETRIC</code>), and optionally sync JSON snapshots through your own Google Drive <code>drive.appdata</code> and <code>drive.file</code> permissions.</p>
+          </li>
+          <li>
+            <h3>Self-Hosted Household Server (Docker + SQLite)</h3>
+            <p>Deploy <code>ghcr.io/waspo98/orbit-money</code> at home for shared household logins (<code>AUTH_PROVIDER=local|oidc|both</code>), recurring expense tracking, and multi-device browser/Android syncing via the <code>orbitmoney://</code> app scheme.</p>
+          </li>
+          <li>
+            <h3>Rocket Money CSV &amp; Optional SimpleFIN</h3>
+            <p>Import historical CSV exports from Rocket Money out of the box, or configure a SimpleFIN Bridge token in self-hosted mode — stored AES-256-GCM encrypted in your own SQLite file.</p>
+          </li>
+          <li>
+            <h3>Optional Merchant Icons &amp; Web Push</h3>
+            <p>Self-hosted instances can optionally query Logo.dev for merchant icons or send VAPID budget alerts if configured by the server administrator. Both remain strictly opt-in.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="orbit-docker">
+      <div class="container two-col-split">
+        <div>
+          <h2 id="orbit-docker">Self-host with Docker Compose</h2>
+          <p style="color:var(--ink-secondary);margin-top:12px;">Spin up Orbit Money on any Linux box, Synology NAS, or home server with a single persistent SQLite volume on port <code>5008</code>.</p>
+          <p style="color:var(--ink-secondary);margin-top:12px;">See the repository <a href="https://github.com/Waspo98/Orbit-Money" rel="noopener">README on GitHub</a> for OIDC provider setup, SimpleFIN encryption key generation, and backup scripts.</p>
+        </div>
+
+        <div class="code-box">
+          <div class="code-box__bar">
+            <span>compose.yaml</span>
+            <button class="copy-btn" type="button" data-copy-target="orbit-compose">Copy</button>
+          </div>
+          <pre id="orbit-compose">services:
+  orbit-money:
+    image: ghcr.io/waspo98/orbit-money:latest
+    container_name: orbit-money
+    ports:
+      - "5008:5008"
+    environment:
+      - AUTH_PROVIDER=local
+      - DATA_DIR=/data
+    volumes:
+      - ./orbit-data:/data
+    restart: unless-stopped</pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="orbit-faq">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="orbit-faq">Frequently asked questions</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Why integer cents instead of standard decimals?</summary>
+            <p>Floating-point arithmetic produces penny rounding errors across hundreds of transfers and splits. Storing values internally as integer cents (for example, $12.34 as 1234) keeps balances exact down to the cent.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What Android permissions does Orbit Money declare?</summary>
+            <p>Only <code>INTERNET</code> (for optional Google Drive sync or connecting to your own Docker server), <code>ACCESS_NETWORK_STATE</code>, <code>USE_BIOMETRIC</code> (app lock), and <code>VIBRATE</code> (haptic feedback).</p>
+          </details>
+          <details class="faq-item">
+            <summary>How do I delete my Orbit Money data?</summary>
+            <p>Uninstall or clear storage on Android, delete snapshots in your Google Drive if Drive backup was enabled, or stop and remove your Docker <code>/data</code> volume. Step-by-step instructions live on our <a href="/data-deletion/">Data Deletion page</a>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand-link" href="/">
+            <img class="brand-mark" src="/assets/brand/overbay-mark.svg" alt="" width="22" height="22">
+            <span>Overbay.app</span>
+          </a>
+          <p>Independent software built by Overbay. Local-first tools with clear privacy boundaries and plain pricing.</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Apps</p>
+          <ul>
+            <li><a href="/lumareader/">Luma Reader</a></li>
+            <li><a href="/allnotes/">AllNotes</a></li>
+            <li><a href="/orbitmoney/">Orbit Money</a></li>
+            <li><a href="/labs/twitter/">Overbay Labs: Twitter</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Privacy &amp; Play Console</p>
+          <ul>
+            <li><a href="/privacy/">Privacy Hub</a></li>
+            <li><a href="/privacy/lumareader/">Luma Reader Privacy</a></li>
+            <li><a href="/privacy/allnotes/">AllNotes Privacy</a></li>
+            <li><a href="/privacy/orbitmoney/">Orbit Money Privacy</a></li>
+            <li><a href="/data-deletion/">Data Deletion</a></li>
+            <li><a href="/terms/">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Discovery &amp; Source</p>
+          <ul>
+            <li><a href="https://github.com/Waspo98" rel="noopener">GitHub (@Waspo98)</a></li>
+            <li><a href="/llms.txt">llms.txt</a></li>
+            <li><a href="/llms-full.txt">llms-full.txt</a></li>
+            <li><a href="/sitemap.xml">sitemap.xml</a></li>
+            <li><a href="mailto:privacy@overbay.app">privacy@overbay.app</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Overbay. All rights reserved.</span>
+        <span>Built as static HTML without third-party analytics or cookies.</span>
+      </div>
     </div>
   </footer>
 
-  <script src="/script.js"></script>
+  <script src="/js/main.js" defer></script>
 </body>
 </html>

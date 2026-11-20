@@ -1,0 +1,456 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-20T19:25:40Z",
+  "title": "Design System: Overbay.app",
+  "extensions": {
+    "colorMeta": {
+      "teal-emerald": {
+        "role": "primary",
+        "displayName": "Teal Emerald",
+        "canonical": "oklch(52.5% 0.097 174.1)",
+        "tonalRamp": [
+          "oklch(18% 0.046 174.1)",
+          "oklch(28% 0.066 174.1)",
+          "oklch(38% 0.082 174.1)",
+          "oklch(50% 0.095 174.1)",
+          "oklch(62% 0.093 174.1)",
+          "oklch(74% 0.079 174.1)",
+          "oklch(86% 0.058 174.1)",
+          "oklch(95% 0.039 174.1)"
+        ]
+      },
+      "teal-deep": {
+        "role": "primary",
+        "displayName": "Teal Deep",
+        "canonical": "oklch(44.7% 0.082 174.0)",
+        "tonalRamp": [
+          "oklch(18% 0.039 174.0)",
+          "oklch(28% 0.056 174.0)",
+          "oklch(38% 0.070 174.0)",
+          "oklch(50% 0.080 174.0)",
+          "oklch(62% 0.079 174.0)",
+          "oklch(74% 0.067 174.0)",
+          "oklch(86% 0.049 174.0)",
+          "oklch(95% 0.033 174.0)"
+        ]
+      },
+      "pine-ink": {
+        "role": "primary",
+        "displayName": "Pine Ink",
+        "canonical": "oklch(40.9% 0.075 174.1)",
+        "tonalRamp": [
+          "oklch(18% 0.035 174.1)",
+          "oklch(28% 0.051 174.1)",
+          "oklch(38% 0.063 174.1)",
+          "oklch(50% 0.073 174.1)",
+          "oklch(62% 0.072 174.1)",
+          "oklch(74% 0.061 174.1)",
+          "oklch(86% 0.045 174.1)",
+          "oklch(95% 0.030 174.1)"
+        ]
+      },
+      "mint-wash": {
+        "role": "primary",
+        "displayName": "Mint Wash",
+        "canonical": "oklch(95.9% 0.015 175.7)",
+        "tonalRamp": [
+          "oklch(18% 0.007 175.7)",
+          "oklch(28% 0.010 175.7)",
+          "oklch(38% 0.012 175.7)",
+          "oklch(50% 0.014 175.7)",
+          "oklch(62% 0.014 175.7)",
+          "oklch(74% 0.012 175.7)",
+          "oklch(86% 0.009 175.7)",
+          "oklch(95% 0.006 175.7)"
+        ]
+      },
+      "pure-white": {
+        "role": "neutral",
+        "displayName": "Pure White",
+        "canonical": "oklch(100.0% 0 0)",
+        "tonalRamp": [
+          "oklch(18% 0 0)",
+          "oklch(28% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(50% 0 0)",
+          "oklch(62% 0 0)",
+          "oklch(74% 0 0)",
+          "oklch(86% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "stone-stage": {
+        "role": "neutral",
+        "displayName": "Stone Stage",
+        "canonical": "oklch(97.3% 0.003 264.5)",
+        "tonalRamp": [
+          "oklch(18% 0.001 264.5)",
+          "oklch(28% 0.002 264.5)",
+          "oklch(38% 0.002 264.5)",
+          "oklch(50% 0.003 264.5)",
+          "oklch(62% 0.003 264.5)",
+          "oklch(74% 0.002 264.5)",
+          "oklch(86% 0.002 264.5)",
+          "oklch(95% 0.001 264.5)"
+        ]
+      },
+      "mist-surface": {
+        "role": "neutral",
+        "displayName": "Mist Surface",
+        "canonical": "oklch(98.2% 0 0)",
+        "tonalRamp": [
+          "oklch(18% 0 0)",
+          "oklch(28% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(50% 0 0)",
+          "oklch(62% 0 0)",
+          "oklch(74% 0 0)",
+          "oklch(86% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "pebble-track": {
+        "role": "neutral",
+        "displayName": "Pebble Track",
+        "canonical": "oklch(96.3% 0.003 247.9)",
+        "tonalRamp": [
+          "oklch(18% 0.002 247.9)",
+          "oklch(28% 0.002 247.9)",
+          "oklch(38% 0.003 247.9)",
+          "oklch(50% 0.003 247.9)",
+          "oklch(62% 0.003 247.9)",
+          "oklch(74% 0.003 247.9)",
+          "oklch(86% 0.002 247.9)",
+          "oklch(95% 0.001 247.9)"
+        ]
+      },
+      "obsidian-ink": {
+        "role": "neutral",
+        "displayName": "Obsidian Ink",
+        "canonical": "oklch(18.6% 0.007 258.4)",
+        "tonalRamp": [
+          "oklch(18% 0.003 258.4)",
+          "oklch(28% 0.005 258.4)",
+          "oklch(38% 0.006 258.4)",
+          "oklch(50% 0.007 258.4)",
+          "oklch(62% 0.007 258.4)",
+          "oklch(74% 0.006 258.4)",
+          "oklch(86% 0.004 258.4)",
+          "oklch(95% 0.003 258.4)"
+        ]
+      },
+      "slate-ink": {
+        "role": "neutral",
+        "displayName": "Slate Ink",
+        "canonical": "oklch(46.0% 0.024 267.0)",
+        "tonalRamp": [
+          "oklch(18% 0.011 267.0)",
+          "oklch(28% 0.016 267.0)",
+          "oklch(38% 0.020 267.0)",
+          "oklch(50% 0.024 267.0)",
+          "oklch(62% 0.023 267.0)",
+          "oklch(74% 0.020 267.0)",
+          "oklch(86% 0.014 267.0)",
+          "oklch(95% 0.010 267.0)"
+        ]
+      },
+      "muted-slate": {
+        "role": "neutral",
+        "displayName": "Muted Slate",
+        "canonical": "oklch(51.3% 0.027 264.3)",
+        "tonalRamp": [
+          "oklch(18% 0.013 264.3)",
+          "oklch(28% 0.019 264.3)",
+          "oklch(38% 0.023 264.3)",
+          "oklch(50% 0.027 264.3)",
+          "oklch(62% 0.026 264.3)",
+          "oklch(74% 0.022 264.3)",
+          "oklch(86% 0.016 264.3)",
+          "oklch(95% 0.011 264.3)"
+        ]
+      },
+      "hairline-gray": {
+        "role": "neutral",
+        "displayName": "Hairline Gray",
+        "canonical": "oklch(92.8% 0.006 264.5)",
+        "tonalRamp": [
+          "oklch(18% 0.003 264.5)",
+          "oklch(28% 0.004 264.5)",
+          "oklch(38% 0.005 264.5)",
+          "oklch(50% 0.006 264.5)",
+          "oklch(62% 0.006 264.5)",
+          "oklch(74% 0.005 264.5)",
+          "oklch(86% 0.004 264.5)",
+          "oklch(95% 0.002 264.5)"
+        ]
+      },
+      "pewter-border": {
+        "role": "neutral",
+        "displayName": "Pewter Border",
+        "canonical": "oklch(87.2% 0.012 259.8)",
+        "tonalRamp": [
+          "oklch(18% 0.006 259.8)",
+          "oklch(28% 0.008 259.8)",
+          "oklch(38% 0.010 259.8)",
+          "oklch(50% 0.012 259.8)",
+          "oklch(62% 0.012 259.8)",
+          "oklch(74% 0.010 259.8)",
+          "oklch(86% 0.007 259.8)",
+          "oklch(95% 0.005 259.8)"
+        ]
+      },
+      "specimen-indigo-bg": {
+        "role": "neutral",
+        "displayName": "Specimen Indigo Tint",
+        "canonical": "oklch(96.7% 0.012 271.3)",
+        "tonalRamp": [
+          "oklch(18% 0.006 271.3)",
+          "oklch(28% 0.008 271.3)",
+          "oklch(38% 0.011 271.3)",
+          "oklch(50% 0.012 271.3)",
+          "oklch(62% 0.012 271.3)",
+          "oklch(74% 0.010 271.3)",
+          "oklch(86% 0.008 271.3)",
+          "oklch(95% 0.005 271.3)"
+        ]
+      },
+      "specimen-indigo-ink": {
+        "role": "neutral",
+        "displayName": "Specimen Indigo Ink",
+        "canonical": "oklch(39.8% 0.177 277.4)",
+        "tonalRamp": [
+          "oklch(18% 0.084 277.4)",
+          "oklch(28% 0.121 277.4)",
+          "oklch(38% 0.150 277.4)",
+          "oklch(50% 0.174 277.4)",
+          "oklch(62% 0.171 277.4)",
+          "oklch(74% 0.145 277.4)",
+          "oklch(86% 0.107 277.4)",
+          "oklch(95% 0.072 277.4)"
+        ]
+      },
+      "specimen-mint-bg": {
+        "role": "neutral",
+        "displayName": "Specimen Mint Tint",
+        "canonical": "oklch(97.3% 0.013 172.4)",
+        "tonalRamp": [
+          "oklch(18% 0.006 172.4)",
+          "oklch(28% 0.009 172.4)",
+          "oklch(38% 0.011 172.4)",
+          "oklch(50% 0.012 172.4)",
+          "oklch(62% 0.012 172.4)",
+          "oklch(74% 0.010 172.4)",
+          "oklch(86% 0.008 172.4)",
+          "oklch(95% 0.005 172.4)"
+        ]
+      },
+      "specimen-sky-bg": {
+        "role": "neutral",
+        "displayName": "Specimen Sky Tint",
+        "canonical": "oklch(97.3% 0.009 242.8)",
+        "tonalRamp": [
+          "oklch(18% 0.004 242.8)",
+          "oklch(28% 0.006 242.8)",
+          "oklch(38% 0.008 242.8)",
+          "oklch(50% 0.009 242.8)",
+          "oklch(62% 0.009 242.8)",
+          "oklch(74% 0.008 242.8)",
+          "oklch(86% 0.006 242.8)",
+          "oklch(95% 0.004 242.8)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display (Inter Tight 700)",
+        "purpose": "Page hero h1 titles with tight -0.025em tracking and balanced line wrapping."
+      },
+      "headline": {
+        "displayName": "Headline (Inter Tight 700)",
+        "purpose": "Section h2 headings and gallery stage headers."
+      },
+      "title": {
+        "displayName": "Title (Inter Tight 600)",
+        "purpose": "Feature h3 titles, detail list items, and FAQ summary triggers."
+      },
+      "body": {
+        "displayName": "Body (Public Sans 400)",
+        "purpose": "Running product descriptions, spotlight prose, and legal policies capped at 68ch."
+      },
+      "label": {
+        "displayName": "Label (Public Sans 500–600)",
+        "purpose": "Pill buttons, top navigation links, stage switcher tabs, and table headers."
+      },
+      "mono": {
+        "displayName": "Mono (JetBrains Mono 400–500)",
+        "purpose": "Android package identifiers, specimen status tags, and Docker/CLI code blocks."
+      }
+    },
+    "shadows": [
+      {
+        "name": "device",
+        "value": "0 18px 36px -14px rgba(17, 19, 22, 0.16), 0 4px 12px -2px rgba(17, 19, 22, 0.06)",
+        "purpose": "Soft diffuse lift applied strictly to device bezels and UI specimen cards inside framing stages."
+      },
+      {
+        "name": "nav-indicator",
+        "value": "inset 0 -2px 0 #0d7c66",
+        "purpose": "Flat 2px bottom indicator bar highlighting the current page in desktop navigation."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Exponential ease-out settle for button press release and gallery stage panel entrance."
+      },
+      {
+        "name": "dur-fast",
+        "value": "160ms",
+        "purpose": "Snappy state transitions on buttons, links, navigation pills, and switcher tabs."
+      },
+      {
+        "name": "dur-medium",
+        "value": "280ms",
+        "purpose": "Stage panel entrance fade and 6px vertical settle when switching apps."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "560px" },
+      { "name": "md", "value": "680px" },
+      { "name": "nav", "value": "920px" },
+      { "name": "lg", "value": "1040px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary pill action in Teal Emerald used for flagship Google Play software pages.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Explore Luma Reader</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 24px; border-radius: var(--radius-pill, 9999px); border: 1px solid transparent; background: var(--accent, #0d7c66); color: var(--ink-on-accent, #ffffff); font-family: var(--font-body, 'Public Sans', sans-serif); font-size: 0.95rem; font-weight: 600; text-decoration: none; cursor: pointer; white-space: nowrap; transition: background var(--dur-fast, 160ms) ease, transform var(--dur-fast, 160ms) var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn-primary:hover { background: var(--accent-hover, #0a6351); color: var(--ink-on-accent, #ffffff); } .ds-btn-primary:active { transform: translateY(1px); } .ds-btn-primary:focus-visible { outline: 2px solid var(--accent, #0d7c66); outline-offset: 3px; }"
+    },
+    {
+      "name": "Dark Action Button",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "Obsidian pill button separating Overbay Labs sideload software from Play Store flagships.",
+      "html": "<a class=\"ds-btn-dark\" href=\"#\">Inspect Overbay Labs</a>",
+      "css": ".ds-btn-dark { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 24px; border-radius: var(--radius-pill, 9999px); border: 1px solid transparent; background: var(--ink-primary, #111316); color: #ffffff; font-family: var(--font-body, 'Public Sans', sans-serif); font-size: 0.95rem; font-weight: 600; text-decoration: none; cursor: pointer; white-space: nowrap; transition: background var(--dur-fast, 160ms) ease, transform var(--dur-fast, 160ms) var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn-dark:hover { background: #22262d; color: #ffffff; } .ds-btn-dark:active { transform: translateY(1px); } .ds-btn-dark:focus-visible { outline: 2px solid var(--accent, #0d7c66); outline-offset: 3px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary Pure White pill button with a crisp 1px Pewter Border for downloads and privacy links.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\">Download APK</a>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 24px; border-radius: var(--radius-pill, 9999px); border: 1px solid var(--border-strong, #d0d5dd); background: var(--bg-page, #ffffff); color: var(--ink-primary, #111316); font-family: var(--font-body, 'Public Sans', sans-serif); font-size: 0.95rem; font-weight: 600; text-decoration: none; cursor: pointer; white-space: nowrap; transition: background var(--dur-fast, 160ms) ease, border-color var(--dur-fast, 160ms) ease, transform var(--dur-fast, 160ms) var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn-outline:hover { background: var(--bg-stage, #f5f6f8); border-color: var(--ink-primary, #111316); color: var(--ink-primary, #111316); } .ds-btn-outline:active { transform: translateY(1px); } .ds-btn-outline:focus-visible { outline: 2px solid var(--accent, #0d7c66); outline-offset: 3px; }"
+    },
+    {
+      "name": "Segmented Stage Switcher",
+      "kind": "nav",
+      "refersTo": "stage-tab",
+      "description": "Four-app pill switcher track above the gallery stage with solid Obsidian Ink active selection.",
+      "html": "<div class=\"ds-stage-tabs\" role=\"tablist\" aria-label=\"Featured applications\"><button class=\"ds-stage-tab\" type=\"button\" role=\"tab\" aria-selected=\"true\">Luma Reader</button><button class=\"ds-stage-tab\" type=\"button\" role=\"tab\" aria-selected=\"false\">AllNotes</button><button class=\"ds-stage-tab\" type=\"button\" role=\"tab\" aria-selected=\"false\">Orbit Money</button><button class=\"ds-stage-tab\" type=\"button\" role=\"tab\" aria-selected=\"false\">Labs: Twitter</button></div>",
+      "css": ".ds-stage-tabs { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 4px; padding: 5px; border-radius: var(--radius-pill, 9999px); background: var(--bg-pill-track, #f1f3f5); border: 1px solid var(--border-hairline, #e5e7eb); } .ds-stage-tab { appearance: none; border: none; background: transparent; color: var(--ink-secondary, #525866); font-family: var(--font-body, 'Public Sans', sans-serif); font-size: 0.92rem; font-weight: 500; padding: 9px 20px; border-radius: var(--radius-pill, 9999px); cursor: pointer; transition: background var(--dur-fast, 160ms) ease, color var(--dur-fast, 160ms) ease; } .ds-stage-tab:hover { color: var(--ink-primary, #111316); } .ds-stage-tab[aria-selected=\"true\"] { background: var(--ink-primary, #111316); color: #ffffff; font-weight: 600; } .ds-stage-tab:focus-visible { outline: 2px solid var(--accent, #0d7c66); outline-offset: 2px; }"
+    },
+    {
+      "name": "Top Navigation Bar",
+      "kind": "nav",
+      "refersTo": "nav-pill",
+      "description": "Sticky 3-column studio header with faceted hexagon emblem, inset active bar, and GitHub pill.",
+      "html": "<header class=\"ds-site-header\"><div class=\"ds-nav-bar\"><a class=\"ds-brand-link\" href=\"#\"><svg class=\"ds-brand-mark\" viewBox=\"0 0 36 36\" fill=\"none\" aria-hidden=\"true\"><path d=\"M18 2.5L31.5 10.25V25.75L18 33.5L4.5 25.75V10.25L18 2.5Z\" fill=\"#111316\"/><path d=\"M18 2.5L31.5 10.25L18 18L4.5 10.25L18 2.5Z\" fill=\"#232830\"/><path d=\"M18 18L31.5 10.25V25.75L18 33.5V18Z\" fill=\"#0D7C66\"/><path d=\"M18 11.2L24 14.65V21.55L18 25L12 21.55V14.65L18 11.2Z\" fill=\"#FFFFFF\"/></svg><span>Overbay.app</span></a><nav class=\"ds-nav-menu\" aria-label=\"Main navigation\"><a href=\"#\" aria-current=\"page\">Luma Reader</a><a href=\"#\">AllNotes</a><a href=\"#\">Orbit Money</a><a href=\"#\">Labs</a><a href=\"#\">Privacy</a></nav><div class=\"ds-nav-actions\"><a class=\"ds-nav-pill-btn\" href=\"#\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z\"/></svg><span>GitHub</span></a></div></div></header>",
+      "css": ".ds-site-header { background: rgba(255, 255, 255, 0.96); border-bottom: 1px solid var(--border-hairline, #e5e7eb); padding: 0 28px; } .ds-nav-bar { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px; min-height: 76px; } .ds-brand-link { justify-self: start; display: inline-flex; align-items: center; gap: 11px; text-decoration: none; color: var(--ink-primary, #111316); font-family: var(--font-display, 'Inter Tight', sans-serif); font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em; } .ds-brand-mark { width: 30px; height: 30px; flex-shrink: 0; } .ds-nav-menu { display: flex; align-items: center; gap: 28px; } .ds-nav-menu a { text-decoration: none; color: var(--ink-secondary, #525866); font-family: var(--font-body, 'Public Sans', sans-serif); font-size: 0.95rem; font-weight: 500; padding: 6px 2px; white-space: nowrap; transition: color var(--dur-fast, 160ms) ease; } .ds-nav-menu a:hover, .ds-nav-menu a[aria-current=\"page\"] { color: var(--ink-primary, #111316); } .ds-nav-menu a[aria-current=\"page\"] { font-weight: 600; box-shadow: inset 0 -2px 0 var(--accent, #0d7c66); } .ds-nav-actions { justify-self: end; display: inline-flex; align-items: center; } .ds-nav-pill-btn { display: inline-flex; align-items: center; gap: 7px; padding: 8px 18px; border-radius: var(--radius-pill, 9999px); border: 1px solid var(--border-hairline, #e5e7eb); background: var(--bg-page, #ffffff); color: var(--ink-primary, #111316); font-family: var(--font-body, 'Public Sans', sans-serif); font-size: 0.9rem; font-weight: 500; text-decoration: none; transition: background var(--dur-fast, 160ms) ease, border-color var(--dur-fast, 160ms) ease; } .ds-nav-pill-btn:hover { background: var(--bg-stage, #f5f6f8); border-color: var(--border-strong, #d0d5dd); } .ds-nav-menu a:focus-visible, .ds-nav-pill-btn:focus-visible, .ds-brand-link:focus-visible { outline: 2px solid var(--accent, #0d7c66); outline-offset: 3px; } .ds-icon { width: 16px; height: 16px; flex-shrink: 0; }"
+    },
+    {
+      "name": "Gallery Stage Frame",
+      "kind": "card",
+      "refersTo": "gallery-stage",
+      "description": "Flat Stone Stage container framing app copy, badge pills, and primary actions over #f5f6f8.",
+      "html": "<section class=\"ds-gallery-stage\"><div class=\"ds-stage-copy\"><h2>Luma Reader — EPUB &amp; PDF without ads or tracking</h2><div class=\"ds-stage-badge-row\"><span class=\"ds-stage-badge\">Android</span><span class=\"ds-stage-badge\">Readium 3.4.0</span></div><p class=\"ds-stage-desc\">Open local EPUB and PDF files, customize typography, read two-page spreads on foldables, and sync progress to your private Drive app folder.</p><div class=\"ds-stage-meta\">Free up to 5 active books · $4.99 once for unlimited</div></div></section>",
+      "css": ".ds-gallery-stage { background: var(--bg-stage, #f5f6f8); border: 1px solid var(--border-hairline, #e5e7eb); border-radius: var(--radius-stage, 20px); padding: 28px 34px; color: var(--ink-primary, #111316); font-family: var(--font-body, 'Public Sans', sans-serif); } .ds-stage-copy { display: flex; flex-direction: column; align-items: flex-start; max-width: 44ch; } .ds-stage-copy h2 { font-family: var(--font-display, 'Inter Tight', sans-serif); font-size: 1.75rem; font-weight: 700; letter-spacing: -0.025em; line-height: 1.15; margin: 0 0 10px; } .ds-stage-badge-row { display: inline-flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; } .ds-stage-badge { font-size: 0.78rem; font-weight: 600; padding: 2px 9px; border-radius: var(--radius-pill, 9999px); background: #ffffff; border: 1px solid var(--border-hairline, #e5e7eb); color: var(--ink-secondary, #525866); } .ds-stage-desc { color: var(--ink-secondary, #525866); font-size: 0.95rem; line-height: 1.65; margin: 0 0 14px; } .ds-stage-meta { font-size: 0.86rem; color: var(--ink-secondary, #525866); font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "UI Specimen Card",
+      "kind": "custom",
+      "refersTo": "ui-specimen",
+      "description": "Elevated Pure White software preview frame with Mist Surface bar, mono tag pill, and Device Lift shadow.",
+      "html": "<div class=\"ds-ui-specimen\"><div class=\"ds-specimen-bar\"><span>Orbit Money · Household Ledger</span><span class=\"ds-specimen-tag\">Sample Data Preview</span></div><div class=\"ds-specimen-body\"><div class=\"ds-balance-bar\"><div><small>Checking &amp; Savings</small><div class=\"ds-balance-val\">$14,280.42</div></div><span class=\"ds-stage-chip\">Local SQLite · Cents exact</span></div></div></div>",
+      "css": ".ds-ui-specimen { width: 100%; max-width: 460px; background: var(--bg-page, #ffffff); border: 1px solid var(--border-hairline, #e5e7eb); border-radius: 16px; box-shadow: var(--shadow-device, 0 18px 36px -14px rgba(17, 19, 22, 0.16), 0 4px 12px -2px rgba(17, 19, 22, 0.06)); overflow: hidden; font-family: var(--font-body, 'Public Sans', sans-serif); font-size: 0.86rem; color: var(--ink-primary, #111316); } .ds-specimen-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px 16px; background: var(--bg-subtle, #f8f9fa); border-bottom: 1px solid var(--border-hairline, #e5e7eb); font-size: 0.8rem; color: var(--ink-secondary, #525866); } .ds-specimen-tag { font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.72rem; padding: 2px 8px; border-radius: var(--radius-pill, 9999px); background: var(--bg-page, #ffffff); border: 1px solid var(--border-hairline, #e5e7eb); color: var(--ink-secondary, #525866); white-space: nowrap; } .ds-specimen-body { padding: 18px 20px; } .ds-balance-bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px; padding: 12px 14px; border-radius: 10px; background: var(--orbit-bg, #eef9f5); } .ds-balance-val { font-family: var(--font-display, 'Inter Tight', sans-serif); font-size: 1.35rem; font-weight: 700; color: var(--orbit-ink, #0a6351); font-variant-numeric: tabular-nums; } .ds-stage-chip { font-size: 0.78rem; font-weight: 600; padding: 2px 9px; border-radius: var(--radius-pill, 9999px); background: #ffffff; border: 1px solid var(--border-hairline, #e5e7eb); color: var(--ink-secondary, #525866); }"
+    },
+    {
+      "name": "Badge Pill",
+      "kind": "chip",
+      "refersTo": "badge-pill",
+      "description": "Compact Pure White hairline pill chip for platform tags and monospace specimen status labels.",
+      "html": "<div class=\"ds-chip-group\"><span class=\"ds-badge-pill\">Android · Web PWA · Docker</span><span class=\"ds-mono-pill\">Placeholder UI</span></div>",
+      "css": ".ds-chip-group { display: inline-flex; align-items: center; gap: 8px; } .ds-badge-pill { display: inline-flex; align-items: center; padding: 2px 9px; border-radius: var(--radius-pill, 9999px); background: var(--bg-page, #ffffff); border: 1px solid var(--border-hairline, #e5e7eb); color: var(--ink-secondary, #525866); font-family: var(--font-body, 'Public Sans', sans-serif); font-size: 0.78rem; font-weight: 600; } .ds-mono-pill { display: inline-flex; align-items: center; padding: 2px 8px; border-radius: var(--radius-pill, 9999px); background: var(--bg-page, #ffffff); border: 1px solid var(--border-hairline, #e5e7eb); color: var(--ink-secondary, #525866); font-family: var(--font-mono, 'JetBrains Mono', monospace); font-size: 0.72rem; }"
+    },
+    {
+      "name": "Code & Compose Box",
+      "kind": "custom",
+      "refersTo": "code-box",
+      "description": "Dark Obsidian Ink terminal frame for Docker Compose and self-hosted sync configuration with copy button.",
+      "html": "<div class=\"ds-code-box\"><div class=\"ds-code-bar\"><span>compose.yaml</span><button class=\"ds-copy-btn\" type=\"button\">Copy</button></div><pre>services:\n  orbit-money:\n    image: ghcr.io/waspo98/orbit-money:latest\n    ports:\n      - \"5008:5008\"</pre></div>",
+      "css": ".ds-code-box { background: var(--ink-primary, #111316); color: #f3f4f6; border-radius: var(--radius-card, 14px); overflow: hidden; border: 1px solid #262930; font-family: var(--font-mono, 'JetBrains Mono', monospace); } .ds-code-bar { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; background: #181b20; border-bottom: 1px solid #262930; font-size: 0.8rem; color: #a3aab8; } .ds-copy-btn { appearance: none; padding: 4px 12px; border-radius: var(--radius-pill, 9999px); border: 1px solid #353a45; background: #232730; color: #f3f4f6; font-family: var(--font-body, 'Public Sans', sans-serif); font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: border-color var(--dur-fast, 160ms) ease; } .ds-copy-btn:hover { border-color: #6b7280; } .ds-copy-btn:focus-visible { outline: 2px solid var(--accent, #0d7c66); outline-offset: 2px; } .ds-code-box pre { margin: 0; padding: 18px 20px; overflow-x: auto; font-family: inherit; font-size: 0.86rem; line-height: 1.6; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Daylight Software Gallery",
+    "overview": "Overbay.app presents independent, local-first software with the quiet clarity of a daylight gallery rather than a dark-mode SaaS marketing funnel. A pure white page canvas lets real Android device screenshots, structured UI specimen cards, data custody tables, and Play Store legal documentation lead without decorative gradients, floating telemetry badges, or visual clutter.\n\nStructural discipline comes from high-contrast obsidian ink, muted slate prose, crisp hairline borders, and neutral stone framing stages. Color stays calm and deliberate: deep teal-emerald signals primary flagship actions, active navigation bars, and focus outlines, while experimental Overbay Labs software steps into solid obsidian buttons and distinct framing bands so store-compliant products and sideloaded tools never blur together.",
+    "keyCharacteristics": [
+      "Pure white canvas (`#ffffff`) anchored by flat cool-stone stage frames (`#f5f6f8`) and 1px hairline borders (`#e5e7eb`)",
+      "Single primary teal-emerald accent (`#0d7c66`) balanced against obsidian ink (`#111316`) and slate prose (`#525866`)",
+      "Self-hosted Latin typography pairing `Inter Tight` headings with `Public Sans` body copy and `JetBrains Mono` package telemetry",
+      "Flat macro hierarchy with soft drop shadows reserved strictly for hardware device bezels and staged UI specimen cards",
+      "Progressive, zero-build static architecture that remains readable without JavaScript and respects reduced-motion preferences"
+    ],
+    "rules": [
+      {
+        "name": "The Single-Accent Discipline Rule",
+        "body": "Teal Emerald (`#0d7c66`) is reserved for primary flagship actions, active navigation bars, status dots, and focus outlines; secondary actions step back to Pure White outlines and Overbay Labs actions use Obsidian Ink (`#111316`).",
+        "section": "colors"
+      },
+      {
+        "name": "The Whisper-Tint Isolation Rule",
+        "body": "App-specific specimen tints (`#f1f4fd`, `#eef9f5`, `#f1f7fc`) stay confined inside staged UI specimen cards and never tint full page backgrounds or outer gallery frames.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Numerals Rule",
+        "body": "Specification strips, comparison tables, stage metadata, and financial ledger previews enforce `tabular-nums` so columns, pricing, and currency balances align across screen widths.",
+        "section": "typography"
+      },
+      {
+        "name": "The Narrow-Measure Rule",
+        "body": "Running paragraphs stay capped at `68ch` (`760px` container maximum on legal and compliance pages) with `1.65` line height so privacy disclosures read as calmly as product copy.",
+        "section": "typography"
+      },
+      {
+        "name": "The Alternating Rhythm Rule",
+        "body": "Core application spotlights alternate media placement left-to-right across full-width `1px` hairline dividers (`#e5e7eb`) instead of repeating identical card boxes.",
+        "section": "layout"
+      },
+      {
+        "name": "The Stage-Over-Card Rule",
+        "body": "Macro layout frames remain completely flat (`#f5f6f8` fill + `1px` `#e5e7eb` border); diffuse drop shadows are reserved strictly for device hardware frames and UI specimen previews staged inside them.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do anchor every page on Pure White (`#ffffff`) with Stone Stage (`#f5f6f8`) framing containers and `1px` Hairline Gray (`#e5e7eb`) dividers, reserving `#111316` / `#1a1d21` surfaces strictly for hardware device bezels, active pill tabs, dark Labs buttons, and code snippet blocks.",
+      "Do distinguish Google Play flagship products from Overbay Labs software by pairing flagship pages with Teal Emerald (`#0d7c66`) primary buttons and Labs pages with Obsidian Ink (`#111316`) dark action buttons plus a bordered disclaimer note.",
+      "Do reserve Device Lift shadows strictly for hardware device frames and UI specimen cards staged inside framing containers while leaving macro sections completely flat.",
+      "Do enforce `tabular-nums` across specification strips, comparison tables, stage metadata, and financial ledger previews.",
+      "Do keep all text, links, comparison tables, and FAQ disclosures readable in plain static HTML without JavaScript and preserve `prefers-reduced-motion` overrides."
+    ],
+    "donts": [
+      "Don't apply drop shadows to gallery stage frames, Labs bands, spotlight rows, or legal summary boxes.",
+      "Don't spread Teal Emerald (`#0d7c66`) across section backgrounds, hero washes, or multi-color marketing gradients.",
+      "Don't pull app-specific specimen tints (`#f1f4fd`, `#eef9f5`, `#f1f7fc`) out into page-level surfaces or global navigation chrome.",
+      "Don't load remote font CDNs, third-party analytics trackers, or external icon font packs; keep fonts self-hosted and icons as inline SVG.",
+      "Don't omit `1px` hairline borders (`#e5e7eb` or `#d0d5dd`) when placing light UI specimen cards or outline pills on light surfaces."
+    ]
+  }
+}

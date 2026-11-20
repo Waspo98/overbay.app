@@ -1,0 +1,83 @@
+/* Self-hosted fonts & Precision Indie Gallery design tokens */
+
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url('/assets/fonts/inter-tight-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/assets/fonts/public-sans-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url('/assets/fonts/jetbrains-mono-latin.woff2') format('woff2');
+}
+
+:root {
+  /* Surfaces */
+  --bg-page: #ffffff;
+  --bg-stage: #f5f6f8;
+  --bg-stage-alt: #eef0f3;
+  --bg-subtle: #f8f9fa;
+  --bg-pill-track: #f1f3f5;
+
+  /* Ink */
+  --ink-primary: #111316;
+  --ink-secondary: #525866;
+  --ink-muted: #5f6777;
+  --ink-on-accent: #ffffff;
+
+  /* Borders */
+  --border-hairline: #e5e7eb;
+  --border-strong: #d0d5dd;
+
+  /* Brand & Accents */
+  --accent: #0d7c66;
+  --accent-hover: #0a6351;
+  --accent-soft: #e8f5f1;
+  --accent-ink: #085747;
+
+  /* App Stage Tints (subtle gallery framing only) */
+  --luma-bg: #fcf8f0;
+  --luma-ink: #92400e;
+  --allnotes-bg: #f1f4fd;
+  --allnotes-ink: #3730a3;
+  --orbit-bg: #eef9f5;
+  --orbit-ink: #0a6351;
+  --labs-bg: #f1f7fc;
+  --labs-ink: #0c5d91;
+
+  /* Typography */
+  --font-display: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Scale & Layout */
+  --container-max: 1220px;
+  --prose-max: 760px;
+  --radius-stage: 20px;
+  --radius-card: 14px;
+  --radius-sm: 10px;
+  --radius-pill: 9999px;
+
+  /* Elevation (offset + soft blur) */
+  --shadow-stage: 0 1px 2px rgba(17, 19, 22, 0.04);
+  --shadow-device: 0 18px 36px -14px rgba(17, 19, 22, 0.16), 0 4px 12px -2px rgba(17, 19, 22, 0.06);
+  --shadow-card: 0 6px 20px -8px rgba(17, 19, 22, 0.08);
+
+  /* Motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 160ms;
+  --dur-medium: 280ms;
+}

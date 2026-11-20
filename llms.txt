@@ -1,0 +1,23 @@
+# Overbay.app
+
+> Overbay builds small, local-first indie applications across Android, Windows, Web PWA, and self-hosted Docker without mandatory accounts, behavioral tracking, ad SDKs, or recurring software rent.
+
+- Website: https://overbay.app/
+- Full LLM specification reference: https://overbay.app/llms-full.txt
+- Contact: privacy@overbay.app
+
+## Applications
+
+- [Luma Reader](https://overbay.app/lumareader/): Android EPUB and PDF reader (`app.overbay.lumareader`) built on Readium 3.4.0 with Android text-to-speech, foldable two-page spreads, and private `drive.appdata` Google Drive sync. Free up to 5 active books; $4.99 one-time lifetime unlock.
+- [AllNotes](https://overbay.app/allnotes/): Notebook, Section Group, Section, and bounded-page note workspace (`app.overbay.allnotes`) using SQLDelight offline storage with optional self-hosted Ktor sync. Android APK available; Windows x64/ARM64 installers coming soon.
+- [Orbit Money](https://overbay.app/orbitmoney/): Open-source personal and household finance ledger (`app.overbay.orbit`) for Android, Web PWA, and Docker (`ghcr.io/waspo98/orbit-money`) using exact integer-cent arithmetic, biometric app lock, optional Google Drive snapshots, Rocket Money CSV import, and optional encrypted SimpleFIN sync.
+- [Twitter — Overbay Labs](https://overbay.app/labs/twitter/): Open-source MIT sideload-only Android WebView wrapper (`app.overbay.twitter`) that strips GraphQL timeline ads, removes Grok/Premium UI, unwraps `t.co` links, and saves `.mp4` and `:orig` media. Not affiliated with X Corp.
+
+## Privacy & Play Store Compliance
+
+- [Privacy Hub](https://overbay.app/privacy/): Site privacy policy and per-app index.
+- [Luma Reader Privacy Policy](https://overbay.app/privacy/lumareader/): Play Store disclosures including `drive.appdata` Limited Use compliance and Play Billing.
+- [AllNotes Privacy Policy](https://overbay.app/privacy/allnotes/): Play Store disclosures for SQLDelight storage and optional self-hosted sync.
+- [Orbit Money Privacy Policy](https://overbay.app/privacy/orbitmoney/): Play Store disclosures for local/Docker modes, Drive snapshots, BiometricPrompt, and SimpleFIN.
+- [Data & Account Deletion](https://overbay.app/data-deletion/): Step-by-step instructions for local wipe, Google OAuth revocation, and self-hosted cleanup.
+- [Terms of Service](https://overbay.app/terms/): Licensing, Play Billing, personal bookkeeping disclaimer, and open-source terms.

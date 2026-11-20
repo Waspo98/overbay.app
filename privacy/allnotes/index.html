@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AllNotes Privacy Policy — Overbay.app</title>
+  <meta name="description" content="Official Google Play Privacy Policy for AllNotes (app.overbay.allnotes) published by Overbay.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://overbay.app/privacy/allnotes/">
+  <link rel="icon" type="image/svg+xml" href="/assets/brand/favicon.svg">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/pages.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="brand-link" href="/">
+        <img class="brand-mark" src="/assets/brand/overbay-mark.svg" alt="" width="24" height="24">
+        <span>Overbay.app</span>
+      </a>
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="/lumareader/">Luma Reader</a>
+        <a href="/allnotes/">AllNotes</a>
+        <a href="/orbitmoney/">Orbit Money</a>
+        <a href="/labs/twitter/">Labs</a>
+        <a href="/privacy/" aria-current="page">Privacy</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="nav-pill-btn" href="https://github.com/Waspo98" rel="noopener">
+          <svg class="icon icon--sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/></svg>
+          <span>GitHub</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="mobile-drawer" aria-label="Mobile navigation">
+      <ul>
+        <li><a href="/lumareader/">Luma Reader</a></li>
+        <li><a href="/allnotes/">AllNotes</a></li>
+        <li><a href="/orbitmoney/">Orbit Money</a></li>
+        <li><a href="/labs/twitter/">Overbay Labs (Twitter)</a></li>
+        <li><a href="/privacy/" aria-current="page">Privacy Policy</a></li>
+        <li><a href="/data-deletion/">Data Deletion</a></li>
+        <li><a href="/terms/">Terms of Service</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="legal-main">
+    <div class="container container--narrow">
+      <nav class="legal-nav-pills" aria-label="Privacy and legal documents">
+        <a href="/privacy/">Privacy Hub</a>
+        <a href="/privacy/lumareader/">Luma Reader</a>
+        <a href="/privacy/allnotes/" aria-current="page">AllNotes</a>
+        <a href="/privacy/orbitmoney/">Orbit Money</a>
+        <a href="/data-deletion/">Data Deletion</a>
+        <a href="/terms/">Terms</a>
+      </nav>
+
+      <header class="legal-header">
+        <h1>AllNotes Privacy Policy</h1>
+        <div class="legal-meta">
+          <span>Package: <code>app.overbay.allnotes</code></span>
+          <span>Developer: Overbay</span>
+          <span>Effective Date: November 20, 2026</span>
+          <span>Contact: <a href="mailto:privacy@overbay.app">privacy@overbay.app</a></span>
+        </div>
+      </header>
+
+      <div class="legal-summary-box">
+        <strong>Summary:</strong> AllNotes stores all notebooks, sections, and pages in a local SQLDelight SQLite database on your device. Overbay operates no central note cloud, runs zero analytics or ads, and transmits notes only if you point the app at a self-hosted Ktor sync server of your own.
+      </div>
+
+      <h2>1. Data Stored Locally on Your Device</h2>
+      <p>AllNotes stores your workspaces, notebooks, section groups, sections, pages, checklists, callout blocks, tables, code blocks, and server configuration settings (stored in local <code>workspace_server.json</code> and SQLite files) solely inside private application storage on your device.</p>
+
+      <h2>2. Optional Self-Hosted Sync Server</h2>
+      <p>By default, AllNotes operates completely offline without making network requests. If you manually configure a sync endpoint URL (with an optional bearer token or OIDC reverse-proxy login header), the app sends your note delta payloads directly to the server URL you entered. Overbay does not operate public AllNotes hosting or view data stored on user-operated servers.</p>
+
+      <h2>3. Declared Android Permissions</h2>
+      <p>AllNotes declares only one sensitive system capability in its Android manifest:</p>
+      <ul>
+        <li><code>INTERNET</code>: Used strictly when you explicitly link a self-hosted AllNotes sync server URL in Workspace Settings.</li>
+      </ul>
+      <p>AllNotes does not request camera, microphone, location, contacts, storage, or advertising identifier permissions.</p>
+
+      <h2>4. Analytics, Advertising &amp; Data Sharing</h2>
+      <p>AllNotes contains zero analytics SDKs, zero ad networks, and zero crash-telemetry trackers. Overbay does not collect, sell, rent, or transfer your note contents or personal information to third parties.</p>
+
+      <h2>5. Data Retention &amp; Deletion</h2>
+      <p>Your notebooks remain on your device until you delete pages in the app, clear app storage, or uninstall AllNotes. If you configured a self-hosted server, removing synced notes is controlled on that server. Full instructions are listed on our <a href="/data-deletion/">Data Deletion page</a>.</p>
+
+      <h2>6. Children's Privacy</h2>
+      <p>AllNotes is not directed to children under 13 years of age (or the applicable age of digital consent in your jurisdiction), and we do not knowingly collect personal information from children.</p>
+
+      <h2>7. Policy Updates &amp; Contact</h2>
+      <p>Any material changes to permissions or sync behavior will update this policy at <code>https://overbay.app/privacy/allnotes/</code> prior to shipping. Questions may be sent to <a href="mailto:privacy@overbay.app">privacy@overbay.app</a>.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand-link" href="/">
+            <img class="brand-mark" src="/assets/brand/overbay-mark.svg" alt="" width="22" height="22">
+            <span>Overbay.app</span>
+          </a>
+          <p>Independent software built by Overbay. Local-first tools with clear privacy boundaries and plain pricing.</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Apps</p>
+          <ul>
+            <li><a href="/lumareader/">Luma Reader</a></li>
+            <li><a href="/allnotes/">AllNotes</a></li>
+            <li><a href="/orbitmoney/">Orbit Money</a></li>
+            <li><a href="/labs/twitter/">Overbay Labs: Twitter</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Privacy &amp; Play Console</p>
+          <ul>
+            <li><a href="/privacy/">Privacy Hub</a></li>
+            <li><a href="/privacy/lumareader/">Luma Reader Privacy</a></li>
+            <li><a href="/privacy/allnotes/">AllNotes Privacy</a></li>
+            <li><a href="/privacy/orbitmoney/">Orbit Money Privacy</a></li>
+            <li><a href="/data-deletion/">Data Deletion</a></li>
+            <li><a href="/terms/">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Discovery &amp; Source</p>
+          <ul>
+            <li><a href="https://github.com/Waspo98" rel="noopener">GitHub (@Waspo98)</a></li>
+            <li><a href="/llms.txt">llms.txt</a></li>
+            <li><a href="/llms-full.txt">llms-full.txt</a></li>
+            <li><a href="/sitemap.xml">sitemap.xml</a></li>
+            <li><a href="mailto:privacy@overbay.app">privacy@overbay.app</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Overbay. All rights reserved.</span>
+        <span>Built as static HTML without third-party analytics or cookies.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

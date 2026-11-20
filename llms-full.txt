@@ -1,0 +1,79 @@
+# Overbay.app — Full Factual Reference
+
+Website: https://overbay.app/
+Publisher / Developer: Overbay (Waspo98)
+Privacy Contact: privacy@overbay.app
+Legal Contact: legal@overbay.app
+GitHub Organization / User: https://github.com/Waspo98
+
+Overbay publishes small, local-first software with no third-party ad SDKs, no behavioral analytics trackers, and no mandatory Overbay-operated accounts.
+
+---
+
+## 1. Luma Reader (`app.overbay.lumareader`)
+- URL: https://overbay.app/lumareader/
+- Privacy Policy URL: https://overbay.app/privacy/lumareader/
+- Platform: Android (phones, tablets, foldables)
+- Direct APK Download: https://github.com/Waspo98/overbay.app/releases/download/downloads/LumaReader-debug.apk
+- Google Play Status: Listing in preparation (not yet live on Google Play)
+- Source Status: Private repository (releases mirrored publicly on overbay.app)
+- Core Engine: Official Readium 3.4.0 Kotlin toolkit supporting DRM-free EPUB and PDF files
+- Audio / Read-Aloud: Built-in Android system text-to-speech engine (`AndroidTtsEngine`) with background foreground media notification playback
+- Cloud Sync: Optional Google Sign-In using strictly the `https://www.googleapis.com/auth/drive.appdata` scope (hidden app-data folder only; never accesses general Google Drive files)
+- Declared Android Permissions: `INTERNET`, `ACCESS_NETWORK_STATE`, `POST_NOTIFICATIONS`, `WAKE_LOCK`, `FOREGROUND_SERVICE`, `FOREGROUND_SERVICE_DATA_SYNC`, `FOREGROUND_SERVICE_MEDIA_PLAYBACK`
+- Pricing: Free tier supports up to 5 active books with full typography controls, themes, TTS, and Drive sync included. Single one-time Play Billing purchase (`luma_unlimited_lifetime`, $4.99 USD equivalent) removes the 5-book shelf limit with no subscription.
+
+---
+
+## 2. AllNotes (`app.overbay.allnotes`)
+- URL: https://overbay.app/allnotes/
+- Privacy Policy URL: https://overbay.app/privacy/allnotes/
+- Platforms: Android (available now); Windows x64/ARM64 MSI/EXE and public Linux/server packaging planned (coming soon)
+- Direct Android APK Download: https://github.com/Waspo98/overbay.app/releases/download/downloads/AllNotes-debug.apk
+- Source Status: Private repository (Android APK mirrored publicly on overbay.app)
+- Structure & UX: OneNote-style Notebook -> Section Group -> Section -> Page hierarchy paired with Word-style bounded page width (no infinite 2D canvas, no stylus inking)
+- Supported Content Blocks: Headings, interactive checklists, callouts, tables, and monospace code blocks
+- Local Storage: SQLDelight offline SQLite database
+- Optional Sync: Connects to a user-operated self-hosted Ktor sync backend (`PORT=8094`) authenticating via bearer token (`ALLNOTES_AUTH_TOKEN`) or forward-auth OIDC headers (`TRUST_AUTHENTIK_HEADERS`)
+- Declared Android Permissions: `INTERNET` only
+- Pricing: Free
+
+---
+
+## 3. Orbit Money (`app.overbay.orbit`)
+- URL: https://overbay.app/orbitmoney/
+- Privacy Policy URL: https://overbay.app/privacy/orbitmoney/
+- Platforms: Android (`orbitmoney://`), installable WebAssembly PWA, self-hosted Docker (`ghcr.io/waspo98/orbit-money`, port `5008`)
+- Source Repository: https://github.com/Waspo98/Orbit-Money
+- Direct Android APK Download: https://github.com/Waspo98/Orbit-Money/releases/download/debug-latest/OrbitMoney-debug.apk
+- Accounting Model: Stores all money values in exact integer cents and preserves immutable `original_*` transaction provenance columns alongside user `edited_*` categories/merchants
+- Two Operating Modes:
+  1. Standalone On-Device Mode: 100% local storage with optional Android `BiometricPrompt` lock and optional Google Drive snapshot sync (`drive.appdata` & `drive.file`)
+  2. Self-Hosted Household Mode: Docker + SQLite (`AUTH_PROVIDER=local|oidc|both`), Rocket Money CSV import, optional AES-256-GCM encrypted SimpleFIN Bridge sync, optional Logo.dev icon fetching, optional VAPID Web Push
+- Declared Android Permissions: `INTERNET`, `ACCESS_NETWORK_STATE`, `USE_BIOMETRIC`, `VIBRATE`
+- Disclaimer: Personal bookkeeping software only — not a bank, lender, payment processor, or licensed financial advisor.
+
+---
+
+## 4. Twitter — Overbay Labs (`app.overbay.twitter`)
+- URL: https://overbay.app/labs/twitter/
+- Source Repository (MIT License): https://github.com/Waspo98/overbay-twitter
+- Direct Sideload APK Download: https://github.com/Waspo98/overbay-twitter/releases/download/debug-latest/Twitter-debug.apk
+- Google Play Distribution: Never on Google Play (sideload-only MIT project)
+- Disclaimer: Independent open-source project under Overbay Labs; not affiliated with, endorsed by, or sponsored by X Corp.
+- Architecture & Features:
+  - Kotlin + Android WebView + `WebViewAssetLoader` + OkHttp interception + AndroidX DataStore settings
+  - Prunes `promotedMetadata` ads and suggestion carousels out of GraphQL JSON responses before WebView rendering
+  - Optional classic `#1DA1F2` accent styling and restored "Tweet" / "Retweet" labels
+  - Toggleable Grok / Premium UI removal, configurable Home tabs, local regex mute filters, and automatic `t.co` redirect unwrapping
+  - Direct `.mp4` video and `name=orig` full-resolution image saving via Android MediaStore
+  - Operates no Overbay servers; network traffic connects directly from the device WebView to x.com
+
+---
+
+## 5. Data & Account Deletion
+- URL: https://overbay.app/data-deletion/
+- Android Local Wipe: Settings -> Apps -> Clear storage or Uninstall
+- Google Drive Disconnect: Sign out in app + revoke at https://myaccount.google.com/permissions + Manage Apps -> Delete hidden app data in Google Drive
+- Self-Hosted Wipe: Remove Docker container and mounted SQLite `/data` volume
+- Email Support Removal: Email `privacy@overbay.app` (processed within 14 days)
