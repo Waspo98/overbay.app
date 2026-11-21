@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AllNotes — Notebooks &amp; Bounded Structured Notes | Overbay.app</title>
-  <meta name="description" content="AllNotes combines OneNote-style Notebook, Section, and Page hierarchy with bounded documents, SQLDelight offline storage, and optional self-hosted sync on the roadmap.">
+  <title>AllNotes — Notebook Organization Without the Endless Canvas | Overbay.app</title>
+  <meta name="description" content="OneNote's notebooks, section groups, and tabs paired with clean, readable pages instead of a messy 2D canvas. Works offline on Android, with Windows and self-hosted sync coming.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://overbay.app/allnotes/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Overbay.app">
-  <meta property="og:title" content="AllNotes — Notebooks &amp; Bounded Structured Notes">
-  <meta property="og:description" content="Local-first notes organized in Notebooks, Sections, and Section Groups with bounded document pages.">
+  <meta property="og:title" content="AllNotes — Notebook Organization Without the Endless Canvas">
+  <meta property="og:description" content="Offline-first notes organized in Notebooks, Sections, and Section Groups with clean, readable pages.">
   <meta property="og:url" content="https://overbay.app/allnotes/">
   <meta property="og:image" content="https://overbay.app/assets/brand/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Overbay.app — AllNotes for Android">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AllNotes — Notebooks &amp; Bounded Structured Notes">
-  <meta name="twitter:description" content="Local-first notes organized in Notebooks, Sections, and Section Groups with bounded document pages.">
+  <meta name="twitter:title" content="AllNotes — Notebook Organization Without the Endless Canvas">
+  <meta name="twitter:description" content="Offline-first notes organized in Notebooks, Sections, and Section Groups with clean, readable pages.">
   <meta name="twitter:image" content="https://overbay.app/assets/brand/og-image.png">
   <meta name="twitter:image:alt" content="Overbay.app — AllNotes for Android">
   <link rel="icon" type="image/svg+xml" href="/assets/brand/favicon.svg">
@@ -56,26 +56,26 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "Does AllNotes upload my notes to Overbay servers?",
+            "name": "Does AllNotes upload my notes anywhere?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. Overbay does not host note accounts or run analytics in AllNotes. Notes stay in local SQLite on your device unless you configure the URL and credentials for a sync server you host yourself."
+              "text": "No. Overbay doesn't host note accounts or run any tracking. Everything stays on your device unless you point the app at a sync server you host yourself."
             }
           },
           {
             "@type": "Question",
-            "name": "Are stylus inking or infinite whiteboards supported?",
+            "name": "Can I draw with a stylus or use an infinite whiteboard?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. AllNotes focuses on structured typography and bounded document pages so notes wrap properly on both phones and desktop monitors without awkward zooming."
+              "text": "No. AllNotes is built for typed notes and normal pages that wrap cleanly on both phones and desktop monitors without awkward zooming."
             }
           },
           {
             "@type": "Question",
-            "name": "When are the Windows installer and standalone sync server coming?",
+            "name": "When are the Windows app and sync server coming?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The Android preview APK is available to download now. Public Windows x64/ARM64 installers and the standalone Ktor sync server package will be linked here once packaging is ready."
+              "text": "The Android preview APK is ready to download now. Windows installers and the self-hosted sync server package will be linked here as soon as packaging is ready."
             }
           }
         ]
@@ -128,45 +128,45 @@
       <div class="container page-hero-grid">
         <div class="page-hero-copy">
           <h1>AllNotes</h1>
-          <p class="page-hero-lead">Notebooks, Section Groups, and Sections paired with bounded document pages instead of an infinite whiteboard canvas.</p>
+          <p class="page-hero-lead">OneNote's notebooks, section groups, and tabs—with clean, readable pages instead of an endless canvas that scrolls sideways on your phone.</p>
 
           <dl class="spec-strip">
             <div><dt>Package</dt><dd><code>app.overbay.allnotes</code></dd></div>
-            <div><dt>Storage</dt><dd>Offline SQLDelight SQLite</dd></div>
-            <div><dt>Desktop &amp; Play</dt><dd>Windows x64/ARM64 &amp; Play planned</dd></div>
-            <div><dt>Sync</dt><dd>Self-hosted Ktor (planned)</dd></div>
+            <div><dt>Storage</dt><dd>Offline on-device</dd></div>
+            <div><dt>Desktop &amp; Play</dt><dd>Windows &amp; Play Store coming</dd></div>
+            <div><dt>Sync</dt><dd>Self-hosted (coming soon)</dd></div>
           </dl>
 
           <div class="btn-row">
-            <a class="btn btn--primary" href="https://github.com/Waspo98/overbay.app/releases/download/downloads/AllNotes-debug.apk">Download preview APK</a>
+            <a class="btn btn--primary" href="https://github.com/Waspo98/overbay.app/releases/download/downloads/AllNotes-debug.apk">Download APK</a>
             <a class="btn btn--outline" href="/privacy/allnotes/">Privacy Policy</a>
           </div>
-          <p class="apk-note">Preview APKs use a debug signature while Play Store release builds are finalized. Moving to a future release or Play Store install requires a fresh install.</p>
+          <p class="apk-note">This preview APK uses a test signature while the Play Store release is finalized. Switching to a future release will require a fresh install.</p>
         </div>
 
         <div class="page-hero-stage" data-screenshot-slot="allnotes-hero">
           <div class="ui-specimen">
             <div class="ui-specimen__bar">
-              <span>AllNotes · Bounded Document Page</span>
-              <span class="ui-specimen__tag">UI preview</span>
+              <span>AllNotes · House Projects</span>
+              <span class="ui-specimen__tag">Preview</span>
             </div>
             <div class="ui-specimen__body">
               <div class="notes-mock-layout">
                 <aside class="notes-mock-rail" aria-label="Sample notebook structure">
-                  <div class="notes-mock-item">House</div>
-                  <div class="notes-mock-item is-active"><span class="notes-mock-dot notes-mock-dot--accent"></span>NAS Upgrade</div>
+                  <div class="notes-mock-item">Home</div>
+                  <div class="notes-mock-item is-active"><span class="notes-mock-dot notes-mock-dot--accent"></span>Yard &amp; Garage</div>
                   <div class="notes-mock-item">Taxes 2026</div>
                   <div class="notes-mock-item">Recipes</div>
                 </aside>
                 <div class="notes-mock-page">
-                  <p class="specimen-title">NAS Drive Replacement</p>
+                  <p class="specimen-title">Garage Shelf Cleanup</p>
                   <div class="notes-callout">
-                    <strong>Order:</strong> Replace bay 2 first and wait for array rebuild before pulling bay 4.
+                    <strong>Note:</strong> Measure wall studs before ordering brackets.
                   </div>
                   <ul class="notes-checklist">
-                    <li><span class="check-box is-checked"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2.5 6.5 5 9 9.5 3.5"/></svg></span><span>Check cold-spare serial numbers</span></li>
-                    <li><span class="check-box is-checked"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2.5 6.5 5 9 9.5 3.5"/></svg></span><span>Save smartctl baseline output</span></li>
-                    <li><span class="check-box"></span><span>Log swap date in drive inventory</span></li>
+                    <li><span class="check-box is-checked"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2.5 6.5 5 9 9.5 3.5"/></svg></span><span>Clear workbench top</span></li>
+                    <li><span class="check-box is-checked"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2.5 6.5 5 9 9.5 3.5"/></svg></span><span>Sort screws and anchors</span></li>
+                    <li><span class="check-box"></span><span>Donate old paint cans</span></li>
                   </ul>
                 </div>
               </div>
@@ -179,27 +179,27 @@
     <section class="section" aria-labelledby="allnotes-design">
       <div class="container two-col-split">
         <div>
-          <h2 id="allnotes-design">Why bounded pages instead of an infinite canvas</h2>
-          <p>OneNote nailed hierarchy: Notebooks on the left, Sections across the top, Section Groups when projects grow, and Pages underneath. The part that breaks on phones and wide monitors alike is the freeform 2D text-box canvas where paragraphs clip off the side or overlap.</p>
-          <p>AllNotes keeps that notebook hierarchy and drops the 2D canvas. Every page renders in a fixed-width document column that fits comfortably on a phone screen and a desktop monitor without sideways scrolling.</p>
+          <h2 id="allnotes-design">Why normal pages instead of an endless canvas</h2>
+          <p>OneNote got the hierarchy right: Notebooks on the left, Sections across the top, Section Groups when things grow, and Pages underneath. The part that breaks on phones and wide monitors is the freeform 2D text-box canvas where notes overlap or clip off the edge.</p>
+          <p>AllNotes keeps that notebook layout and drops the 2D canvas. Every page wraps cleanly to your screen width—comfortable on a phone and crisp on a monitor, with zero sideways scrolling.</p>
         </div>
 
         <ul class="detail-list">
           <li>
             <h3>Notebooks, Sections &amp; Section Groups</h3>
-            <p>Organize larger projects with nested Section Groups while keeping top-level tabs fast to switch between.</p>
+            <p>Organize bigger projects with nested section groups while keeping top-level tabs fast to switch between.</p>
           </li>
           <li>
-            <h3>Structured Content Blocks</h3>
-            <p>Write using headings, callout boxes, interactive checklists, tables, and monospace code blocks—all stored locally for offline reading and editing.</p>
+            <h3>Clean formatting blocks</h3>
+            <p>Write with headings, callout boxes, interactive checklists, tables, and code blocks—all saved locally so they open instantly offline.</p>
           </li>
           <li>
-            <h3>One Android Permission</h3>
-            <p>The Android package declares only the standard <code>INTERNET</code> permission, used when you point the app at a sync server URL. No access to contacts, location, camera, or microphone.</p>
+            <h3>Just one permission</h3>
+            <p>Only asks for basic internet access (used if you connect a self-hosted sync server). Never asks for contacts, location, camera, or mic.</p>
           </li>
           <li>
-            <h3>Local-First SQLDelight Storage</h3>
-            <p>Your workspace lives inside a local SQLite database managed by SQLDelight on your device. No account login is required to create, search, or edit notes.</p>
+            <h3>Offline first, no sign-in wall</h3>
+            <p>Your notes live in a local database right on your device. Open the app and start typing—no account needed.</p>
           </li>
         </ul>
       </div>
@@ -208,18 +208,18 @@
     <section class="section" aria-labelledby="allnotes-sync">
       <div class="container two-col-split">
         <div>
-          <h2 id="allnotes-sync">Optional self-hosted Ktor sync</h2>
-          <p>By default, AllNotes stays completely offline. When you want notes synced across devices, it is built to talk to your own self-hosted Ktor server rather than an Overbay cloud account.</p>
-          <p>Public Windows (<code>x64</code> / <code>ARM64</code>) desktop packages and standalone server setup images will be published here once packaging wraps up.</p>
+          <h2 id="allnotes-sync">Optional self-hosted sync</h2>
+          <p>Out of the box, AllNotes stays completely offline. When cross-device sync ships, it will connect to a lightweight server you run yourself instead of an Overbay cloud account.</p>
+          <p>Windows (<code>x64</code> / <code>ARM64</code>) installers and the standalone server package will be linked here once packaging wraps up.</p>
         </div>
 
         <div class="spec-note-card">
           <h3>Planned sync server options</h3>
           <ul class="spec-note-list">
-            <li><strong>Default port:</strong> <code>PORT=8094</code> behind your reverse proxy with TLS.</li>
-            <li><strong>Bearer auth:</strong> <code>ALLNOTES_AUTH_TOKEN</code> for direct token auth from clients.</li>
-            <li><strong>Forward auth:</strong> <code>TRUST_AUTHENTIK_HEADERS=true</code> when sitting behind an Authentik OIDC proxy.</li>
-            <li><strong>Release status:</strong> Android offline mode works today; desktop installers and public server packaging are in progress.</li>
+            <li><strong>Status:</strong> Android offline mode works today; desktop installers and server packaging are in progress.</li>
+            <li><strong>Default port:</strong> Runs on <code>PORT=8094</code> behind your reverse proxy with HTTPS.</li>
+            <li><strong>Token auth:</strong> Direct access token (<code>ALLNOTES_AUTH_TOKEN</code>) from your clients.</li>
+            <li><strong>Proxy login:</strong> Supports Authentik / OIDC forward-auth headers (<code>TRUST_AUTHENTIK_HEADERS=true</code>).</li>
           </ul>
         </div>
       </div>
@@ -232,16 +232,16 @@
         </div>
         <div class="faq-list">
           <details class="faq-item">
-            <summary>Does AllNotes upload my notes to Overbay servers?</summary>
-            <p>No. Overbay does not host note accounts or run analytics in AllNotes. Notes stay in local SQLite on your device unless you configure the URL and credentials for a sync server you host yourself.</p>
+            <summary>Does AllNotes upload my notes anywhere?</summary>
+            <p>No. Overbay doesn't host note accounts or run any tracking. Everything stays on your device unless you point the app at a sync server you host yourself.</p>
           </details>
           <details class="faq-item">
-            <summary>Are stylus inking or infinite whiteboards supported?</summary>
-            <p>No. AllNotes focuses on structured typography and bounded document pages so notes wrap properly on both phones and desktop monitors without awkward zooming.</p>
+            <summary>Can I draw with a stylus or use an infinite whiteboard?</summary>
+            <p>No. AllNotes is built for typed notes and normal pages that wrap cleanly on both phones and desktop monitors without awkward zooming.</p>
           </details>
           <details class="faq-item">
-            <summary>When are the Windows installer and standalone sync server coming?</summary>
-            <p>The Android preview APK is available to download now. Public Windows <code>x64</code>/<code>ARM64</code> installers and the standalone Ktor sync server package will be linked here once packaging is ready.</p>
+            <summary>When are the Windows app and sync server coming?</summary>
+            <p>The Android preview APK is ready to download now. Windows installers and the self-hosted sync server package will be linked here as soon as packaging is ready.</p>
           </details>
         </div>
       </div>
@@ -256,7 +256,7 @@
             <img class="brand-mark" src="/assets/brand/overbay-mark.svg" alt="" width="30" height="30">
             <span>Overbay.app</span>
           </a>
-          <p>Independent software by Overbay. Local-first tools with no subscriptions or tracking.</p>
+          <p>Small apps by Overbay that stay on your own devices without ads or subscriptions.</p>
         </div>
         <div class="footer-col">
           <p class="footer-heading">Apps</p>

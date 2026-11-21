@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Overbay.app">
   <meta property="og:title" content="AllNotes Privacy Policy — Overbay.app">
-  <meta property="og:description" content="Privacy Policy for AllNotes (app.overbay.allnotes), covering offline SQLDelight storage and optional self-hosted sync.">
+  <meta property="og:description" content="Privacy Policy for AllNotes (app.overbay.allnotes), covering offline storage and optional self-hosted sync.">
   <meta property="og:url" content="https://overbay.app/privacy/allnotes/">
   <meta property="og:image" content="https://overbay.app/assets/brand/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
   <meta property="og:image:alt" content="Overbay.app — AllNotes Privacy Policy">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="AllNotes Privacy Policy — Overbay.app">
-  <meta name="twitter:description" content="Privacy Policy for AllNotes (app.overbay.allnotes), covering offline SQLDelight storage and optional self-hosted sync.">
+  <meta name="twitter:description" content="Privacy Policy for AllNotes (app.overbay.allnotes), covering offline storage and optional self-hosted sync.">
   <meta name="twitter:image" content="https://overbay.app/assets/brand/og-image.png">
   <meta name="twitter:image:alt" content="Overbay.app — AllNotes Privacy Policy">
   <link rel="icon" type="image/svg+xml" href="/assets/brand/favicon.svg">
@@ -90,33 +90,33 @@
       </header>
 
       <div class="legal-summary-box">
-        <strong>Summary:</strong> AllNotes stores notebooks, sections, and pages in a local SQLDelight SQLite database on your device. Overbay operates no central note cloud, includes no analytics or ads, and transmits notes only if you point the app at a self-hosted sync server of your own.
+        <strong>Summary:</strong> AllNotes saves your notebooks, sections, and pages in a local database on your own device. Overbay runs no central note cloud, includes no ads or tracking, and only sends notes over the network if you connect a sync server you host yourself.
       </div>
 
       <h2>1. Data Stored Locally on Your Device</h2>
-      <p>AllNotes stores your workspaces, notebooks, section groups, sections, pages, checklists, callout blocks, tables, code blocks, and server settings (stored in local <code>workspace_server.json</code> and SQLite files) inside private application storage on your device.</p>
+      <p>AllNotes keeps your workspaces, notebooks, section groups, sections, pages, checklists, callouts, tables, code blocks, and sync settings locally inside the app's private storage on your device.</p>
 
       <h2>2. Optional Self-Hosted Sync Server</h2>
-      <p>By default, AllNotes operates completely offline without making network requests. If you manually enter a sync endpoint URL (with an optional bearer token or OIDC reverse-proxy login header), the app sends note sync payloads directly to that server. Overbay does not operate public AllNotes hosting or view data stored on user-operated servers.</p>
+      <p>By default, AllNotes stays completely offline and makes zero network requests. If you manually enter your own sync server address (with an optional access token or proxy login), the app syncs your notes directly with that server. Overbay doesn't host public AllNotes servers or see data on servers you run.</p>
 
       <h2>3. Declared Android Permissions</h2>
       <p>AllNotes declares only one permission in its Android manifest:</p>
       <ul>
-        <li><code>INTERNET</code>: Used only when you link a self-hosted AllNotes sync server URL in Workspace Settings.</li>
+        <li><code>INTERNET</code>: Used only when you connect a self-hosted AllNotes sync server URL in Settings.</li>
       </ul>
-      <p>AllNotes does not request camera, microphone, location, contacts, external storage, or advertising identifier permissions.</p>
+      <p>AllNotes never asks for camera, microphone, location, contacts, external storage, or advertising ID permissions.</p>
 
-      <h2>4. Analytics, Advertising &amp; Data Sharing</h2>
-      <p>AllNotes includes no analytics SDKs, ad networks, or crash-telemetry trackers. Overbay does not collect, sell, rent, or transfer your note contents or personal information to third parties.</p>
+      <h2>4. Analytics, Ads &amp; Data Sharing</h2>
+      <p>AllNotes includes no analytics, ad networks, or crash trackers. Overbay never collects, sells, rents, or shares your notes or personal info.</p>
 
       <h2>5. Data Retention &amp; Deletion</h2>
-      <p>Your notebooks remain on your device until you delete pages in the app, clear app storage, or uninstall AllNotes. If you configured a self-hosted server, removing synced notes is controlled on that server. Full steps are listed on the <a href="/data-deletion/">Data Deletion page</a>.</p>
+      <p>Your notebooks stay on your device until you delete pages in the app, clear app storage, or uninstall AllNotes. If you connected a self-hosted server, removing synced notes is handled on that server. Full steps live on the <a href="/data-deletion/">Data Deletion page</a>.</p>
 
       <h2>6. Children's Privacy</h2>
-      <p>AllNotes is not directed to children under 13 years of age (or the applicable age of digital consent in your jurisdiction), and Overbay does not knowingly collect personal information from children.</p>
+      <p>AllNotes isn't directed at children under 13 (or the minimum age in your jurisdiction), and Overbay doesn't knowingly collect personal info from children.</p>
 
       <h2>7. Policy Updates &amp; Contact</h2>
-      <p>Any material changes to permissions or sync behavior will update this policy at <code>https://overbay.app/privacy/allnotes/</code> prior to shipping. Questions may be sent to <a href="mailto:privacy@overbay.app">privacy@overbay.app</a>.</p>
+      <p>If permissions or sync behavior change in a future update, this policy at <code>https://overbay.app/privacy/allnotes/</code> will be updated before shipping. Questions? Email <a href="mailto:privacy@overbay.app">privacy@overbay.app</a>.</p>
     </div>
   </main>
 
@@ -128,7 +128,7 @@
             <img class="brand-mark" src="/assets/brand/overbay-mark.svg" alt="" width="30" height="30">
             <span>Overbay.app</span>
           </a>
-          <p>Independent software by Overbay. Local-first tools with no subscriptions or tracking.</p>
+          <p>Small apps by Overbay that stay on your own devices without ads or subscriptions.</p>
         </div>
         <div class="footer-col">
           <p class="footer-heading">Apps</p>

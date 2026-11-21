@@ -89,34 +89,34 @@
       </header>
 
       <div class="legal-summary-box">
-        <strong>Overview:</strong> Overbay does not host central user accounts or cloud databases for Luma Reader, AllNotes, Orbit Money, or Overbay Labs. You control your local device files, your Google Drive app data, and any server you self-host.
+        <strong>Overview:</strong> Overbay doesn't host user accounts or cloud databases for Luma Reader, AllNotes, Orbit Money, or Overbay Labs. You control your phone's storage, your Google Drive app data, and any server you host yourself.
       </div>
 
       <h2>1. Delete Local Android App Data (All Apps)</h2>
-      <p>To remove local books, notes, budgets, cached thumbnails, and preferences stored on your Android device by <strong>Luma Reader</strong>, <strong>AllNotes</strong>, <strong>Orbit Money</strong>, or <strong>Twitter (Overbay Labs)</strong>:</p>
+      <p>To wipe local books, notes, budgets, cached covers, and settings stored on your phone by <strong>Luma Reader</strong>, <strong>AllNotes</strong>, <strong>Orbit Money</strong>, or <strong>Twitter (Overbay Labs)</strong>:</p>
       <ol>
-        <li>Open Android <strong>Settings &gt; Apps</strong> and select the Overbay app.</li>
-        <li>Tap <strong>Storage &amp; cache &gt; Clear storage</strong> (or uninstall the application).</li>
+        <li>Open Android <strong>Settings &gt; Apps</strong> and select the app.</li>
+        <li>Tap <strong>Storage &amp; cache &gt; Clear storage</strong> (or just uninstall the app).</li>
       </ol>
-      <p>Because Overbay holds no copy of your local files, clearing storage or uninstalling removes the local database from your phone while leaving any original files you imported from Downloads untouched.</p>
+      <p>Because Overbay holds no copy of your local files, clearing storage or uninstalling removes the app's database from your phone while leaving any original EPUBs, PDFs, or CSV files in your Downloads folder untouched.</p>
 
       <h2>2. Revoke Google Drive Access &amp; Delete Synced Data (Luma Reader &amp; Orbit Money)</h2>
-      <p>If you connected your Google Account in <strong>Luma Reader</strong> (<code>drive.appdata</code>) or <strong>Orbit Money</strong> (<code>drive.appdata</code> and/or <code>drive.file</code>):</p>
+      <p>If you connected your Google Account in <strong>Luma Reader</strong> (<code>drive.appdata</code>) or <strong>Orbit Money</strong> (<code>drive.appdata</code> / <code>drive.file</code>):</p>
       <ol>
-        <li>Sign out inside the app's Settings screen first if the app is still installed.</li>
+        <li>Sign out inside the app's Settings screen first if it's still installed.</li>
         <li>Open <a href="https://myaccount.google.com/permissions">Google Account Third-Party Connections</a> and remove access for Luma Reader or Orbit Money.</li>
-        <li>To purge hidden app data stored inside your Google Drive, open <strong>drive.google.com &gt; Settings &gt; Manage apps</strong>, find Luma Reader or Orbit Money, click <strong>Options &gt; Delete hidden app data</strong>, and delete any visible Orbit Money snapshot files if desired.</li>
+        <li>To wipe hidden app data in your Google Drive, go to <strong>drive.google.com &gt; Settings &gt; Manage apps</strong>, find Luma Reader or Orbit Money, click <strong>Options &gt; Delete hidden app data</strong>, and delete any visible Orbit Money backup files if you want.</li>
       </ol>
 
-      <h2>3. Delete Data on Self-Hosted Instances (AllNotes &amp; Orbit Money)</h2>
-      <p>If you linked AllNotes to a self-hosted sync server or deployed Orbit Money via Docker (<code>ghcr.io/waspo98/orbit-money</code>):</p>
+      <h2>3. Delete Data on Self-Hosted Servers (AllNotes &amp; Orbit Money)</h2>
+      <p>If you linked AllNotes to a self-hosted sync server or ran Orbit Money in Docker (<code>ghcr.io/waspo98/orbit-money</code>):</p>
       <ul>
-        <li>Remove the server profile inside the app Settings.</li>
-        <li>Stop the container on your machine or NAS and delete its mapped SQLite volume directory (for example <code>./orbit-data</code>).</li>
+        <li>Remove the server connection inside the app Settings.</li>
+        <li>Stop the container on your computer or NAS and delete its mapped data folder (for example <code>./orbit-data</code>).</li>
       </ul>
 
-      <h2>4. Support Emails &amp; Deletion Assistance</h2>
-      <p>If you emailed Overbay previously and want your correspondence deleted from our support mailbox, email <a href="mailto:privacy@overbay.app?subject=Data%20Deletion%20Request">privacy@overbay.app</a> from the address used. Verified email deletion requests are processed within 14 days.</p>
+      <h2>4. Support Emails &amp; Deletion Help</h2>
+      <p>If you emailed Overbay before and want your messages deleted from our inbox, email <a href="mailto:privacy@overbay.app?subject=Data%20Deletion%20Request">privacy@overbay.app</a> from the same address. Requests are handled within 14 days.</p>
     </div>
   </main>
 
@@ -128,7 +128,7 @@
             <img class="brand-mark" src="/assets/brand/overbay-mark.svg" alt="" width="30" height="30">
             <span>Overbay.app</span>
           </a>
-          <p>Independent software by Overbay. Local-first tools with no subscriptions or tracking.</p>
+          <p>Small apps by Overbay that stay on your own devices without ads or subscriptions.</p>
         </div>
         <div class="footer-col">
           <p class="footer-heading">Apps</p>

@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Orbit Money — Personal &amp; Household Finance Ledger | Overbay.app</title>
-  <meta name="description" content="Orbit Money is an open-source, local-first finance tracker for Android, Web PWA, and self-hosted Docker. Supports biometric lock, Google Drive backup, Rocket Money CSV imports, and optional SimpleFIN sync.">
+  <title>Orbit Money — Private Budgeting &amp; Household Finance | Overbay.app</title>
+  <meta name="description" content="Open-source budgeting and net worth tracker for Android, Web, and Docker. Works offline with fingerprint lock, Google Drive backup, and Rocket Money CSV imports.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://overbay.app/orbitmoney/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Overbay.app">
-  <meta property="og:title" content="Orbit Money — Personal &amp; Household Finance Ledger">
-  <meta property="og:description" content="Track budgets, recurring bills, and net worth in exact integer cents on Android or self-hosted Docker.">
+  <meta property="og:title" content="Orbit Money — Private Budgeting &amp; Household Finance">
+  <meta property="og:description" content="Track spending, budgets, bills, and net worth on Android or a home Docker server—no ads or subscriptions.">
   <meta property="og:url" content="https://overbay.app/orbitmoney/">
   <meta property="og:image" content="https://overbay.app/assets/brand/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Overbay.app — Orbit Money">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Orbit Money — Personal &amp; Household Finance Ledger">
-  <meta name="twitter:description" content="Track budgets, recurring bills, and net worth in exact integer cents on Android or self-hosted Docker.">
+  <meta name="twitter:title" content="Orbit Money — Private Budgeting &amp; Household Finance">
+  <meta name="twitter:description" content="Track spending, budgets, bills, and net worth on Android or a home Docker server—no ads or subscriptions.">
   <meta name="twitter:image" content="https://overbay.app/assets/brand/og-image.png">
   <meta name="twitter:image:alt" content="Overbay.app — Orbit Money">
   <link rel="icon" type="image/svg+xml" href="/assets/brand/favicon.svg">
@@ -60,31 +60,31 @@
             "name": "Can I run Orbit Money completely offline on Android without Docker?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Orbit Money runs standalone on Android with local storage, optional BiometricPrompt lock, and optional JSON snapshot backups to your Google Drive account."
+              "text": "Yes. It runs standalone on Android with everything saved on your phone, optional fingerprint/face unlock, and optional backups to your own Google Drive."
             }
           },
           {
             "@type": "Question",
-            "name": "Why integer cents instead of standard decimals?",
+            "name": "Does Orbit Money round off pennies?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Floating-point arithmetic produces penny rounding errors across hundreds of transfers and splits. Storing values internally as integer cents (for example, $12.34 as 1234) keeps balances exact down to the cent."
+              "text": "No. Balances and splits are stored in exact cents under the hood rather than imprecise decimals, so totals stay accurate down to the penny."
             }
           },
           {
             "@type": "Question",
-            "name": "Does Overbay have access to my bank credentials or SimpleFIN tokens?",
+            "name": "Does Overbay have access to my bank info or transactions?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. Overbay runs no hosted Orbit Money servers. In self-hosted mode, your SimpleFIN Access URL stays encrypted with AES-256-GCM inside your own SQLite database, and Rocket Money CSV imports are parsed locally."
+              "text": "No. Overbay runs zero servers for Orbit Money. Rocket Money CSV imports stay local, and if you link SimpleFIN in self-hosted mode, your key stays encrypted inside your own database."
             }
           },
           {
             "@type": "Question",
-            "name": "What Android permissions does Orbit Money declare?",
+            "name": "What permissions does the Android app ask for?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Only INTERNET (for optional Google Drive sync or connecting to your own Docker server), ACCESS_NETWORK_STATE, USE_BIOMETRIC (app lock), and VIBRATE (haptic feedback)."
+              "text": "Only internet access (if you turn on Google Drive backups or connect your own Docker server), fingerprint/face lock, and vibration for button feedback."
             }
           },
           {
@@ -92,7 +92,7 @@
             "name": "How do I delete my Orbit Money data?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Uninstall or clear storage on Android, delete snapshots in your Google Drive if Drive backup was enabled, or stop and remove your Docker /data volume. Step-by-step instructions live on the Data Deletion page."
+              "text": "Clear app storage or uninstall on Android, delete backups in Google Drive if you turned them on, or remove your Docker data folder. Full steps live on the Data Deletion page."
             }
           }
         ]
@@ -145,40 +145,40 @@
       <div class="container page-hero-grid">
         <div class="page-hero-copy">
           <h1>Orbit Money</h1>
-          <p class="page-hero-lead">Track budgets, recurring bills, and net worth in exact integer cents without handing your financial history to an ad-funded app. Run it offline on Android, install it as a Web PWA, or self-host a household instance with Docker.</p>
+          <p class="page-hero-lead">Track your accounts, budgets, bills, and net worth without feeding your financial history to an ad company. Run it offline on Android, install the web app, or host it at home for your household.</p>
 
           <dl class="spec-strip">
             <div><dt>Package</dt><dd><code>app.overbay.orbit</code></dd></div>
-            <div><dt>Platforms</dt><dd>Android · Web PWA · Docker</dd></div>
+            <div><dt>Platforms</dt><dd>Android · Web App · Docker</dd></div>
             <div><dt>Google Play</dt><dd>Coming soon</dd></div>
-            <div><dt>Security</dt><dd>BiometricPrompt + Drive sync</dd></div>
+            <div><dt>Security</dt><dd>Fingerprint lock + Drive backup</dd></div>
           </dl>
 
-          <!-- When live on Google Play, add alongside Download preview APK:
+          <!-- When live on Google Play, add alongside Download APK:
                <a class="btn btn--primary" href="https://play.google.com/store/apps/details?id=app.overbay.orbit">Get on Google Play</a> -->
           <div class="btn-row">
-            <a class="btn btn--primary" href="https://github.com/Waspo98/Orbit-Money/releases/download/debug-latest/OrbitMoney-debug.apk">Download preview APK</a>
+            <a class="btn btn--primary" href="https://github.com/Waspo98/Orbit-Money/releases/download/debug-latest/OrbitMoney-debug.apk">Download APK</a>
             <a class="btn btn--outline" href="https://github.com/Waspo98/Orbit-Money">Source on GitHub</a>
             <a class="btn btn--outline" href="/privacy/orbitmoney/">Privacy Policy</a>
           </div>
-          <p class="apk-note">Preview APKs use a debug signature while Play Store release builds are finalized. Moving to a future release or Play Store install requires a fresh install.</p>
-          <p class="disclaimer-note">Orbit Money is a personal bookkeeping tool — not a bank, lender, payment processor, or licensed financial advisor.</p>
+          <p class="apk-note">This preview APK uses a test signature while the Play Store release is finalized. Switching to the Play Store version later will require a fresh install.</p>
+          <p class="disclaimer-note">Orbit Money is a personal budgeting tool—not a bank, lender, or financial advisor.</p>
         </div>
 
         <div class="page-hero-stage" data-screenshot-slot="orbit-hero">
           <div class="ui-specimen">
             <div class="ui-specimen__bar">
-              <span>Orbit Money · Checking &amp; Category Ledger</span>
+              <span>Orbit Money · Household Budget</span>
               <span class="ui-specimen__tag">Sample data</span>
             </div>
             <div class="ui-specimen__body">
               <div class="orbit-mock-grid">
                 <div class="orbit-balance-bar">
                   <div>
-                    <small>Net Household Liquid</small>
+                    <small>Checking &amp; Savings</small>
                     <div class="orbit-balance-val">$14,280.42</div>
                   </div>
-                  <span class="stage-app-badge">Integer cents · Audit trail</span>
+                  <span class="stage-app-badge">Private &amp; Local</span>
                 </div>
                 <table class="orbit-ledger" aria-label="Sample transaction table">
                   <thead>
@@ -190,7 +190,7 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Corner Market (orig: CM #0412)</td>
+                      <td>Corner Market</td>
                       <td>Groceries</td>
                       <td>-$84.19</td>
                     </tr>
@@ -200,7 +200,7 @@
                       <td>-$118.40</td>
                     </tr>
                     <tr>
-                      <td>Employer Direct Deposit</td>
+                      <td>Paycheck</td>
                       <td>Income</td>
                       <td>+$2,640.00</td>
                     </tr>
@@ -221,27 +221,27 @@
     <section class="section" aria-labelledby="orbit-modes">
       <div class="container two-col-split">
         <div>
-          <h2 id="orbit-modes">Two storage modes, same ledger</h2>
-          <p>You shouldn't have to set up a server just to track a budget on your phone, and you shouldn't be stuck on one phone if you want to share expenses with a partner. Orbit Money supports both.</p>
-          <p>When you rename messy bank merchant strings or recategorize purchases, Orbit Money keeps the original <code>original_*</code> import fields intact alongside your <code>edited_*</code> labels so later CSV imports never clobber your edits.</p>
+          <h2 id="orbit-modes">Use it on your phone—or host it at home</h2>
+          <p>You shouldn't have to set up a server just to track a budget on your phone, and you shouldn't be stuck on one phone if you share expenses with a partner. Orbit Money works both ways.</p>
+          <p>When you clean up ugly bank merchant names or recategorize purchases, Orbit Money keeps the original bank description tucked away underneath—so importing new CSVs later never overwrites your edits.</p>
         </div>
 
         <ul class="detail-list">
           <li>
-            <h3>On-Device Local Mode (Android &amp; PWA)</h3>
-            <p>Keeps your full ledger locally on your phone or browser. Lock opening the app with Android's <code>BiometricPrompt</code> (<code>USE_BIOMETRIC</code>), and optionally back up JSON snapshots to your own Google Drive via <code>drive.appdata</code> or <code>drive.file</code>.</p>
+            <h3>Offline on Android &amp; Web</h3>
+            <p>Keeps your budget right on your phone or browser. Lock the app with your fingerprint or face, and optionally save backups to your own Google Drive.</p>
           </li>
           <li>
-            <h3>Self-Hosted Household Server (Docker + SQLite)</h3>
-            <p>Run <code>ghcr.io/waspo98/orbit-money</code> at home for shared household logins (<code>AUTH_PROVIDER=local|oidc|both</code>), recurring expense tracking, and multi-device syncing over <code>orbitmoney://</code> or HTTPS.</p>
+            <h3>Home server for your household</h3>
+            <p>Spin up the Docker container (<code>ghcr.io/waspo98/orbit-money</code>) at home for shared logins and multi-device syncing across phones and laptops.</p>
           </li>
           <li>
-            <h3>Rocket Money CSV &amp; Optional SimpleFIN</h3>
-            <p>Import historical CSV exports from Rocket Money out of the box, or link a SimpleFIN Bridge token in self-hosted mode—stored AES-256-GCM encrypted in your own SQLite file.</p>
+            <h3>Rocket Money CSV &amp; optional SimpleFIN</h3>
+            <p>Import your history from Rocket Money CSV exports right out of the box, or connect a SimpleFIN Bridge token in self-hosted mode—stored encrypted in your own database.</p>
           </li>
           <li>
-            <h3>Optional Merchant Icons &amp; Web Push</h3>
-            <p>Self-hosted instances can optionally query Logo.dev for merchant icons or send VAPID budget alerts when configured by the server administrator.</p>
+            <h3>Optional extras</h3>
+            <p>Self-hosted instances can optionally turn on merchant brand icons (Logo.dev) or browser push notifications for budget alerts.</p>
           </li>
         </ul>
       </div>
@@ -251,8 +251,8 @@
       <div class="container two-col-split">
         <div>
           <h2 id="orbit-docker">Self-host with Docker Compose</h2>
-          <p>Run Orbit Money on any Linux server, NAS, or home box with a single persistent SQLite volume on port <code>5008</code>.</p>
-          <p>See the <a href="https://github.com/Waspo98/Orbit-Money">README on GitHub</a> for OIDC provider setup, SimpleFIN encryption key generation, and backup scripts.</p>
+          <p>Run Orbit Money on any Linux box, Raspberry Pi, or NAS with one data folder on port <code>5008</code>.</p>
+          <p>Check the <a href="https://github.com/Waspo98/Orbit-Money">README on GitHub</a> for login options, SimpleFIN bank sync setup, and backup tips.</p>
         </div>
 
         <div class="code-box">
@@ -284,23 +284,23 @@
         <div class="faq-list">
           <details class="faq-item">
             <summary>Can I run Orbit Money completely offline on Android without Docker?</summary>
-            <p>Yes. Orbit Money runs standalone on Android with local storage, optional <code>BiometricPrompt</code> lock, and optional JSON snapshot backups to your Google Drive account.</p>
+            <p>Yes. It runs standalone on Android with everything saved on your phone, optional fingerprint/face unlock, and optional backups to your own Google Drive.</p>
           </details>
           <details class="faq-item">
-            <summary>Why integer cents instead of standard decimals?</summary>
-            <p>Floating-point arithmetic produces penny rounding errors across hundreds of transfers and splits. Storing values internally as integer cents (for example, $12.34 as 1234) keeps balances exact down to the cent.</p>
+            <summary>Does Orbit Money round off pennies?</summary>
+            <p>No. Balances and splits are stored in exact cents under the hood rather than imprecise decimals, so totals stay accurate down to the penny.</p>
           </details>
           <details class="faq-item">
-            <summary>Does Overbay have access to my bank credentials or SimpleFIN tokens?</summary>
-            <p>No. Overbay runs no hosted Orbit Money servers. In self-hosted mode, your SimpleFIN Access URL stays encrypted with AES-256-GCM inside your own SQLite database, and Rocket Money CSV imports are parsed locally.</p>
+            <summary>Does Overbay have access to my bank info or transactions?</summary>
+            <p>No. Overbay runs zero servers for Orbit Money. Rocket Money CSV imports stay local, and if you link SimpleFIN in self-hosted mode, your key stays encrypted inside your own database.</p>
           </details>
           <details class="faq-item">
-            <summary>What Android permissions does Orbit Money declare?</summary>
-            <p>Only <code>INTERNET</code> (for optional Google Drive sync or connecting to your own Docker server), <code>ACCESS_NETWORK_STATE</code>, <code>USE_BIOMETRIC</code> (app lock), and <code>VIBRATE</code> (haptic feedback).</p>
+            <summary>What permissions does the Android app ask for?</summary>
+            <p>Only internet access (if you turn on Google Drive backups or connect your own Docker server), fingerprint/face lock, and vibration for button feedback.</p>
           </details>
           <details class="faq-item">
             <summary>How do I delete my Orbit Money data?</summary>
-            <p>Uninstall or clear storage on Android, delete snapshots in your Google Drive if Drive backup was enabled, or stop and remove your Docker <code>/data</code> volume. Step-by-step instructions live on the <a href="/data-deletion/">Data Deletion page</a>.</p>
+            <p>Clear app storage or uninstall on Android, delete backups in Google Drive if you turned them on, or remove your Docker data folder. Full steps live on the <a href="/data-deletion/">Data Deletion page</a>.</p>
           </details>
         </div>
       </div>
@@ -315,7 +315,7 @@
             <img class="brand-mark" src="/assets/brand/overbay-mark.svg" alt="" width="30" height="30">
             <span>Overbay.app</span>
           </a>
-          <p>Independent software by Overbay. Local-first tools with no subscriptions or tracking.</p>
+          <p>Small apps by Overbay that stay on your own devices without ads or subscriptions.</p>
         </div>
         <div class="footer-col">
           <p class="footer-heading">Apps</p>

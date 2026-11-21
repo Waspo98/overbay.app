@@ -6,7 +6,7 @@ Privacy Contact: privacy@overbay.app
 Legal Contact: legal@overbay.app
 GitHub Organization / User: https://github.com/Waspo98
 
-Overbay publishes small, local-first software with no third-party ad SDKs, no behavioral analytics trackers, and no mandatory Overbay-operated accounts. Preview APKs linked on overbay.app use a debug signature while Play Store release builds are finalized (moving to future release or Play Store builds requires a fresh install).
+Overbay publishes small, offline-first software with no ads, no tracking, and no mandatory Overbay accounts. Preview APKs linked on overbay.app use a test signature while Play Store release builds are finalized (switching to future release or Play Store builds requires a fresh install).
 
 ---
 
