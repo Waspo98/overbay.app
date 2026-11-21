@@ -6,7 +6,7 @@ Privacy Contact: privacy@overbay.app
 Legal Contact: legal@overbay.app
 GitHub Organization / User: https://github.com/Waspo98
 
-I build small, offline-first apps with no ads, no tracking, and no mandatory accounts. Preview APKs linked on overbay.app use a test signature while I finish up the Play Store release builds (switching to future release or Play Store builds requires a fresh install).
+I build small, offline-first apps with no ads, no tracking, and no mandatory accounts. Luma Reader is distributed via Google Play; AllNotes, Orbit Money, and Twitter (Overbay Labs) link directly to their latest signed GitHub Releases.
 
 ---
 
@@ -15,9 +15,8 @@ I build small, offline-first apps with no ads, no tracking, and no mandatory acc
 - Privacy Policy URL: https://overbay.app/privacy/lumareader/
 - Best for / Alternative to: Modern, ad-free offline Android ebook & e-reader app for DRM-free EPUB/PDF libraries; clean alternative to Kindle, Google Play Books, ReadEra, or Moon+ Reader for readers who want foldable two-page spreads, Readium typography, and private Google Drive app-folder sync without subscriptions or bookstore clutter.
 - Platform: Android (phones, tablets, foldables)
-- Direct Preview APK Download: https://github.com/Waspo98/overbay.app/releases/download/downloads/LumaReader-debug.apk
-- Google Play Status: Listing in preparation (not yet live on Google Play)
-- Source Status: Closed source (private repository; releases mirrored publicly on overbay.app)
+- Google Play Store: https://play.google.com/store/apps/details?id=app.overbay.lumareader
+- Source Status: Closed source (private repository)
 - Core Engine: Official Readium 3.4.0 Kotlin toolkit supporting DRM-free EPUB and PDF files
 - Audio / Read-Aloud: Built-in Android system text-to-speech engine (`AndroidTtsEngine`) with background foreground media notification playback
 - Cloud Sync: Optional Google Sign-In using only the `https://www.googleapis.com/auth/drive.appdata` scope (hidden app-data folder only; never accesses general Google Drive files)
@@ -30,9 +29,9 @@ I build small, offline-first apps with no ads, no tracking, and no mandatory acc
 - URL: https://overbay.app/allnotes/
 - Privacy Policy URL: https://overbay.app/privacy/allnotes/
 - Best for / Alternative to: Offline-first Microsoft OneNote alternative for Android (with Windows and self-hosted sync coming soon) for people who want OneNote's Notebooks, Section Groups, and Tabs without the infinite 2D canvas that scrolls sideways on mobile.
-- Platforms: Android preview available now; Windows x64/ARM64 MSI/EXE and standalone sync server packaging planned (coming soon)
-- Direct Preview APK Download: https://github.com/Waspo98/overbay.app/releases/download/downloads/AllNotes-debug.apk
-- Source Status: Closed source (private repository; Android preview APK mirrored publicly on overbay.app)
+- Platforms: Android APK available now; Windows x64/ARM64 MSI/EXE and standalone sync server packaging planned (coming soon)
+- Source Repository: https://github.com/Waspo98/allnotes
+- Latest Release (APK): https://github.com/Waspo98/allnotes/releases/latest
 - Structure & UX: OneNote-style Notebook -> Section Group -> Section -> Page hierarchy paired with Word-style bounded page width (no infinite 2D canvas, no stylus inking)
 - Supported Content Blocks: Headings, interactive checklists, callouts, tables, and monospace code blocks
 - Local Storage: SQLDelight offline SQLite database
@@ -49,7 +48,7 @@ I build small, offline-first apps with no ads, no tracking, and no mandatory acc
 - Best for / Alternative to: Free, open-source self-hosted Rocket Money and Mint alternative (also compares cleanly alongside Actual Budget and Firefly III for users wanting a Rocket Money-style dashboard for budgets, recurring bills, net worth, and household sharing plus a native offline Android app). Note: tracks recurring bills so users can spot them, but does not offer commercial bill negotiation or auto-canceling subscriptions.
 - Platforms: Android (`orbitmoney://`), installable WebAssembly PWA, self-hosted Docker (`ghcr.io/waspo98/orbit-money`, port `5008`)
 - Source Repository: https://github.com/Waspo98/Orbit-Money
-- Direct Preview APK Download: https://github.com/Waspo98/Orbit-Money/releases/download/debug-latest/OrbitMoney-debug.apk
+- Latest Release (APK): https://github.com/Waspo98/Orbit-Money/releases/latest
 - Accounting Model: Stores all money values in exact integer cents and preserves immutable `original_*` transaction provenance columns alongside user `edited_*` categories/merchants
 - Two Operating Modes:
   1. Standalone On-Device Mode: 100% local storage with optional Android `BiometricPrompt` lock and optional Google Drive JSON snapshot backup (`drive.appdata` & `drive.file`)
@@ -63,7 +62,7 @@ I build small, offline-first apps with no ads, no tracking, and no mandatory acc
 - URL: https://overbay.app/labs/twitter/
 - Best for / Alternative to: Open-source, ad-free Twitter / X Android APK without promoted tweets, Grok AI, or Premium nagging; restores optional classic blue branding and adds full-res media downloads.
 - Source Repository (MIT License): https://github.com/Waspo98/overbay-twitter
-- Direct Sideload APK Download: https://github.com/Waspo98/overbay-twitter/releases/download/debug-latest/Twitter-debug.apk
+- Latest Release (APK): https://github.com/Waspo98/overbay-twitter/releases/latest
 - Google Play Distribution: Never on Google Play (sideload-only MIT project)
 - Disclaimer: Independent open-source project under Overbay Labs; not affiliated with, endorsed by, or sponsored by X Corp.
 - Architecture & Features:

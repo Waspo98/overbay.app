@@ -27,7 +27,7 @@ Unlike SaaS software studios or subscription bundles that monetize user attentio
 
 - **No ads, no subscriptions, no studio-run data servers:** User files, notes, and financial records stay on the user's device, in their own Google Drive (`appDataFolder` / `drive.file`), or on hardware they self-host.
 - **Three flagship apps + cleanly separated Overbay Labs:** Flagship Play Store / cross-platform products (`Luma Reader`, `AllNotes`, `Orbit Money`) sit front and center with dedicated privacy and deletion URLs, while experimental sideload-only mods (`Twitter`) live under a clearly labeled **Overbay Labs** section with explicit non-affiliation disclaimers so Play Store developer verification remains unambiguous.
-- **Public download reliability:** Public binary artifacts (`.apk`, Windows `.msi` installers) for private source repositories (`Luma Reader`, `AllNotes`) are published via GitHub Releases on the public `Waspo98/overbay.app` repository so visitor downloads never 404, while `Orbit Money` and `Twitter` link directly to their public source repositories and releases.
+- **Public download reliability:** `Luma Reader` links to its Google Play Store listing (`app.overbay.lumareader`), while `AllNotes` (`Waspo98/allnotes`), `Orbit Money` (`Waspo98/Orbit-Money`), and `Twitter` (`Waspo98/overbay-twitter`) link directly to `/releases/latest` on their public GitHub repositories so links remain constant across new releases.
 
 ## Operating Context
 
@@ -48,7 +48,7 @@ Unlike SaaS software studios or subscription bundles that monetize user attentio
 - **Brand identity reset:** Retire the incumbent website branding and build a completely fresh `Overbay.app` studio identity with drop-in device/desktop frame slots ready to accept real app screenshots when the user provides them later.
 - **No JavaScript-gated content:** Headings, copy, structured specs, and links must be readable in plain HTML with zero JS execution (`prefers-reduced-motion` and no-JS safe).
 - **Undecided / open product facts:**
-  - Live Google Play Store listing URLs (`play.google.com/store/apps/details?id=...`) are not published yet; store buttons/badges should be cleanly structured as upcoming/ready-to-wire while direct `.apk`, Windows `.msi`, and Docker/GitHub paths remain active.
+  - `Luma Reader` uses its Google Play Store URL (`https://play.google.com/store/apps/details?id=app.overbay.lumareader`); `AllNotes` and `Orbit Money` Play Store listing URLs are not published yet while their GitHub Releases `/releases/latest` (and `Orbit Money` Docker/GitHub) paths remain active.
   - Real app screenshots will be supplied later by the user and dropped into structured asset slots (`/assets/screenshots/<app>/`); current build uses honest structural previews rather than fake screenshots.
   - Contact/legal emails confirmed on existing site: `privacy@overbay.app` and `legal@overbay.app`.
 

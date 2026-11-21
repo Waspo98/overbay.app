@@ -25,14 +25,14 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/allnotes-apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/styles.css?v=4">
+  <link rel="stylesheet" href="/css/styles.css?v=5">
   <noscript><link rel="stylesheet" href="/css/noscript.css?v=3"></noscript>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "SoftwareApplication",
+        "@type": ["SoftwareApplication", "SoftwareSourceCode"],
         "name": "AllNotes",
         "description": "Offline-first OneNote alternative for Android combining Notebooks, Section Groups, Sections, and Pages with Word-style bounded page width instead of a freeform 2D canvas. Windows and optional self-hosted sync coming soon.",
         "applicationCategory": "ProductivityApplication",
@@ -42,7 +42,8 @@
         "identifier": "app.overbay.allnotes",
         "url": "https://overbay.app/allnotes/",
         "image": "https://overbay.app/assets/icons/allnotes-512.png",
-        "downloadUrl": "https://github.com/Waspo98/overbay.app/releases/download/downloads/AllNotes-debug.apk",
+        "downloadUrl": "https://github.com/Waspo98/allnotes/releases/latest",
+        "codeRepository": "https://github.com/Waspo98/allnotes",
         "featureList": [
           "OneNote-style Notebook, Section Group, Section, and Page hierarchy",
           "Clean bounded page layout that wraps on phones and desktops without sideways scrolling",
@@ -110,7 +111,7 @@
             "name": "When are the Windows app and sync server coming?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The Android preview APK is ready to download now. I'll link the Windows installers and self-hosted sync server package here as soon as I finish packaging them."
+              "text": "The Android APK is ready to download from GitHub Releases now. I'll link the Windows installers and self-hosted sync server package here as soon as I finish packaging them."
             }
           }
         ]
@@ -179,10 +180,11 @@
           </dl>
 
           <div class="btn-row">
-            <a class="btn btn--primary" href="https://github.com/Waspo98/overbay.app/releases/download/downloads/AllNotes-debug.apk">Download APK</a>
+            <a class="btn btn--primary" href="https://github.com/Waspo98/allnotes/releases/latest">Download APK</a>
+            <a class="btn btn--outline" href="https://github.com/Waspo98/allnotes">Source on GitHub</a>
             <a class="btn btn--outline" href="/privacy/allnotes/">Privacy Policy</a>
           </div>
-          <p class="apk-note">This preview APK uses a test signature while I finish up the Play Store release. Switching to a future release will require a fresh install.</p>
+          <p class="apk-note">Signed release APK from GitHub Releases (under Assets). If you previously installed a debug build, uninstall it once first; future GitHub releases update in place.</p>
         </div>
 
         <div class="page-hero-stage" data-screenshot-slot="allnotes-hero">
@@ -335,7 +337,7 @@
           </details>
           <details class="faq-item">
             <summary>When are the Windows app and sync server coming?</summary>
-            <p>The Android preview APK is ready to download now. I'll link the Windows installers and self-hosted sync server package here as soon as I finish packaging them.</p>
+            <p>The Android APK is ready to download from GitHub Releases now. I'll link the Windows installers and self-hosted sync server package here as soon as I finish packaging them.</p>
           </details>
         </div>
       </div>
@@ -376,6 +378,7 @@
           <p class="footer-heading">Source &amp; Contact</p>
           <ul>
             <li><a href="https://github.com/Waspo98">GitHub (@Waspo98)</a></li>
+            <li><a href="https://github.com/Waspo98/allnotes">AllNotes Source</a></li>
             <li><a href="https://github.com/Waspo98/Orbit-Money">Orbit Money Source</a></li>
             <li><a href="https://github.com/Waspo98/overbay-twitter">Twitter Wrapper Source</a></li>
             <li><a href="mailto:privacy@overbay.app">privacy@overbay.app</a></li>
@@ -390,6 +393,6 @@
     </div>
   </footer>
 
-  <script src="/js/main.js?v=2" defer></script>
+  <script src="/js/main.js?v=3" defer></script>
 </body>
 </html>
