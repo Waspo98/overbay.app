@@ -26,8 +26,8 @@
   <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/styles.css?v=2">
-  <noscript><link rel="stylesheet" href="/css/noscript.css?v=2"></noscript>
+  <link rel="stylesheet" href="/css/styles.css?v=3">
+  <noscript><link rel="stylesheet" href="/css/noscript.css?v=3"></noscript>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -131,10 +131,34 @@
         <p class="studio-lead">Small software built for your own phone, computer, or home server instead of someone else's cloud.</p>
 
         <div class="stage-tabs" role="tablist" aria-label="Featured applications" data-tabs>
-          <button class="stage-tab" type="button" role="tab" id="tab-luma" aria-selected="true" aria-controls="panel-luma">Luma Reader</button>
-          <button class="stage-tab" type="button" role="tab" id="tab-allnotes" aria-selected="false" aria-controls="panel-allnotes" tabindex="-1">AllNotes</button>
-          <button class="stage-tab" type="button" role="tab" id="tab-orbit" aria-selected="false" aria-controls="panel-orbit" tabindex="-1">Orbit Money</button>
-          <button class="stage-tab" type="button" role="tab" id="tab-labs" aria-selected="false" aria-controls="panel-labs" tabindex="-1">Labs: Twitter</button>
+          <button class="stage-tab" type="button" role="tab" id="tab-luma" aria-selected="true" aria-controls="panel-luma">
+            <picture>
+              <source srcset="/assets/icons/lumareader-96.webp" type="image/webp">
+              <img class="app-icon app-icon--xs" src="/assets/icons/lumareader-96.png" alt="" width="20" height="20" decoding="async">
+            </picture>
+            <span>Luma Reader</span>
+          </button>
+          <button class="stage-tab" type="button" role="tab" id="tab-allnotes" aria-selected="false" aria-controls="panel-allnotes" tabindex="-1">
+            <picture>
+              <source srcset="/assets/icons/allnotes-96.webp" type="image/webp">
+              <img class="app-icon app-icon--xs" src="/assets/icons/allnotes-96.png" alt="" width="20" height="20" decoding="async">
+            </picture>
+            <span>AllNotes</span>
+          </button>
+          <button class="stage-tab" type="button" role="tab" id="tab-orbit" aria-selected="false" aria-controls="panel-orbit" tabindex="-1">
+            <picture>
+              <source srcset="/assets/icons/orbitmoney-96.webp" type="image/webp">
+              <img class="app-icon app-icon--xs" src="/assets/icons/orbitmoney-96.png" alt="" width="20" height="20" decoding="async">
+            </picture>
+            <span>Orbit Money</span>
+          </button>
+          <button class="stage-tab" type="button" role="tab" id="tab-labs" aria-selected="false" aria-controls="panel-labs" tabindex="-1">
+            <picture>
+              <source srcset="/assets/icons/twitter-96.webp" type="image/webp">
+              <img class="app-icon app-icon--xs" src="/assets/icons/twitter-96.png" alt="" width="20" height="20" decoding="async">
+            </picture>
+            <span>Labs: Twitter</span>
+          </button>
         </div>
       </div>
 
@@ -145,7 +169,13 @@
             <!-- Panel 1: Luma Reader -->
             <div class="stage-panel" role="tabpanel" id="panel-luma" aria-labelledby="tab-luma">
               <div class="stage-copy">
-                <h2>Luma Reader</h2>
+                <div class="stage-app-name">
+                  <picture>
+                    <source srcset="/assets/icons/lumareader-96.webp 1x, /assets/icons/lumareader-192.webp 2x" type="image/webp">
+                    <img class="app-icon" src="/assets/icons/lumareader-96.png" srcset="/assets/icons/lumareader-96.png 1x, /assets/icons/lumareader-192.png 2x" alt="" width="44" height="44" decoding="async">
+                  </picture>
+                  <h2>Luma Reader</h2>
+                </div>
                 <div class="stage-badge-row">
                   <span class="stage-app-badge">Android</span>
                   <span class="stage-app-badge">EPUB &amp; PDF</span>
@@ -176,7 +206,13 @@
             <!-- Panel 2: AllNotes -->
             <div class="stage-panel" role="tabpanel" id="panel-allnotes" aria-labelledby="tab-allnotes" hidden>
               <div class="stage-copy">
-                <h2>AllNotes</h2>
+                <div class="stage-app-name">
+                  <picture>
+                    <source srcset="/assets/icons/allnotes-96.webp 1x, /assets/icons/allnotes-192.webp 2x" type="image/webp">
+                    <img class="app-icon" src="/assets/icons/allnotes-96.png" srcset="/assets/icons/allnotes-96.png 1x, /assets/icons/allnotes-192.png 2x" alt="" width="44" height="44" decoding="async">
+                  </picture>
+                  <h2>AllNotes</h2>
+                </div>
                 <div class="stage-badge-row">
                   <span class="stage-app-badge">Android</span>
                   <span class="stage-app-badge">Offline Notes</span>
@@ -191,7 +227,13 @@
               <div class="stage-visuals" data-screenshot-slot="allnotes-hero">
                 <div class="ui-specimen">
                   <div class="ui-specimen__bar">
-                    <span>AllNotes · House Projects</span>
+                    <span class="specimen-app-label">
+                      <picture>
+                        <source srcset="/assets/icons/allnotes-96.webp" type="image/webp">
+                        <img class="app-icon app-icon--xs" src="/assets/icons/allnotes-96.png" alt="" width="18" height="18" loading="lazy" decoding="async">
+                      </picture>
+                      <span>AllNotes · House Projects</span>
+                    </span>
                     <span class="ui-specimen__tag">Preview</span>
                   </div>
                   <div class="ui-specimen__body">
@@ -222,7 +264,13 @@
             <!-- Panel 3: Orbit Money -->
             <div class="stage-panel" role="tabpanel" id="panel-orbit" aria-labelledby="tab-orbit" hidden>
               <div class="stage-copy">
-                <h2>Orbit Money</h2>
+                <div class="stage-app-name">
+                  <picture>
+                    <source srcset="/assets/icons/orbitmoney-96.webp 1x, /assets/icons/orbitmoney-192.webp 2x" type="image/webp">
+                    <img class="app-icon" src="/assets/icons/orbitmoney-96.png" srcset="/assets/icons/orbitmoney-96.png 1x, /assets/icons/orbitmoney-192.png 2x" alt="" width="44" height="44" decoding="async">
+                  </picture>
+                  <h2>Orbit Money</h2>
+                </div>
                 <div class="stage-badge-row">
                   <span class="stage-app-badge">Android · Web App · Docker</span>
                   <span class="stage-app-badge">Open Source</span>
@@ -237,7 +285,13 @@
               <div class="stage-visuals" data-screenshot-slot="orbit-hero">
                 <div class="ui-specimen">
                   <div class="ui-specimen__bar">
-                    <span>Orbit Money · Household Budget</span>
+                    <span class="specimen-app-label">
+                      <picture>
+                        <source srcset="/assets/icons/orbitmoney-96.webp" type="image/webp">
+                        <img class="app-icon app-icon--xs" src="/assets/icons/orbitmoney-96.png" alt="" width="18" height="18" loading="lazy" decoding="async">
+                      </picture>
+                      <span>Orbit Money · Household Budget</span>
+                    </span>
                     <span class="ui-specimen__tag">Sample data</span>
                   </div>
                   <div class="ui-specimen__body">
@@ -284,7 +338,13 @@
             <!-- Panel 4: Overbay Labs: Twitter -->
             <div class="stage-panel" role="tabpanel" id="panel-labs" aria-labelledby="tab-labs" hidden>
               <div class="stage-copy">
-                <h2>Twitter (Overbay Labs)</h2>
+                <div class="stage-app-name">
+                  <picture>
+                    <source srcset="/assets/icons/twitter-96.webp 1x, /assets/icons/twitter-192.webp 2x" type="image/webp">
+                    <img class="app-icon" src="/assets/icons/twitter-96.png" srcset="/assets/icons/twitter-96.png 1x, /assets/icons/twitter-192.png 2x" alt="" width="44" height="44" decoding="async">
+                  </picture>
+                  <h2>Twitter (Overbay Labs)</h2>
+                </div>
                 <div class="stage-badge-row">
                   <span class="stage-app-badge">Open Source</span>
                   <span class="stage-app-badge">Sideload APK</span>
@@ -299,7 +359,13 @@
               <div class="stage-visuals" data-screenshot-slot="twitter-hero">
                 <div class="ui-specimen">
                   <div class="ui-specimen__bar">
-                    <span>Twitter (Overbay Labs)</span>
+                    <span class="specimen-app-label">
+                      <picture>
+                        <source srcset="/assets/icons/twitter-96.webp" type="image/webp">
+                        <img class="app-icon app-icon--xs" src="/assets/icons/twitter-96.png" alt="" width="18" height="18" loading="lazy" decoding="async">
+                      </picture>
+                      <span>Twitter (Overbay Labs)</span>
+                    </span>
                     <span class="ui-specimen__tag">Preview</span>
                   </div>
                   <div class="ui-specimen__body">
@@ -358,8 +424,18 @@
             <tbody>
               <tr>
                 <td data-label="App">
-                  <a class="app-cell-link" href="/lumareader/">Luma Reader</a>
-                  <code class="pkg-code">app.overbay.lumareader</code>
+                  <div class="app-cell">
+                    <a class="app-cell-icon" href="/lumareader/" tabindex="-1" aria-hidden="true">
+                      <picture>
+                        <source srcset="/assets/icons/lumareader-96.webp 1x, /assets/icons/lumareader-192.webp 2x" type="image/webp">
+                        <img class="app-icon app-icon--md" src="/assets/icons/lumareader-96.png" srcset="/assets/icons/lumareader-96.png 1x, /assets/icons/lumareader-192.png 2x" alt="" width="36" height="36" loading="lazy" decoding="async">
+                      </picture>
+                    </a>
+                    <div>
+                      <a class="app-cell-link" href="/lumareader/">Luma Reader</a>
+                      <code class="pkg-code">app.overbay.lumareader</code>
+                    </div>
+                  </div>
                 </td>
                 <td data-label="Platforms">Android</td>
                 <td data-label="Default Storage">On your phone</td>
@@ -368,8 +444,18 @@
               </tr>
               <tr>
                 <td data-label="App">
-                  <a class="app-cell-link" href="/allnotes/">AllNotes</a>
-                  <code class="pkg-code">app.overbay.allnotes</code>
+                  <div class="app-cell">
+                    <a class="app-cell-icon" href="/allnotes/" tabindex="-1" aria-hidden="true">
+                      <picture>
+                        <source srcset="/assets/icons/allnotes-96.webp 1x, /assets/icons/allnotes-192.webp 2x" type="image/webp">
+                        <img class="app-icon app-icon--md" src="/assets/icons/allnotes-96.png" srcset="/assets/icons/allnotes-96.png 1x, /assets/icons/allnotes-192.png 2x" alt="" width="36" height="36" loading="lazy" decoding="async">
+                      </picture>
+                    </a>
+                    <div>
+                      <a class="app-cell-link" href="/allnotes/">AllNotes</a>
+                      <code class="pkg-code">app.overbay.allnotes</code>
+                    </div>
+                  </div>
                 </td>
                 <td data-label="Platforms">Android (Windows &amp; Linux coming)</td>
                 <td data-label="Default Storage">On your device</td>
@@ -378,8 +464,18 @@
               </tr>
               <tr>
                 <td data-label="App">
-                  <a class="app-cell-link" href="/orbitmoney/">Orbit Money</a>
-                  <code class="pkg-code">app.overbay.orbit</code>
+                  <div class="app-cell">
+                    <a class="app-cell-icon" href="/orbitmoney/" tabindex="-1" aria-hidden="true">
+                      <picture>
+                        <source srcset="/assets/icons/orbitmoney-96.webp 1x, /assets/icons/orbitmoney-192.webp 2x" type="image/webp">
+                        <img class="app-icon app-icon--md" src="/assets/icons/orbitmoney-96.png" srcset="/assets/icons/orbitmoney-96.png 1x, /assets/icons/orbitmoney-192.png 2x" alt="" width="36" height="36" loading="lazy" decoding="async">
+                      </picture>
+                    </a>
+                    <div>
+                      <a class="app-cell-link" href="/orbitmoney/">Orbit Money</a>
+                      <code class="pkg-code">app.overbay.orbit</code>
+                    </div>
+                  </div>
                 </td>
                 <td data-label="Platforms">Android · Web App · Docker</td>
                 <td data-label="Default Storage">Your phone or home server</td>
@@ -388,8 +484,18 @@
               </tr>
               <tr>
                 <td data-label="App">
-                  <a class="app-cell-link" href="/labs/twitter/">Twitter (Labs)</a>
-                  <code class="pkg-code">app.overbay.twitter</code>
+                  <div class="app-cell">
+                    <a class="app-cell-icon" href="/labs/twitter/" tabindex="-1" aria-hidden="true">
+                      <picture>
+                        <source srcset="/assets/icons/twitter-96.webp 1x, /assets/icons/twitter-192.webp 2x" type="image/webp">
+                        <img class="app-icon app-icon--md" src="/assets/icons/twitter-96.png" srcset="/assets/icons/twitter-96.png 1x, /assets/icons/twitter-192.png 2x" alt="" width="36" height="36" loading="lazy" decoding="async">
+                      </picture>
+                    </a>
+                    <div>
+                      <a class="app-cell-link" href="/labs/twitter/">Twitter (Labs)</a>
+                      <code class="pkg-code">app.overbay.twitter</code>
+                    </div>
+                  </div>
                 </td>
                 <td data-label="Platforms">Android (sideload APK)</td>
                 <td data-label="Default Storage">On your phone only</td>
@@ -416,8 +522,8 @@
             <div class="spotlight-copy">
               <div class="stage-app-name">
                 <picture>
-                  <source srcset="/assets/screenshots/lumareader/icon-96.webp" type="image/webp">
-                  <img class="app-icon" src="/assets/screenshots/lumareader/icon-96.png" alt="Luma Reader icon" width="44" height="44" loading="lazy" decoding="async">
+                  <source srcset="/assets/icons/lumareader-96.webp 1x, /assets/icons/lumareader-192.webp 2x" type="image/webp">
+                  <img class="app-icon" src="/assets/icons/lumareader-96.png" srcset="/assets/icons/lumareader-96.png 1x, /assets/icons/lumareader-192.png 2x" alt="" width="44" height="44" loading="lazy" decoding="async">
                 </picture>
                 <h3>Luma Reader</h3>
               </div>
@@ -451,7 +557,13 @@
           <!-- AllNotes Spotlight -->
           <article class="spotlight-row">
             <div class="spotlight-copy">
-              <h3>AllNotes</h3>
+              <div class="stage-app-name">
+                <picture>
+                  <source srcset="/assets/icons/allnotes-96.webp 1x, /assets/icons/allnotes-192.webp 2x" type="image/webp">
+                  <img class="app-icon" src="/assets/icons/allnotes-96.png" srcset="/assets/icons/allnotes-96.png 1x, /assets/icons/allnotes-192.png 2x" alt="" width="44" height="44" loading="lazy" decoding="async">
+                </picture>
+                <h3>AllNotes</h3>
+              </div>
               <p>OneNote nailed how notebooks should be organized—notebooks, section groups, and tabs—but its endless 2D canvas is annoying on a phone. AllNotes keeps that same notebook layout and puts everything on normal pages that wrap cleanly on any screen.</p>
               <ul class="fact-list">
                 <li>Headings, checklists, callout boxes, tables, and code blocks</li>
@@ -466,7 +578,13 @@
             <div class="spotlight-media" data-screenshot-slot="allnotes-spotlight">
               <div class="ui-specimen">
                 <div class="ui-specimen__bar">
-                  <span>AllNotes · Weekend</span>
+                  <span class="specimen-app-label">
+                    <picture>
+                      <source srcset="/assets/icons/allnotes-96.webp" type="image/webp">
+                      <img class="app-icon app-icon--xs" src="/assets/icons/allnotes-96.png" alt="" width="18" height="18" loading="lazy" decoding="async">
+                    </picture>
+                    <span>AllNotes · Weekend</span>
+                  </span>
                   <span class="ui-specimen__tag">Preview</span>
                 </div>
                 <div class="ui-specimen__body">
@@ -496,7 +614,13 @@
           <!-- Orbit Money Spotlight -->
           <article class="spotlight-row">
             <div class="spotlight-copy">
-              <h3>Orbit Money</h3>
+              <div class="stage-app-name">
+                <picture>
+                  <source srcset="/assets/icons/orbitmoney-96.webp 1x, /assets/icons/orbitmoney-192.webp 2x" type="image/webp">
+                  <img class="app-icon" src="/assets/icons/orbitmoney-96.png" srcset="/assets/icons/orbitmoney-96.png 1x, /assets/icons/orbitmoney-192.png 2x" alt="" width="44" height="44" loading="lazy" decoding="async">
+                </picture>
+                <h3>Orbit Money</h3>
+              </div>
               <p>Keep track of accounts, monthly budgets, bills, and net worth without handing your spending history to an ad-funded app. Run it offline on your phone with fingerprint lock, or self-host it at home for your household and import your Rocket Money CSVs.</p>
               <ul class="fact-list">
                 <li>Exact to-the-cent math so totals never drift</li>
@@ -511,7 +635,13 @@
             <div class="spotlight-media" data-screenshot-slot="orbit-spotlight">
               <div class="ui-specimen">
                 <div class="ui-specimen__bar">
-                  <span>Orbit Money · Monthly Bills</span>
+                  <span class="specimen-app-label">
+                    <picture>
+                      <source srcset="/assets/icons/orbitmoney-96.webp" type="image/webp">
+                      <img class="app-icon app-icon--xs" src="/assets/icons/orbitmoney-96.png" alt="" width="18" height="18" loading="lazy" decoding="async">
+                    </picture>
+                    <span>Orbit Money · Monthly Bills</span>
+                  </span>
                   <span class="ui-specimen__tag">Sample data</span>
                 </div>
                 <div class="ui-specimen__body">
@@ -563,7 +693,13 @@
             <p class="disclaimer-note">Overbay Labs projects are independent open-source mods and are not affiliated with or endorsed by X Corp.</p>
           </div>
           <div>
-            <h3>Twitter for Android</h3>
+            <div class="stage-app-name">
+              <picture>
+                <source srcset="/assets/icons/twitter-96.webp 1x, /assets/icons/twitter-192.webp 2x" type="image/webp">
+                <img class="app-icon" src="/assets/icons/twitter-96.png" srcset="/assets/icons/twitter-96.png 1x, /assets/icons/twitter-192.png 2x" alt="" width="44" height="44" loading="lazy" decoding="async">
+              </picture>
+              <h3>Twitter for Android</h3>
+            </div>
             <p>A clean Android client for Twitter—no ads, no Grok, and no Premium prompts. Restores the classic blue look, skips tracking links, lets you mute keywords, and saves full-res photos and videos.</p>
             <div class="btn-row">
               <a class="btn btn--dark" href="/labs/twitter/">About Twitter Mod</a>
@@ -589,10 +725,10 @@
         <div class="footer-col">
           <p class="footer-heading">Apps</p>
           <ul>
-            <li><a href="/lumareader/">Luma Reader</a></li>
-            <li><a href="/allnotes/">AllNotes</a></li>
-            <li><a href="/orbitmoney/">Orbit Money</a></li>
-            <li><a href="/labs/twitter/">Overbay Labs: Twitter</a></li>
+            <li><a href="/lumareader/"><picture><source srcset="/assets/icons/lumareader-96.webp" type="image/webp"><img class="app-icon app-icon--xs" src="/assets/icons/lumareader-96.png" alt="" width="18" height="18" loading="lazy" decoding="async"></picture><span>Luma Reader</span></a></li>
+            <li><a href="/allnotes/"><picture><source srcset="/assets/icons/allnotes-96.webp" type="image/webp"><img class="app-icon app-icon--xs" src="/assets/icons/allnotes-96.png" alt="" width="18" height="18" loading="lazy" decoding="async"></picture><span>AllNotes</span></a></li>
+            <li><a href="/orbitmoney/"><picture><source srcset="/assets/icons/orbitmoney-96.webp" type="image/webp"><img class="app-icon app-icon--xs" src="/assets/icons/orbitmoney-96.png" alt="" width="18" height="18" loading="lazy" decoding="async"></picture><span>Orbit Money</span></a></li>
+            <li><a href="/labs/twitter/"><picture><source srcset="/assets/icons/twitter-96.webp" type="image/webp"><img class="app-icon app-icon--xs" src="/assets/icons/twitter-96.png" alt="" width="18" height="18" loading="lazy" decoding="async"></picture><span>Overbay Labs: Twitter</span></a></li>
           </ul>
         </div>
         <div class="footer-col">

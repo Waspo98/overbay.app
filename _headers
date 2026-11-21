@@ -17,6 +17,9 @@
 /assets/brand/*
   Cache-Control: public, max-age=2592000
 
+/assets/icons/*
+  Cache-Control: public, max-age=2592000
+
 /assets/screenshots/*
   Cache-Control: public, max-age=2592000
 

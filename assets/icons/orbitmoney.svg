@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" style="display:block;">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="55%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="28%" cy="22%" r="65%">
+      <stop offset="0%" stop-color="#34D399" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sph" x1="185.07" y1="207.32" x2="339.74" y2="310.65" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#DCFCE7"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect width="512" height="512" rx="112" fill="url(#glow)"/>
+  <path d="M174.487,313.928 C150.035,279.521 149.821,233.466 173.952,198.833 C198.082,164.200 241.360,148.448 282.107,159.468 C322.853,170.488 352.293,205.905 355.678,247.980 C328.261,265.183 298.673,278.721 268.313,289.829 C237.915,300.835 206.547,309.483 174.487,313.928 Z" fill="url(#sph)"/>
+  <path d="M246.916,355.586 C274.253,347.809 301.031,338.062 326.971,326.448 C305.965,347.611 276.611,358.295 246.916,355.587 Z" fill="url(#sph)"/>
+  <path d="M72.843,314.150 C85.840,349.859 176.230,346.756 275.837,310.502 C375.445,274.248 446.682,218.523 433.685,182.815 C426.160,162.141 383.612,156.344 326.885,164.221 C361.059,164.553 387.205,172.063 393.361,188.978 C402.938,215.289 345.879,257.340 266.945,286.070 C188.010,314.800 117.271,319.263 107.694,292.952 C101.538,276.038 116.739,253.478 142.705,231.257 C94.186,261.686 65.318,293.477 72.843,314.150 Z" fill="#FFFFFF"/>
+</svg>

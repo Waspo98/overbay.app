@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- OneNote purple squircle backdrop -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7E1CB3"/>
+      <stop offset="52%" stop-color="#6A149B"/>
+      <stop offset="100%" stop-color="#4B0B74"/>
+    </linearGradient>
+
+    <!-- Subtle warm paper sheen -->
+    <linearGradient id="paperGrad" x1="15%" y1="0%" x2="85%" y2="100%">
+      <stop offset="0%" stop-color="#FFFEFA"/>
+      <stop offset="100%" stop-color="#F7F3EA"/>
+    </linearGradient>
+
+    <!-- Whisper-soft spine-to-page crease -->
+    <linearGradient id="spineSeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.45"/>
+      <stop offset="35%" stop-color="#2E104D" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#2E104D" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Back curl of the ribbon (shadowed underside) -->
+    <linearGradient id="ribbonBackGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0A2B6B"/>
+      <stop offset="100%" stop-color="#1955C2"/>
+    </linearGradient>
+
+    <!-- Front sky-to-cobalt bookmark ribbon -->
+    <linearGradient id="ribbonFrontGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#5FD0FF"/>
+      <stop offset="8%" stop-color="#48BCFF"/>
+      <stop offset="52%" stop-color="#2787FA"/>
+      <stop offset="100%" stop-color="#175AE6"/>
+    </linearGradient>
+
+    <!-- Soft drop shadow for the folio -->
+    <filter id="cardShadow" x="-12%" y="-12%" width="128%" height="132%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#1E0333" flood-opacity="0.38"/>
+    </filter>
+
+    <!-- Soft drop shadow for the ribbon over the page -->
+    <filter id="ribbonShadow" x="-20%" y="-10%" width="145%" height="130%">
+      <feDropShadow dx="-2" dy="6" stdDeviation="6" flood-color="#2A1645" flood-opacity="0.22"/>
+    </filter>
+
+    <!-- Clip for rounded card & spine -->
+    <clipPath id="cardClip">
+      <rect x="99" y="93" width="316" height="334" rx="24"/>
+    </clipPath>
+  </defs>
+
+  <!-- Rounded Squircle OneNote Purple Background (browser favicon & desktop style) -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+
+  <!-- Ribbon back curl (tucked smoothly behind top edge of page) -->
+  <path d="M 289,95 C 289,82 294,76 302,76 L 322,76 L 322,96 L 289,96 Z"
+        fill="url(#ribbonBackGrad)"/>
+
+  <!-- Main Folio Group -->
+  <g filter="url(#cardShadow)">
+    <g clip-path="url(#cardClip)">
+      <!-- Bottom page thickness rim -->
+      <rect x="99" y="93" width="316" height="334" fill="#E4DDD2"/>
+      <!-- Warm cream paper face -->
+      <rect x="99" y="93" width="316" height="328" rx="22" fill="url(#paperGrad)"/>
+
+      <!-- Subtle spine crease highlight/shadow onto paper -->
+      <rect x="136" y="93" width="7" height="328" fill="url(#spineSeam)"/>
+
+      <!-- 3-Segment Tonal Lilac-to-Violet Spine -->
+      <rect x="99" y="93" width="37" height="111.5" fill="#E6D5FF"/>
+      <rect x="99" y="204.5" width="37" height="111.5" fill="#BE7CFA"/>
+      <rect x="99" y="316" width="37" height="111" fill="#8B2CF5"/>
+    </g>
+  </g>
+
+  <!-- Structured Document Content Bars -->
+  <!-- Heading Bar (Deep OneNote Plum) -->
+  <rect x="166" y="167" width="126" height="19" rx="9.5" fill="#530D7F"/>
+  <!-- Paragraph Bars (Soft Plum-Slate) -->
+  <rect x="166" y="225" width="126" height="18" rx="9" fill="#7D6E8E"/>
+  <rect x="166" y="259" width="100" height="18" rx="9" fill="#7D6E8E"/>
+
+  <!-- Electric Sky-Cobalt Notched Bookmark Ribbon -->
+  <path d="M 301,76
+           L 368,76
+           C 377.5,76 384,83 384,93
+           L 384,261
+           C 384,265.5 379,268 375.5,265
+           L 351.5,244.5
+           C 350,243.2 348,243.2 346.5,244.5
+           L 322.5,265
+           C 319,268 314,265.5 314,261
+           L 314,93
+           C 314,82 308.5,76 301,76 Z"
+        fill="url(#ribbonFrontGrad)"
+        filter="url(#ribbonShadow)"/>
+</svg>
