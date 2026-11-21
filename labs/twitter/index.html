@@ -3,53 +3,113 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Twitter (Overbay Labs) — No Ads, No Grok, Classic Blue | Overbay.app</title>
-  <meta name="description" content="An open-source Android app for Twitter with no ads, no Grok, and no Premium nagging. Restores classic blue accents, skips tracking links, and saves full-res photos and videos.">
+  <title>Twitter for Android (Overbay Labs) — Ad-Free, No Grok APK | Overbay.app</title>
+  <meta name="description" content="Open-source, ad-free Twitter and X Android APK with no promoted posts, no Grok, and no Premium nagging. Restores classic blue accents, skips t.co tracking links, and saves full-res photos and videos.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://overbay.app/labs/twitter/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Overbay.app">
-  <meta property="og:title" content="Twitter (Overbay Labs) — No Ads, No Grok, Classic Blue">
-  <meta property="og:description" content="Twitter without the clutter: no ads, no Grok, no Premium prompts, classic blue look, clean links, and HD media downloads. Open-source MIT APK.">
+  <meta property="og:title" content="Twitter for Android (Overbay Labs) — Ad-Free, No Grok APK">
+  <meta property="og:description" content="Open-source MIT ad-free Twitter / X Android client: no promoted posts, no Grok, no Premium prompts, classic blue look, clean links, and HD media downloads.">
   <meta property="og:url" content="https://overbay.app/labs/twitter/">
   <meta property="og:image" content="https://overbay.app/assets/brand/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Overbay.app — Overbay Labs Twitter Wrapper">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Twitter (Overbay Labs) — No Ads, No Grok, Classic Blue">
-  <meta name="twitter:description" content="Twitter without the clutter: no ads, no Grok, no Premium prompts, classic blue look, clean links, and HD media downloads. Open-source MIT APK.">
+  <meta name="twitter:title" content="Twitter for Android (Overbay Labs) — Ad-Free, No Grok APK">
+  <meta name="twitter:description" content="Open-source MIT ad-free Twitter / X Android client: no promoted posts, no Grok, no Premium prompts, classic blue look, clean links, and HD media downloads.">
   <meta name="twitter:image" content="https://overbay.app/assets/brand/og-image.png">
   <meta name="twitter:image:alt" content="Overbay.app — Overbay Labs Twitter Wrapper">
   <link rel="icon" type="image/svg+xml" href="/assets/icons/twitter.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/twitter-apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/styles.css?v=3">
+  <link rel="stylesheet" href="/css/styles.css?v=4">
   <noscript><link rel="stylesheet" href="/css/noscript.css?v=3"></noscript>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": ["SoftwareApplication", "SoftwareSourceCode"],
-    "name": "Twitter (Overbay Labs)",
-    "applicationCategory": "SocialNetworkingApplication",
-    "operatingSystem": "Android",
-    "license": "https://opensource.org/licenses/MIT",
-    "identifier": "app.overbay.twitter",
-    "url": "https://overbay.app/labs/twitter/",
-    "image": "https://overbay.app/assets/icons/twitter-512.png",
-    "downloadUrl": "https://github.com/Waspo98/overbay-twitter/releases/download/debug-latest/Twitter-debug.apk",
-    "codeRepository": "https://github.com/Waspo98/overbay-twitter",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "publisher": {
-      "@type": "Person",
-      "name": "Neal Overbay",
-      "url": "https://overbay.app/"
-    }
+    "@graph": [
+      {
+        "@type": ["SoftwareApplication", "SoftwareSourceCode"],
+        "name": "Twitter (Overbay Labs)",
+        "description": "Independent MIT open-source ad-free Android client for Twitter / X that strips promoted posts from GraphQL feeds before render, hides Grok AI and Premium upsells, restores classic blue Twitter styling, unwraps t.co tracking links, and downloads full-resolution photos and MP4 videos.",
+        "applicationCategory": "SocialNetworkingApplication",
+        "operatingSystem": "Android",
+        "isAccessibleForFree": true,
+        "license": "https://opensource.org/licenses/MIT",
+        "identifier": "app.overbay.twitter",
+        "url": "https://overbay.app/labs/twitter/",
+        "image": "https://overbay.app/assets/icons/twitter-512.png",
+        "downloadUrl": "https://github.com/Waspo98/overbay-twitter/releases/download/debug-latest/Twitter-debug.apk",
+        "codeRepository": "https://github.com/Waspo98/overbay-twitter",
+        "featureList": [
+          "Strips promoted tweets and suggestion carousels from GraphQL JSON before render",
+          "Toggleable removal of Grok AI buttons and Premium upsells",
+          "Optional classic Twitter blue (#1DA1F2) and Tweet / Retweet labels",
+          "Configurable Home tabs and local keyword/regex mute filters",
+          "Automatic t.co tracking link unwrapping",
+          "Direct full-resolution photo and MP4 video downloads to device storage"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Neal Overbay",
+          "url": "https://overbay.app/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://overbay.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Twitter (Overbay Labs)",
+            "item": "https://overbay.app/labs/twitter/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How is this different from using X in a mobile browser with an ad blocker?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Browser CSS blockers often leave blank gaps in your timeline where promoted cards used to sit. This app strips promoted entries from the GraphQL JSON feed before they render, hides Grok and Premium prompts, unwraps t.co links, adds local keyword mute filters, restores optional classic Twitter blue labels, and lets you save full-res photos and MP4 videos directly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why isn't this on Google Play?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Third-party wrappers for someone else's site don't belong on Google Play. I keep this under Overbay Labs with MIT open-source code on GitHub so you can check every line and sideload the APK if you want it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does this app collect my login or timeline data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. You sign in straight on X's own login page inside the app. I don't run any servers for it, and there are no crash reporters or analytics."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -197,6 +257,10 @@
           <h2 id="twitter-faq">Questions &amp; build notes</h2>
         </div>
         <div class="faq-list">
+          <details class="faq-item">
+            <summary>How is this different from using X in a mobile browser with an ad blocker?</summary>
+            <p>Browser CSS blockers often leave blank gaps in your timeline where promoted cards used to sit. This app strips promoted entries from the GraphQL JSON feed before they render, hides Grok and Premium prompts, unwraps <code>t.co</code> links, adds local keyword mute filters, restores optional classic Twitter blue labels, and lets you save full-res photos and MP4 videos directly.</p>
+          </details>
           <details class="faq-item">
             <summary>Why isn't this on Google Play?</summary>
             <p>Third-party wrappers for someone else's site don't belong on Google Play. I keep this under Overbay Labs with MIT open-source code on GitHub so you can check every line and sideload the APK if you want it.</p>

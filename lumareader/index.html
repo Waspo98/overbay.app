@@ -3,29 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Luma Reader — Offline EPUB &amp; PDF Reader for Android | Overbay.app</title>
-  <meta name="description" content="A clean, offline EPUB and PDF reader for Android phones, tablets, and foldables. No ads, no bookstore, no subscriptions.">
+  <title>Luma Reader — Modern Offline EPUB &amp; PDF Ebook Reader for Android | Overbay.app</title>
+  <meta name="description" content="A modern, ad-free offline ebook reader app for Android phones, tablets, and foldables. Open DRM-free EPUBs and PDFs with two-page spreads, read-aloud TTS, and private Google Drive sync.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://overbay.app/lumareader/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Overbay.app">
-  <meta property="og:title" content="Luma Reader — Offline EPUB &amp; PDF Reader for Android">
-  <meta property="og:description" content="Read your own EPUBs and PDFs offline with no ads or accounts. Free for 5 books; $4.99 once for unlimited.">
+  <meta property="og:title" content="Luma Reader — Modern Offline EPUB &amp; PDF Ebook Reader for Android">
+  <meta property="og:description" content="Modern, ad-free Android e-reader app for your own EPUBs and PDFs with foldable two-page spreads, read-aloud TTS, and private Drive sync. Free for 5 books; $4.99 once for unlimited.">
   <meta property="og:url" content="https://overbay.app/lumareader/">
   <meta property="og:image" content="https://overbay.app/assets/brand/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Overbay.app — Luma Reader for Android">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Luma Reader — Offline EPUB &amp; PDF Reader for Android">
-  <meta name="twitter:description" content="Read your own EPUBs and PDFs offline with no ads or accounts. Free for 5 books; $4.99 once for unlimited.">
+  <meta name="twitter:title" content="Luma Reader — Modern Offline EPUB &amp; PDF Ebook Reader for Android">
+  <meta name="twitter:description" content="Modern, ad-free Android e-reader app for your own EPUBs and PDFs with foldable two-page spreads, read-aloud TTS, and private Drive sync.">
   <meta name="twitter:image" content="https://overbay.app/assets/brand/og-image.png">
   <meta name="twitter:image:alt" content="Overbay.app — Luma Reader for Android">
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/lumareader-favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/lumareader-apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/styles.css?v=3">
+  <link rel="stylesheet" href="/css/styles.css?v=4">
   <noscript><link rel="stylesheet" href="/css/noscript.css?v=3"></noscript>
   <script type="application/ld+json">
   {
@@ -34,12 +34,23 @@
       {
         "@type": "MobileApplication",
         "name": "Luma Reader",
+        "description": "A modern, ad-free offline ebook and PDF reader app for Android phones, tablets, and foldables built on Readium 3.4 with custom typography, two-page spreads, background read-aloud TTS, and private Google Drive app-folder sync.",
         "applicationCategory": "BooksAndReferenceApplication",
+        "applicationSubCategory": "Ebook & EPUB Reader",
         "operatingSystem": "Android",
+        "isAccessibleForFree": true,
         "identifier": "app.overbay.lumareader",
         "url": "https://overbay.app/lumareader/",
         "image": "https://overbay.app/assets/icons/lumareader-512.png",
         "downloadUrl": "https://github.com/Waspo98/overbay.app/releases/download/downloads/LumaReader-debug.apk",
+        "featureList": [
+          "Offline DRM-free EPUB and PDF reading powered by Readium 3.4",
+          "Adaptive two-page book spreads on Android foldables and tablets",
+          "Light, Sepia, Slate, and AMOLED themes with custom font, spacing, and margin controls",
+          "Android system text-to-speech read-aloud with lock-screen media controls",
+          "Optional private Google Drive sync using only the hidden drive.appdata folder",
+          "Zero ads, zero bookstore clutter, and no subscriptions"
+        ],
         "screenshot": [
           "https://overbay.app/assets/screenshots/lumareader/foldable-spread.png",
           "https://overbay.app/assets/screenshots/lumareader/library.png",
@@ -68,6 +79,23 @@
         }
       },
       {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://overbay.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Luma Reader",
+            "item": "https://overbay.app/lumareader/"
+          }
+        ]
+      },
+      {
         "@type": "FAQPage",
         "mainEntity": [
           {
@@ -76,6 +104,14 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Yes. Opening your EPUBs and PDFs, reading, bookmarks, and read-aloud all work offline. It only uses the internet if you turn on Google Drive sync or check a purchase."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is Luma Reader different from Kindle, ReadEra, or Moon+ Reader?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Luma Reader skips bookstore feeds and ad banners completely, uses the modern Readium 3.4 engine for accurate EPUB and PDF typography, renders native two-page spreads on Android foldables and tablets, and restricts Google Drive sync strictly to Drive's hidden app-data folder so it can never touch your other files."
             }
           },
           {
@@ -166,7 +202,7 @@
             </picture>
             <h1>Luma Reader</h1>
           </div>
-          <p class="page-hero-lead">A clean, offline EPUB and PDF reader for Android—no ads, no bookstore, no subscriptions. Pick your fonts and themes, read two-page spreads on foldables, listen with read-aloud, or sync your spot to Google Drive.</p>
+          <p class="page-hero-lead">A modern, ad-free offline ebook reader app for Android—no bookstore, no tracking, no subscriptions. Open your own EPUBs and PDFs, pick your fonts and themes, read two-page spreads on foldables, listen with read-aloud, or sync your spot to Google Drive.</p>
 
           <dl class="spec-strip">
             <div><dt>Package</dt><dd><code>app.overbay.lumareader</code></dd></div>
@@ -313,6 +349,60 @@
       </div>
     </section>
 
+    <section class="section" aria-labelledby="luma-compare">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="luma-compare">How Luma Reader compares</h2>
+          <p>Why I built a modern Android e-reader app alongside Kindle, ReadEra, and Moon+ Reader.</p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Luma Reader</th>
+                <th>Kindle / Play Books</th>
+                <th>ReadEra / Moon+</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Feature"><strong>Bookstore &amp; ads</strong></td>
+                <td data-label="Luma Reader">Zero ads, zero bookstore tabs—only the files you load</td>
+                <td data-label="Kindle / Play Books">Built around a storefront and store promos</td>
+                <td data-label="ReadEra / Moon+">Ad-free or ad-supported free tiers with Pro upgrades</td>
+              </tr>
+              <tr>
+                <td data-label="Feature"><strong>Foldables &amp; tablets</strong></td>
+                <td data-label="Luma Reader">Adaptive two-page book spreads built in</td>
+                <td data-label="Kindle / Play Books">Basic multi-column options</td>
+                <td data-label="ReadEra / Moon+">Varies by app and layout settings</td>
+              </tr>
+              <tr>
+                <td data-label="Feature"><strong>Drive sync privacy</strong></td>
+                <td data-label="Luma Reader">Hidden Google Drive app folder (<code>drive.appdata</code>) only</td>
+                <td data-label="Kindle / Play Books">Stored on Amazon / Google cloud accounts</td>
+                <td data-label="ReadEra / Moon+">Local-only or broader Drive/Dropbox folder access</td>
+              </tr>
+              <tr>
+                <td data-label="Feature"><strong>Rendering engine</strong></td>
+                <td data-label="Luma Reader">Modern Readium 3.4 Kotlin toolkit (DRM-free EPUB &amp; PDF)</td>
+                <td data-label="Kindle / Play Books">Proprietary storefront format &amp; renderer</td>
+                <td data-label="ReadEra / Moon+">Custom engines with wide legacy format support</td>
+              </tr>
+              <tr>
+                <td data-label="Feature"><strong>Pricing</strong></td>
+                <td data-label="Luma Reader">5 active books free · $4.99 once forever</td>
+                <td data-label="Kindle / Play Books">Free app tied to store ecosystem</td>
+                <td data-label="ReadEra / Moon+">Free + one-time Pro upgrades</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
     <section class="section" aria-labelledby="luma-faq">
       <div class="container">
         <div class="section-header">
@@ -322,6 +412,10 @@
           <details class="faq-item">
             <summary>Does Luma Reader work completely offline?</summary>
             <p>Yes. Opening your EPUBs and PDFs, reading, bookmarks, and read-aloud all work offline. It only uses the internet if you turn on Google Drive sync or check a purchase.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How is Luma Reader different from Kindle, ReadEra, or Moon+ Reader?</summary>
+            <p>Luma Reader skips bookstore feeds and ad banners completely, uses the modern Readium 3.4 engine for accurate EPUB and PDF typography, renders native two-page spreads on Android foldables and tablets, and restricts Google Drive sync strictly to Drive's hidden app-data folder so it can never touch your other files.</p>
           </details>
           <details class="faq-item">
             <summary>What happens when I hit the 5-book free limit?</summary>

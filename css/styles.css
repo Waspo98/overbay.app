@@ -1686,6 +1686,88 @@ p {
   margin-top: 24px;
 }
 
+/* ── Breadcrumbs & Guide Components ── */
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  font-size: 0.86rem;
+  color: var(--ink-muted);
+}
+
+.breadcrumb a {
+  color: var(--ink-secondary);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--ink-primary);
+  text-decoration: underline;
+}
+
+.breadcrumb [aria-current="page"] {
+  color: var(--ink-primary);
+  font-weight: 500;
+}
+
+.compare-note {
+  margin-top: 18px;
+  font-size: 0.94rem;
+  color: var(--ink-secondary);
+}
+
+.step-list {
+  list-style: none;
+  counter-reset: guide-step;
+  display: grid;
+  gap: 20px;
+  margin-top: 22px;
+}
+
+.step-list li {
+  counter-increment: guide-step;
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.step-list li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.step-list li::before {
+  content: counter(guide-step);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-stage);
+  border: 1px solid var(--border-hairline);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.step-list h3 {
+  font-size: 1.08rem;
+  margin-bottom: 5px;
+}
+
+.step-list p {
+  color: var(--ink-secondary);
+  font-size: 0.95rem;
+}
+
 /* ── Responsive Breakpoints ── */
 @media (max-width: 1040px) {
   .stage-panel {

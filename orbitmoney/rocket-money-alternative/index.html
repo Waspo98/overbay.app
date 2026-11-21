@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Self-Hosted Rocket Money Alternative — Orbit Money | Overbay.app</title>
+  <meta name="description" content="Looking for a self-hosted Rocket Money alternative? Orbit Money is a free, open-source budgeting and net worth tracker for Docker, Web, and Android with Rocket Money CSV import and optional SimpleFIN bank sync.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://overbay.app/orbitmoney/rocket-money-alternative/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Overbay.app">
+  <meta property="og:title" content="Self-Hosted Rocket Money Alternative — Switching to Orbit Money">
+  <meta property="og:description" content="Compare Orbit Money vs. Rocket Money, import your Rocket Money CSV export, and self-host your household budget with Docker and optional SimpleFIN bank sync.">
+  <meta property="og:url" content="https://overbay.app/orbitmoney/rocket-money-alternative/">
+  <meta property="og:image" content="https://overbay.app/assets/brand/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Overbay.app — Orbit Money self-hosted Rocket Money alternative">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Self-Hosted Rocket Money Alternative — Switching to Orbit Money">
+  <meta name="twitter:description" content="Free, open-source self-hosted Rocket Money alternative for Android, Web, and Docker with Rocket Money CSV import and optional SimpleFIN bank sync.">
+  <meta name="twitter:image" content="https://overbay.app/assets/brand/og-image.png">
+  <meta name="twitter:image:alt" content="Overbay.app — Orbit Money self-hosted Rocket Money alternative">
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/orbitmoney.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/orbitmoney-apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/styles.css?v=4">
+  <noscript><link rel="stylesheet" href="/css/noscript.css?v=3"></noscript>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "A Self-Hosted Rocket Money Alternative: Switching to Orbit Money",
+        "description": "How Orbit Money compares to Rocket Money, what it replaces, what it intentionally skips, and how to import your Rocket Money CSV into a self-hosted Docker server or offline Android app.",
+        "datePublished": "2026-11-21",
+        "dateModified": "2026-11-21",
+        "mainEntityOfPage": "https://overbay.app/orbitmoney/rocket-money-alternative/",
+        "author": {
+          "@type": "Person",
+          "name": "Neal Overbay",
+          "url": "https://overbay.app/"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Neal Overbay",
+          "url": "https://overbay.app/"
+        },
+        "about": {
+          "@type": "SoftwareApplication",
+          "name": "Orbit Money",
+          "url": "https://overbay.app/orbitmoney/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://overbay.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Orbit Money",
+            "item": "https://overbay.app/orbitmoney/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Rocket Money Alternative",
+            "item": "https://overbay.app/orbitmoney/rocket-money-alternative/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I import my Rocket Money transaction history into Orbit Money?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Orbit Money includes a Rocket Money CSV importer out of the box. Imported rows preserve the original bank description alongside any merchant or category edits you make later, so re-importing CSVs won't wipe out your cleanup work."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Orbit Money automatically sync with banks like Rocket Money?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "When self-hosted in Docker, Orbit Money supports optional automated bank syncing through SimpleFIN Bridge. Your SimpleFIN access URL is encrypted with AES-256-GCM inside your own SQLite database, and no third-party developer server sits in the middle."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can Orbit Money cancel subscriptions or negotiate bills for me?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Orbit Money tracks recurring bills and monthly budgets so you can spot unwanted charges quickly, but it does not call providers to negotiate bills or auto-cancel subscriptions on your behalf."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need a home server or Docker to leave Rocket Money for Orbit Money?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. You can run Orbit Money completely offline on Android with biometric lock and optional private Google Drive backups, or spin up the Docker container later if you want multi-device household sync and SimpleFIN bank feeds."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="brand-link" href="/">
+        <img class="brand-mark" src="/assets/brand/overbay-mark.svg" alt="" width="30" height="30">
+        <span>Overbay.app</span>
+      </a>
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="/lumareader/">Luma Reader</a>
+        <a href="/allnotes/">AllNotes</a>
+        <a href="/orbitmoney/" class="is-section-active">Orbit Money</a>
+        <a href="/labs/twitter/">Labs</a>
+        <a href="/privacy/">Privacy</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="nav-pill-btn" href="https://github.com/Waspo98">
+          <svg class="icon icon--sm icon--fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/></svg>
+          <span>GitHub</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg class="icon" viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="mobile-drawer" aria-label="Mobile navigation">
+      <ul>
+        <li><a href="/lumareader/">Luma Reader</a></li>
+        <li><a href="/allnotes/">AllNotes</a></li>
+        <li><a href="/orbitmoney/">Orbit Money</a></li>
+        <li><a href="/labs/twitter/">Overbay Labs (Twitter)</a></li>
+        <li><a href="/privacy/">Privacy Policy</a></li>
+        <li><a href="/data-deletion/">Data Deletion</a></li>
+        <li><a href="/terms/">Terms of Service</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span aria-hidden="true">/</span>
+          <a href="/orbitmoney/">Orbit Money</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Rocket Money Alternative</span>
+        </nav>
+
+        <div class="page-hero-title">
+          <picture>
+            <source srcset="/assets/icons/orbitmoney-96.webp 1x, /assets/icons/orbitmoney-192.webp 2x" type="image/webp">
+            <img class="app-icon app-icon--lg" src="/assets/icons/orbitmoney-96.png" srcset="/assets/icons/orbitmoney-96.png 1x, /assets/icons/orbitmoney-192.png 2x" alt="" width="48" height="48" decoding="async">
+          </picture>
+          <h1>A self-hosted Rocket Money alternative</h1>
+        </div>
+        <p class="page-hero-lead">I built Orbit Money because I liked seeing my spending, monthly budgets, recurring bills, and net worth in one place—without paying a monthly subscription or keeping years of bank transactions on a third-party cloud server.</p>
+
+        <div class="btn-row">
+          <a class="btn btn--primary" href="/orbitmoney/">Explore Orbit Money</a>
+          <a class="btn btn--outline" href="https://github.com/Waspo98/Orbit-Money/releases/download/debug-latest/OrbitMoney-debug.apk">Download Android APK</a>
+          <a class="btn btn--outline" href="https://github.com/Waspo98/Orbit-Money">Source on GitHub</a>
+        </div>
+        <p class="disclaimer-note">Orbit Money is personal bookkeeping software only—not a bank, lender, or financial advisor.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="compare-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="compare-heading">Orbit Money vs. Rocket Money</h2>
+          <p>An honest look at where Orbit Money matches Rocket Money—and the commercial concierge features it intentionally skips.</p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th>Area</th>
+                <th>Orbit Money</th>
+                <th>Rocket Money</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Area"><strong>App cost</strong></td>
+                <td data-label="Orbit Money">Free &amp; open source (optional SimpleFIN Bridge costs ~$1.50/mo paid directly to SimpleFIN)</td>
+                <td data-label="Rocket Money">Freemium with paid monthly tiers and upsells</td>
+              </tr>
+              <tr>
+                <td data-label="Area"><strong>Where data lives</strong></td>
+                <td data-label="Orbit Money">Your Android phone, your Google Drive backup, or your own Docker SQLite server</td>
+                <td data-label="Rocket Money">Rocket Money's cloud servers</td>
+              </tr>
+              <tr>
+                <td data-label="Area"><strong>Bank syncing</strong></td>
+                <td data-label="Orbit Money">Rocket Money CSV import + optional encrypted SimpleFIN Bridge sync in Docker mode</td>
+                <td data-label="Rocket Money">Built-in Plaid bank connections</td>
+              </tr>
+              <tr>
+                <td data-label="Area"><strong>Budgets, bills &amp; net worth</strong></td>
+                <td data-label="Orbit Money">Monthly budgets, recurring bills, savings goals, net worth, and exact integer-cent math</td>
+                <td data-label="Rocket Money">Budgets, recurring charge tracking, and net worth (some features paywalled)</td>
+              </tr>
+              <tr>
+                <td data-label="Area"><strong>Household sharing</strong></td>
+                <td data-label="Orbit Money">Self-hosted multi-user logins (local accounts or OIDC / Authentik) on your home server</td>
+                <td data-label="Rocket Money">Shared accounts require paid cloud membership</td>
+              </tr>
+              <tr>
+                <td data-label="Area"><strong>Offline Android mode</strong></td>
+                <td data-label="Orbit Money">Works 100% offline with fingerprint/face lock—no server required</td>
+                <td data-label="Rocket Money">Requires online cloud account</td>
+              </tr>
+              <tr>
+                <td data-label="Area"><strong>Bill negotiation &amp; auto-cancel</strong></td>
+                <td data-label="Orbit Money">No—tracks recurring bills so you spot them, but you cancel them yourself</td>
+                <td data-label="Rocket Money">Yes (paid/commission-based concierge service)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="tradeoffs-heading">
+      <div class="container two-col-split">
+        <div>
+          <h2 id="tradeoffs-heading">What it replaces—and what it skips</h2>
+          <p>Most people leaving Rocket Money or Mint aren't actually looking for someone to call their cable company. They just want a fast, clean view of where their money went this month, what bills are coming up, and how their net worth is trending.</p>
+          <p>If you specifically want automated bill negotiation or a concierge to cancel subscriptions on your behalf, stick with a commercial service. If you want full custody of your financial ledger with zero ads or subscription lock-in, Orbit Money was built for that job.</p>
+        </div>
+
+        <ul class="detail-list">
+          <li>
+            <h3>Original bank rows never get overwritten</h3>
+            <p>When you rename a cryptic card charge or recategorize a split, Orbit Money saves your edit alongside the immutable original bank description—so re-importing CSVs later stays clean.</p>
+          </li>
+          <li>
+            <h3>Exact-cent math</h3>
+            <p>Every balance, budget, and split is stored in exact integer cents under the hood rather than floating-point decimals, so totals never drift by a penny.</p>
+          </li>
+          <li>
+            <h3>Your SimpleFIN key stays on your hardware</h3>
+            <p>If you want automatic bank feeds in self-hosted mode, Orbit Money encrypts your SimpleFIN Bridge access URL with AES-256-GCM inside your own SQLite database. I never see or relay your token.</p>
+          </li>
+          <li>
+            <h3>No account required to try it</h3>
+            <p>Start standalone on Android with everything saved locally, or deploy one Docker container at home when you want browser access and shared household logins.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="migrate-heading">
+      <div class="container two-col-split">
+        <div>
+          <h2 id="migrate-heading">Switch from Rocket Money in 3 steps</h2>
+          <ol class="step-list">
+            <li>
+              <div>
+                <h3>Export your Rocket Money CSV</h3>
+                <p>Download your transaction history CSV from Rocket Money so you keep years of spending history, categories, and balances when you leave.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Pick phone-only or Docker self-hosting</h3>
+                <p>Install the Android APK for 100% offline budgeting (with optional fingerprint lock and Google Drive backups), or spin up the Docker Compose stack on any Linux box, Raspberry Pi, or NAS on port <code>5008</code>.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Import your CSV &amp; optionally add SimpleFIN</h3>
+                <p>Use Orbit Money's built-in Rocket Money CSV importer to pull in your history. In self-hosted Docker mode, you can also attach a SimpleFIN Bridge token for automated bank updates.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="code-box">
+          <div class="code-box__bar">
+            <span>compose.yaml</span>
+            <button class="copy-btn" type="button" data-copy-target="migrate-compose">Copy</button>
+          </div>
+          <pre id="migrate-compose">services:
+  orbit-money:
+    image: ghcr.io/waspo98/orbit-money:latest
+    container_name: orbit-money
+    ports:
+      - "5008:5008"
+    environment:
+      - AUTH_PROVIDER=local
+      - DATA_DIR=/data
+    volumes:
+      - ./orbit-data:/data
+    restart: unless-stopped</pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="other-selfhosted">
+      <div class="container two-col-split">
+        <div>
+          <h2 id="other-selfhosted">How it fits next to Actual Budget &amp; Firefly III</h2>
+          <p>There are great open-source finance projects already out there, and picking the right one mostly comes down to how you like to think about budgeting.</p>
+        </div>
+
+        <ul class="detail-list">
+          <li>
+            <h3>Choose Actual Budget if you want strict envelope budgeting</h3>
+            <p>Actual is fast, local-first, and built around zero-based envelope budgeting (similar to YNAB).</p>
+          </li>
+          <li>
+            <h3>Choose Firefly III if you want double-entry accounting</h3>
+            <p>Firefly III is mature and deeply configurable if you want strict accounting ledgers, complex automation rules, and granular reports.</p>
+          </li>
+          <li>
+            <h3>Choose Orbit Money for a Rocket Money-style dashboard + native Android</h3>
+            <p>Orbit Money focuses on approachable monthly budgets, recurring bills, net worth, household sharing, direct Rocket Money CSV imports, and a native offline Android app that works even without a server.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="migrate-faq">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="migrate-faq">Frequently asked questions</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Can I import my Rocket Money transaction history into Orbit Money?</summary>
+            <p>Yes. Orbit Money includes a Rocket Money CSV importer out of the box. Imported rows preserve the original bank description alongside any merchant or category edits you make later, so re-importing CSVs won't wipe out your cleanup work.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does Orbit Money automatically sync with banks like Rocket Money?</summary>
+            <p>When self-hosted in Docker, Orbit Money supports optional automated bank syncing through SimpleFIN Bridge. Your SimpleFIN access URL is encrypted with AES-256-GCM inside your own SQLite database, and no third-party developer server sits in the middle.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can Orbit Money cancel subscriptions or negotiate bills for me?</summary>
+            <p>No. Orbit Money tracks recurring bills and monthly budgets so you can spot unwanted charges quickly, but it does not call providers to negotiate bills or auto-cancel subscriptions on your behalf.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do I need a home server or Docker to leave Rocket Money for Orbit Money?</summary>
+            <p>No. You can run Orbit Money completely offline on Android with biometric lock and optional private Google Drive backups, or spin up the Docker container later if you want multi-device household sync and SimpleFIN bank feeds.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand-link" href="/">
+            <img class="brand-mark" src="/assets/brand/overbay-mark.svg" alt="" width="30" height="30">
+            <span>Overbay.app</span>
+          </a>
+          <p>Small apps I made that stay on your own devices without ads or subscriptions.</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Apps</p>
+          <ul>
+            <li><a href="/lumareader/"><picture><source srcset="/assets/icons/lumareader-96.webp" type="image/webp"><img class="app-icon app-icon--xs" src="/assets/icons/lumareader-96.png" alt="" width="18" height="18" loading="lazy" decoding="async"></picture><span>Luma Reader</span></a></li>
+            <li><a href="/allnotes/"><picture><source srcset="/assets/icons/allnotes-96.webp" type="image/webp"><img class="app-icon app-icon--xs" src="/assets/icons/allnotes-96.png" alt="" width="18" height="18" loading="lazy" decoding="async"></picture><span>AllNotes</span></a></li>
+            <li><a href="/orbitmoney/"><picture><source srcset="/assets/icons/orbitmoney-96.webp" type="image/webp"><img class="app-icon app-icon--xs" src="/assets/icons/orbitmoney-96.png" alt="" width="18" height="18" loading="lazy" decoding="async"></picture><span>Orbit Money</span></a></li>
+            <li><a href="/labs/twitter/"><picture><source srcset="/assets/icons/twitter-96.webp" type="image/webp"><img class="app-icon app-icon--xs" src="/assets/icons/twitter-96.png" alt="" width="18" height="18" loading="lazy" decoding="async"></picture><span>Overbay Labs: Twitter</span></a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Legal &amp; Privacy</p>
+          <ul>
+            <li><a href="/privacy/">Privacy Policy</a></li>
+            <li><a href="/privacy/lumareader/">Luma Reader Privacy</a></li>
+            <li><a href="/privacy/allnotes/">AllNotes Privacy</a></li>
+            <li><a href="/privacy/orbitmoney/">Orbit Money Privacy</a></li>
+            <li><a href="/data-deletion/">Data Deletion</a></li>
+            <li><a href="/terms/">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Source &amp; Contact</p>
+          <ul>
+            <li><a href="https://github.com/Waspo98">GitHub (@Waspo98)</a></li>
+            <li><a href="https://github.com/Waspo98/Orbit-Money">Orbit Money Source</a></li>
+            <li><a href="https://github.com/Waspo98/overbay-twitter">Twitter Wrapper Source</a></li>
+            <li><a href="mailto:privacy@overbay.app">privacy@overbay.app</a></li>
+            <li><a href="mailto:legal@overbay.app">legal@overbay.app</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Neal Overbay</span>
+        <span>No cookies, ads, or analytics.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js?v=2" defer></script>
+</body>
+</html>

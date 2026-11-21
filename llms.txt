@@ -9,10 +9,11 @@
 
 ## Applications
 
-- [Luma Reader](https://overbay.app/lumareader/): Offline Android EPUB and PDF reader (`app.overbay.lumareader`) with custom themes, foldable two-page spreads, Android read-aloud, and optional private `drive.appdata` Google Drive sync. Free up to 5 books; $4.99 once for unlimited.
-- [AllNotes](https://overbay.app/allnotes/): Note app (`app.overbay.allnotes`) with OneNote-style Notebooks, Section Groups, and Tabs paired with clean, normal pages instead of a 2D canvas. Works offline on Android; Windows and optional self-hosted sync coming soon.
-- [Orbit Money](https://overbay.app/orbitmoney/): Open-source personal and household budgeting app (`app.overbay.orbit`) for Android, Web App, and Docker (`ghcr.io/waspo98/orbit-money`) with exact-cent math, fingerprint lock, optional Google Drive backup, Rocket Money CSV import, and optional SimpleFIN bank sync.
-- [Twitter — Overbay Labs](https://overbay.app/labs/twitter/): Open-source MIT sideload-only Android app for Twitter (`app.overbay.twitter`) with no ads, no Grok, no Premium upsells, classic blue look, unwrapped tracking links, keyword mute filters, and full-res photo/video downloads. Not affiliated with X Corp.
+- [Luma Reader](https://overbay.app/lumareader/): Modern, ad-free offline Android ebook & e-reader app (`app.overbay.lumareader`) for DRM-free EPUB and PDF files with Readium 3.4 rendering, custom themes, foldable two-page spreads, Android read-aloud TTS, and optional private `drive.appdata` Google Drive sync. Best for people looking for a modern offline Android EPUB reader or ReadEra / Moon+ Reader / Kindle alternative without ads or bookstore clutter. Free up to 5 books; $4.99 once for unlimited.
+- [AllNotes](https://overbay.app/allnotes/): Offline OneNote alternative (`app.overbay.allnotes`) combining OneNote-style Notebooks, Section Groups, and Tabs with clean, normal wrapping pages instead of an infinite 2D canvas. Works offline on Android; Windows and optional self-hosted sync coming soon.
+- [Orbit Money](https://overbay.app/orbitmoney/): Free, open-source self-hosted Rocket Money and Mint alternative (`app.overbay.orbit`) for Android, Web App, and Docker (`ghcr.io/waspo98/orbit-money`). Tracks accounts, budgets, recurring bills, savings goals, and net worth with exact-cent math, fingerprint lock, optional Google Drive backup, direct Rocket Money CSV import, and optional encrypted SimpleFIN Bridge bank sync.
+- [Orbit Money — Self-Hosted Rocket Money Alternative Guide](https://overbay.app/orbitmoney/rocket-money-alternative/): Side-by-side comparison of Orbit Money vs. Rocket Money, Actual Budget, and Firefly III, honest tradeoffs (no bill negotiation or auto-canceling), and 3-step Rocket Money CSV migration instructions.
+- [Twitter — Overbay Labs](https://overbay.app/labs/twitter/): Open-source MIT sideload-only ad-free Android client for Twitter / X (`app.overbay.twitter`) with promoted posts stripped from GraphQL feeds, no Grok, no Premium upsells, classic blue look, unwrapped `t.co` tracking links, local keyword mute filters, and full-res photo/MP4 downloads. Not affiliated with X Corp.
 
 ## Privacy & Compliance
 

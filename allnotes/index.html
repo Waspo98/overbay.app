@@ -3,29 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AllNotes — Notebook Organization Without the Endless Canvas | Overbay.app</title>
-  <meta name="description" content="OneNote's notebooks, section groups, and tabs paired with clean, readable pages instead of a messy 2D canvas. Works offline on Android, with Windows and self-hosted sync coming.">
+  <title>AllNotes — Offline OneNote Alternative Without the 2D Canvas | Overbay.app</title>
+  <meta name="description" content="An offline OneNote alternative for Android with Notebooks, Section Groups, and Tabs—paired with clean, readable pages instead of an endless 2D canvas. Windows and self-hosted sync coming soon.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://overbay.app/allnotes/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Overbay.app">
-  <meta property="og:title" content="AllNotes — Notebook Organization Without the Endless Canvas">
-  <meta property="og:description" content="Offline-first notes organized in Notebooks, Sections, and Section Groups with clean, readable pages.">
+  <meta property="og:title" content="AllNotes — Offline OneNote Alternative Without the 2D Canvas">
+  <meta property="og:description" content="Offline-first OneNote alternative organized in Notebooks, Sections, and Section Groups with clean, wrapping pages instead of an infinite canvas.">
   <meta property="og:url" content="https://overbay.app/allnotes/">
   <meta property="og:image" content="https://overbay.app/assets/brand/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Overbay.app — AllNotes for Android">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AllNotes — Notebook Organization Without the Endless Canvas">
-  <meta name="twitter:description" content="Offline-first notes organized in Notebooks, Sections, and Section Groups with clean, readable pages.">
+  <meta name="twitter:title" content="AllNotes — Offline OneNote Alternative Without the 2D Canvas">
+  <meta name="twitter:description" content="Offline-first OneNote alternative organized in Notebooks, Sections, and Section Groups with clean, wrapping pages.">
   <meta name="twitter:image" content="https://overbay.app/assets/brand/og-image.png">
   <meta name="twitter:image:alt" content="Overbay.app — AllNotes for Android">
   <link rel="icon" type="image/svg+xml" href="/assets/icons/allnotes.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/allnotes-apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/styles.css?v=3">
+  <link rel="stylesheet" href="/css/styles.css?v=4">
   <noscript><link rel="stylesheet" href="/css/noscript.css?v=3"></noscript>
   <script type="application/ld+json">
   {
@@ -34,12 +34,22 @@
       {
         "@type": "SoftwareApplication",
         "name": "AllNotes",
+        "description": "Offline-first OneNote alternative for Android combining Notebooks, Section Groups, Sections, and Pages with Word-style bounded page width instead of a freeform 2D canvas. Windows and optional self-hosted sync coming soon.",
         "applicationCategory": "ProductivityApplication",
+        "applicationSubCategory": "Note-Taking",
         "operatingSystem": "Android",
+        "isAccessibleForFree": true,
         "identifier": "app.overbay.allnotes",
         "url": "https://overbay.app/allnotes/",
         "image": "https://overbay.app/assets/icons/allnotes-512.png",
         "downloadUrl": "https://github.com/Waspo98/overbay.app/releases/download/downloads/AllNotes-debug.apk",
+        "featureList": [
+          "OneNote-style Notebook, Section Group, Section, and Page hierarchy",
+          "Clean bounded page layout that wraps on phones and desktops without sideways scrolling",
+          "Headings, interactive checklists, callout boxes, tables, and monospace code blocks",
+          "Offline-first local SQLite database with no account required",
+          "Windows desktop app and optional self-hosted sync server in development"
+        ],
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -52,8 +62,33 @@
         }
       },
       {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://overbay.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "AllNotes",
+            "item": "https://overbay.app/allnotes/"
+          }
+        ]
+      },
+      {
         "@type": "FAQPage",
         "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How is AllNotes different from Microsoft OneNote?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AllNotes keeps OneNote's deep Notebook, Section Group, Section, and Page hierarchy, but replaces the freeform 2D text-box canvas with normal bounded pages that wrap cleanly on phones. It also works completely offline with no Microsoft account required, and will support optional self-hosted sync."
+            }
+          },
           {
             "@type": "Question",
             "name": "Does AllNotes upload my notes anywhere?",
@@ -134,7 +169,7 @@
             </picture>
             <h1>AllNotes</h1>
           </div>
-          <p class="page-hero-lead">OneNote's notebooks, section groups, and tabs—with clean, readable pages instead of an endless canvas that scrolls sideways on your phone.</p>
+          <p class="page-hero-lead">An offline OneNote alternative for Android. Keep OneNote's notebooks, section groups, and tabs—paired with clean, readable pages instead of an endless 2D canvas that scrolls sideways on your phone.</p>
 
           <dl class="spec-strip">
             <div><dt>Package</dt><dd><code>app.overbay.allnotes</code></dd></div>
@@ -237,12 +272,59 @@
       </div>
     </section>
 
+    <section class="section" aria-labelledby="allnotes-compare">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="allnotes-compare">AllNotes vs. Microsoft OneNote</h2>
+          <p>Built for people who love OneNote's notebook hierarchy but want typed, clean-wrapping pages and local-first storage.</p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>AllNotes</th>
+                <th>Microsoft OneNote</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Feature"><strong>Organization</strong></td>
+                <td data-label="AllNotes">Notebooks, Section Groups, Sections, and Pages</td>
+                <td data-label="OneNote">Notebooks, Section Groups, Sections, and Pages</td>
+              </tr>
+              <tr>
+                <td data-label="Feature"><strong>Page layout</strong></td>
+                <td data-label="AllNotes">Bounded document flow that wraps cleanly on phones and monitors</td>
+                <td data-label="OneNote">Freeform infinite 2D canvas with floating text boxes</td>
+              </tr>
+              <tr>
+                <td data-label="Feature"><strong>Account &amp; storage</strong></td>
+                <td data-label="AllNotes">100% offline SQLite on device; optional self-hosted sync coming soon</td>
+                <td data-label="OneNote">Microsoft account &amp; OneDrive cloud sync</td>
+              </tr>
+              <tr>
+                <td data-label="Feature"><strong>Stylus / whiteboard</strong></td>
+                <td data-label="AllNotes">No—built specifically for structured typed notes</td>
+                <td data-label="OneNote">Yes—includes freehand drawing and stylus inking</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
     <section class="section" aria-labelledby="allnotes-faq">
       <div class="container">
         <div class="section-header">
           <h2 id="allnotes-faq">Frequently asked questions</h2>
         </div>
         <div class="faq-list">
+          <details class="faq-item">
+            <summary>How is AllNotes different from Microsoft OneNote?</summary>
+            <p>AllNotes keeps OneNote's deep Notebook, Section Group, Section, and Page hierarchy, but replaces the freeform 2D text-box canvas with normal bounded pages that wrap cleanly on phones. It also works completely offline with no Microsoft account required, and will support optional self-hosted sync.</p>
+          </details>
           <details class="faq-item">
             <summary>Does AllNotes upload my notes anywhere?</summary>
             <p>No. I don't host note accounts or run any tracking. Everything stays on your device unless you point the app at a sync server you host yourself.</p>
