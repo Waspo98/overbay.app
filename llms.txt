@@ -1,8 +1,9 @@
 # Overbay.app
 
-> Small, offline-first apps for Android, desktop, and home servers. No ads, no tracking, no monthly subscriptions.
+> Small, offline-first apps I build for Android, desktop, and home servers. No ads, no tracking, no monthly subscriptions.
 
 - Website: https://overbay.app/
+- Developer: Neal Overbay
 - Full reference: https://overbay.app/llms-full.txt
 - Contact: privacy@overbay.app
 

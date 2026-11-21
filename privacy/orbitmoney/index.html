@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Orbit Money Privacy Policy — Overbay.app</title>
-  <meta name="description" content="Official Google Play Privacy Policy for Orbit Money (app.overbay.orbit) published by Overbay.">
+  <meta name="description" content="Privacy Policy for Orbit Money (app.overbay.orbit), covering local storage, self-hosted Docker mode, Google Drive backups, and SimpleFIN.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://overbay.app/privacy/orbitmoney/">
   <meta property="og:type" content="website">
@@ -89,21 +89,21 @@
         </div>
         <div class="legal-meta">
           <span>Package: <code>app.overbay.orbit</code></span>
-          <span>Developer: Overbay</span>
+          <span>Developer: Neal Overbay</span>
           <span>Effective Date: November 20, 2026</span>
           <span>Contact: <a href="mailto:privacy@overbay.app">privacy@overbay.app</a></span>
         </div>
       </header>
 
       <div class="legal-summary-box">
-        <strong>Summary:</strong> Orbit Money keeps your accounts, budgets, and transactions on your phone or on your own self-hosted Docker server. Overbay doesn't host user financial databases, collect tracking data, or sell your records.
+        <strong>Summary:</strong> Orbit Money keeps your accounts, budgets, and transactions on your phone or on your own self-hosted Docker server. I don't host user financial databases, collect tracking data, or sell your records.
       </div>
 
       <h2>1. Data Stored Locally vs. Self-Hosted Mode</h2>
       <p>Orbit Money works in two separate modes chosen by you:</p>
       <ul>
         <li><strong>On-Device Local Mode (Android &amp; PWA):</strong> Account balances, categories, recurring bills, and transactions stay locally on your phone or browser. If you turn on Biometric Lock, unlocking uses Android's hardware-backed biometric prompt; your fingerprint or face data never enters Orbit Money or leaves Android's secure keystore.</li>
-        <li><strong>Self-Hosted Household Mode (Docker + SQLite):</strong> When you connect the app to a self-hosted Orbit Money Docker server you run (via <code>orbitmoney://</code> or HTTPS), your ledger and login data stay inside your server's SQLite folder (<code>AUTH_PROVIDER=local|oidc|both</code>). Overbay cannot see or access servers you host.</li>
+        <li><strong>Self-Hosted Household Mode (Docker + SQLite):</strong> When you connect the app to a self-hosted Orbit Money Docker server you run (via <code>orbitmoney://</code> or HTTPS), your ledger and login data stay inside your server's SQLite folder (<code>AUTH_PROVIDER=local|oidc|both</code>). I can't see or access servers you host.</li>
       </ul>
 
       <h2>2. Optional Google Drive Backup Sync</h2>
@@ -119,13 +119,13 @@
       <ul>
         <li>Google Drive access is used solely to back up and restore your own Orbit Money data inside your Google Drive account.</li>
         <li>Google user data is never sold, shared with advertisers or data brokers, or used for ads, credit underwriting, or training AI models.</li>
-        <li>Overbay never reads or views backups stored in your Google Drive.</li>
+        <li>I never read or view backups stored in your Google Drive.</li>
       </ul>
 
       <h2>4. Optional Third-Party Integrations (Self-Hosted Mode)</h2>
       <p>A few optional extras are only active when explicitly turned on by whoever runs a self-hosted instance:</p>
       <ul>
-        <li><strong>SimpleFIN Bridge:</strong> If you add a SimpleFIN Setup Token or Access URL, your self-hosted server encrypts the Access URL inside SQLite and fetches updates directly from SimpleFIN. Overbay never sees or relays SimpleFIN tokens.</li>
+        <li><strong>SimpleFIN Bridge:</strong> If you add a SimpleFIN Setup Token or Access URL, your self-hosted server encrypts the Access URL inside SQLite and fetches updates directly from SimpleFIN. I never see or relay SimpleFIN tokens.</li>
         <li><strong>Logo.dev Merchant Icons (Opt-In):</strong> If turned on, merchant domain lookups fetch brand icons directly from Logo.dev.</li>
         <li><strong>Web Push Alerts (Opt-In):</strong> Self-hosted admins can optionally set up VAPID keys for browser push notifications.</li>
       </ul>
@@ -144,7 +144,7 @@
       <p>Orbit Money has no ads or analytics trackers. Remove your data anytime using the in-app reset, Android's Clear Storage or Uninstall options, revoking Google Drive access, or deleting your self-hosted Docker <code>/data</code> folder. Full steps live on the <a href="/data-deletion/">Data Deletion page</a>.</p>
 
       <h2>8. Children's Privacy &amp; Contact</h2>
-      <p>Orbit Money isn't intended for children under 13 (or the minimum age in your jurisdiction). Questions or privacy requests can go to <a href="mailto:privacy@overbay.app">privacy@overbay.app</a>.</p>
+      <p>Orbit Money isn't intended for children under 13 (or the minimum age in your jurisdiction), and I don't knowingly collect personal info from children. Questions or privacy requests? Email me at <a href="mailto:privacy@overbay.app">privacy@overbay.app</a>.</p>
     </div>
   </main>
 
@@ -156,7 +156,7 @@
             <img class="brand-mark" src="/assets/brand/overbay-mark.svg" alt="" width="30" height="30">
             <span>Overbay.app</span>
           </a>
-          <p>Small apps by Overbay that stay on your own devices without ads or subscriptions.</p>
+          <p>Small apps I made that stay on your own devices without ads or subscriptions.</p>
         </div>
         <div class="footer-col">
           <p class="footer-heading">Apps</p>
@@ -190,7 +190,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 Overbay</span>
+        <span>&copy; 2026 Neal Overbay</span>
         <span>No cookies, ads, or analytics.</span>
       </div>
     </div>

@@ -1,12 +1,12 @@
 # Overbay.app — Full Factual Reference
 
 Website: https://overbay.app/
-Publisher / Developer: Overbay (Waspo98)
+Publisher / Developer: Neal Overbay (Waspo98)
 Privacy Contact: privacy@overbay.app
 Legal Contact: legal@overbay.app
 GitHub Organization / User: https://github.com/Waspo98
 
-Overbay publishes small, offline-first software with no ads, no tracking, and no mandatory Overbay accounts. Preview APKs linked on overbay.app use a test signature while Play Store release builds are finalized (switching to future release or Play Store builds requires a fresh install).
+I build small, offline-first apps with no ads, no tracking, and no mandatory accounts. Preview APKs linked on overbay.app use a test signature while I finish up the Play Store release builds (switching to future release or Play Store builds requires a fresh install).
 
 ---
 
@@ -67,7 +67,7 @@ Overbay publishes small, offline-first software with no ads, no tracking, and no
   - Optional classic `#1DA1F2` accent styling and restored "Tweet" / "Retweet" labels
   - Toggleable Grok / Premium UI removal, configurable Home tabs, local regex mute filters, and automatic `t.co` redirect unwrapping
   - Direct `.mp4` video and `name=orig` full-resolution image saving via Android MediaStore
-  - Operates no Overbay servers; network traffic connects directly from the device WebView to x.com
+  - No middleman servers; network traffic connects directly from the device WebView to x.com
 
 ---
 
