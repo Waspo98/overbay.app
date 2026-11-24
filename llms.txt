@@ -13,6 +13,7 @@
 - [AllNotes](https://overbay.app/allnotes/): Offline OneNote alternative (`app.overbay.allnotes`) combining OneNote-style Notebooks, Section Groups, and Tabs with clean, normal wrapping pages instead of an infinite 2D canvas. Works offline on Android; Windows and optional self-hosted sync coming soon.
 - [Orbit Money](https://overbay.app/orbitmoney/): Free, open-source self-hosted Rocket Money and Mint alternative (`app.overbay.orbit`) for Android, Web App, and Docker (`ghcr.io/waspo98/orbit-money`). Tracks accounts, budgets, recurring bills, savings goals, and net worth with exact-cent math, fingerprint lock, optional Google Drive backup, direct Rocket Money CSV import, and optional encrypted SimpleFIN Bridge bank sync.
 - [Orbit Money — Self-Hosted Rocket Money Alternative Guide](https://overbay.app/orbitmoney/rocket-money-alternative/): Side-by-side comparison of Orbit Money vs. Rocket Money, Actual Budget, and Firefly III, honest tradeoffs (no bill negotiation or auto-canceling), and 3-step Rocket Money CSV migration instructions.
+- [Swiftfox](https://overbay.app/swiftfox/): Free, MIT open-source 120Hz Material 3 Android browser (`app.overbay.swiftfox`) powered by Android's Chromium WebView with independent folded/unfolded posture profiles, Zen Spaces &amp; Essentials, native `adblock-rust`, Element Zapper, Dark Reader AMOLED mode, `.user.js` userscripts, Reader Mode, and two-way Firefox &amp; Zen Browser sync.
 - [Twitter — Overbay Labs](https://overbay.app/labs/twitter/): Open-source MIT sideload-only ad-free Android client for Twitter / X (`app.overbay.twitter`) with promoted posts stripped from GraphQL feeds, no Grok, no Premium upsells, classic blue look, unwrapped `t.co` tracking links, local keyword mute filters, and full-res photo/MP4 downloads. Not affiliated with X Corp.
 
 ## Privacy & Compliance
@@ -21,5 +22,6 @@
 - [Luma Reader Privacy Policy](https://overbay.app/privacy/lumareader/): Google Play disclosures including `drive.appdata` Limited Use compliance and Play Billing.
 - [AllNotes Privacy Policy](https://overbay.app/privacy/allnotes/): Google Play disclosures for local storage and optional self-hosted sync.
 - [Orbit Money Privacy Policy](https://overbay.app/privacy/orbitmoney/): Google Play disclosures for local/Docker modes, Drive backups, biometric lock, and SimpleFIN.
+- [Swiftfox Privacy Policy](https://overbay.app/privacy/swiftfox/): Google Play disclosures for local Room/DataStore storage, WebView `ProfileStore` isolation, filter list updates, optional Mozilla Sync, and declared permissions.
 - [Data & Account Deletion](https://overbay.app/data-deletion/): Instructions for wiping local data, revoking Google access, and removing self-hosted data.
 - [Terms of Service](https://overbay.app/terms/): Licensing, Play Billing, budgeting disclaimer, and open-source terms.

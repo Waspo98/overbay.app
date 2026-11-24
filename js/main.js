@@ -758,6 +758,232 @@
           });
         }
       }
+
+      // 4d. Swiftfox interactive Zen Spaces, posture profile & quick controls specimen
+      const sfApp = specimen.querySelector('.swiftfox-mock-app');
+      if (sfApp) {
+        const tag = specimen.querySelector('.ui-specimen__tag');
+        if (tag) {
+          tag.textContent = 'Interactive preview';
+          tag.classList.add('is-interactive');
+        }
+
+        const barTitle = specimen.querySelector('.specimen-app-label > span');
+        const domainEl = sfApp.querySelector('.swiftfox-domain');
+        const shieldDot = sfApp.querySelector('.swiftfox-shield-dot');
+        const postureBtn = sfApp.querySelector('.swiftfox-posture-pill');
+        const shellEl = sfApp.querySelector('.swiftfox-mock-shell');
+        const spaceItems = Array.from(sfApp.querySelectorAll('.swiftfox-space-item'));
+        const pageEl = sfApp.querySelector('.swiftfox-mock-page');
+        const pageTitleEl = sfApp.querySelector('.swiftfox-mock-page .specimen-title');
+        const modeTagEl = sfApp.querySelector('.swiftfox-mode-tag');
+        const excerptEl = sfApp.querySelector('.swiftfox-mock-excerpt');
+        const bannerEl = sfApp.querySelector('.swiftfox-mock-banner');
+        const adblockChip = sfApp.querySelector('[data-sf-action="adblock"]');
+        const darkChip = sfApp.querySelector('[data-sf-action="darkreader"]');
+        const zapperChip = sfApp.querySelector('[data-sf-action="zapper"]');
+
+        const SWIFTFOX_SPACES = {
+          Personal: {
+            domain: 'en.wikipedia.org',
+            title: 'National Museum of Racing',
+            excerpt:
+              'Founded in 1950 in Saratoga Springs, preserving thoroughbred racing history and exhibits.',
+            bannerLabel: 'App banner:',
+            bannerText: 'Install the native app for a smoother reading experience!',
+            blocked: 4,
+          },
+          Work: {
+            domain: 'developer.android.com',
+            title: 'Foldable posture states',
+            excerpt:
+              'Keep separate toolbar placements and site modes across folded cover screens and inner displays.',
+            bannerLabel: 'Cookie prompt:',
+            bannerText: 'Manage optional telemetry preferences before reading the docs.',
+            blocked: 7,
+          },
+          Reading: {
+            domain: 'overbay.app/swiftfox',
+            title: 'Built for crisp 120Hz text',
+            excerpt:
+              'Android Chromium WebView rendering paired with Dark Reader AMOLED mode, userscripts, and Reader Mode.',
+            bannerLabel: 'Overlay:',
+            bannerText: 'Subscribe to our weekly newsletter before continuing this article.',
+            blocked: 3,
+          },
+        };
+
+        // Preserve initial active space text if customized in HTML
+        const initialSpaceEl = spaceItems.find((s) => s.classList.contains('is-active'));
+        const initialSpaceName = initialSpaceEl ? initialSpaceEl.textContent.trim() : 'Personal';
+        if (initialSpaceName && pageTitleEl && excerptEl) {
+          const base = SWIFTFOX_SPACES[initialSpaceName] || {};
+          const blockedMatch = adblockChip ? adblockChip.textContent.match(/(\d+)/) : null;
+          SWIFTFOX_SPACES[initialSpaceName] = {
+            domain: domainEl ? domainEl.textContent.trim() : base.domain || 'en.wikipedia.org',
+            title: pageTitleEl.textContent.trim(),
+            excerpt: excerptEl.textContent.trim(),
+            bannerLabel: bannerEl && bannerEl.querySelector('strong')
+              ? bannerEl.querySelector('strong').textContent.trim()
+              : base.bannerLabel || 'Notice:',
+            bannerText: bannerEl
+              ? bannerEl.textContent
+                  .replace(
+                    bannerEl.querySelector('strong') ? bannerEl.querySelector('strong').textContent : '',
+                    ''
+                  )
+                  .trim()
+              : base.bannerText || '',
+            blocked: blockedMatch ? parseInt(blockedMatch[1], 10) : (base.blocked || 4),
+          };
+        }
+
+        let currentSpace = initialSpaceName;
+        let adblockOn = adblockChip ? adblockChip.classList.contains('is-on') : true;
+        const zappedSpaces = new Set();
+
+        const syncControls = () => {
+          const info = SWIFTFOX_SPACES[currentSpace] || SWIFTFOX_SPACES.Personal;
+          const isZapped = zappedSpaces.has(currentSpace);
+
+          if (adblockChip) {
+            adblockChip.classList.toggle('is-on', adblockOn);
+            adblockChip.setAttribute('aria-pressed', String(adblockOn));
+            adblockChip.textContent = adblockOn
+              ? `Adblock · ${info.blocked} blocked`
+              : 'Adblock · Paused';
+          }
+          if (shieldDot) {
+            shieldDot.classList.toggle('is-paused', !adblockOn);
+          }
+          if (darkChip && pageEl) {
+            const darkOn = pageEl.classList.contains('is-dark-reader');
+            darkChip.classList.toggle('is-on', darkOn);
+            darkChip.setAttribute('aria-pressed', String(darkOn));
+            darkChip.textContent = darkOn ? 'Dark Reader: On' : 'Dark Reader: Off';
+          }
+          if (bannerEl) {
+            bannerEl.hidden = isZapped;
+          }
+          if (zapperChip) {
+            zapperChip.classList.toggle('is-zapped', isZapped);
+            zapperChip.setAttribute('aria-pressed', String(isZapped));
+            zapperChip.textContent = isZapped ? 'Zapped · Undo' : 'Element Zapper';
+          }
+        };
+
+        const bindTap = (el, handler) => {
+          if (!el) return;
+          el.setAttribute('role', 'button');
+          el.tabIndex = 0;
+          el.addEventListener('click', handler);
+          el.addEventListener('keydown', (e) => {
+            if (e.key === ' ' || e.key === 'Enter') {
+              e.preventDefault();
+              handler();
+            }
+          });
+        };
+
+        spaceItems.forEach((item) => {
+          const name = item.textContent.trim();
+          if (!SWIFTFOX_SPACES[name]) return;
+          item.setAttribute('aria-pressed', String(item.classList.contains('is-active')));
+
+          bindTap(item, () => {
+            if (item.classList.contains('is-active')) return;
+            currentSpace = name;
+            const info = SWIFTFOX_SPACES[name];
+
+            spaceItems.forEach((s) => {
+              const active = s === item;
+              s.classList.toggle('is-active', active);
+              s.setAttribute('aria-pressed', String(active));
+              const dot = s.querySelector('.swiftfox-space-dot');
+              if (active && !dot) {
+                const newDot = document.createElement('span');
+                newDot.className = 'swiftfox-space-dot';
+                newDot.setAttribute('aria-hidden', 'true');
+                s.prepend(newDot);
+              } else if (!active && dot) {
+                dot.remove();
+              }
+            });
+
+            if (barTitle) barTitle.textContent = `Swiftfox · ${name}`;
+            if (domainEl) domainEl.textContent = info.domain;
+            if (pageTitleEl) pageTitleEl.textContent = info.title;
+            if (excerptEl) excerptEl.textContent = info.excerpt;
+            if (bannerEl) {
+              const strong = document.createElement('strong');
+              strong.textContent = `${info.bannerLabel} `;
+              bannerEl.replaceChildren(strong, document.createTextNode(info.bannerText));
+            }
+            syncControls();
+
+            if (pageEl && !prefersReduced() && typeof pageEl.animate === 'function') {
+              pageEl.animate(
+                [
+                  { opacity: 0, transform: 'translate3d(8px, 0, 0)' },
+                  { opacity: 1, transform: 'translate3d(0, 0, 0)' },
+                ],
+                { duration: 220, easing: EASE_OUT_EXPO }
+              );
+            }
+          });
+        });
+
+        if (postureBtn && shellEl) {
+          const syncPosture = () => {
+            const folded = shellEl.classList.contains('is-folded');
+            postureBtn.setAttribute('aria-pressed', String(folded));
+            postureBtn.textContent = folded ? 'Folded · Split bar' : 'Unfolded · Side rail';
+            if (modeTagEl) modeTagEl.textContent = folded ? 'Mobile site' : 'Desktop site';
+          };
+          syncPosture();
+          bindTap(postureBtn, () => {
+            shellEl.classList.toggle('is-folded');
+            syncPosture();
+          });
+        }
+
+        if (adblockChip) {
+          bindTap(adblockChip, () => {
+            adblockOn = !adblockOn;
+            syncControls();
+          });
+        }
+
+        if (darkChip && pageEl) {
+          bindTap(darkChip, () => {
+            pageEl.classList.toggle('is-dark-reader');
+            syncControls();
+          });
+        }
+
+        if (zapperChip && bannerEl) {
+          bindTap(zapperChip, () => {
+            const willZap = !zappedSpaces.has(currentSpace);
+            if (willZap) {
+              zappedSpaces.add(currentSpace);
+            } else {
+              zappedSpaces.delete(currentSpace);
+            }
+            syncControls();
+            if (!willZap && !prefersReduced() && typeof bannerEl.animate === 'function') {
+              bannerEl.animate(
+                [
+                  { opacity: 0, transform: 'translateY(-4px)' },
+                  { opacity: 1, transform: 'translateY(0)' },
+                ],
+                { duration: 200, easing: EASE_OUT_EXPO }
+              );
+            }
+          });
+        }
+
+        syncControls();
+      }
     });
 
     // ── 5. Pointer-Responsive Hardware Depth & Specular Sheen ──

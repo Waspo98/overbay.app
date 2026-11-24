@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Swiftfox — 120Hz Android Browser with Adblock, Dark Reader &amp; Firefox Sync | Overbay.app</title>
+  <meta name="description" content="A 120Hz Material 3 Android browser powered by Chromium WebView with native adblock-rust, an Element Zapper, Dark Reader, userscripts, foldable posture profiles, and two-way Firefox &amp; Zen Browser sync.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://overbay.app/swiftfox/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Overbay.app">
+  <meta property="og:title" content="Swiftfox — 120Hz Android Browser with Adblock, Dark Reader &amp; Firefox Sync">
+  <meta property="og:description" content="120Hz Android browser on Chromium WebView with native adblock-rust, Element Zapper, Dark Reader, .user.js userscripts, foldable posture profiles, and Firefox / Zen Sync.">
+  <meta property="og:url" content="https://overbay.app/swiftfox/">
+  <meta property="og:image" content="https://overbay.app/assets/brand/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Overbay.app — Swiftfox for Android">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Swiftfox — 120Hz Android Browser with Adblock, Dark Reader &amp; Firefox Sync">
+  <meta name="twitter:description" content="120Hz Android browser on Chromium WebView with native adblock-rust, Element Zapper, Dark Reader, userscripts, foldable profiles, and Firefox / Zen Sync.">
+  <meta name="twitter:image" content="https://overbay.app/assets/brand/og-image.png">
+  <meta name="twitter:image:alt" content="Overbay.app — Swiftfox for Android">
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/swiftfox.svg?v=2">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/swiftfox-favicon.png?v=2">
+  <link rel="icon" href="/assets/icons/swiftfox-favicon.ico?v=2" sizes="16x16 32x32 48x48">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/swiftfox-apple-touch-icon.png?v=2">
+  <link rel="preload" href="/assets/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/styles.css?v=6">
+  <noscript><link rel="stylesheet" href="/css/noscript.css?v=3"></noscript>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["SoftwareApplication", "SoftwareSourceCode"],
+        "name": "Swiftfox",
+        "description": "Free, MIT open-source 120Hz Material 3 Android browser built on Chromium WebView with independent folded and unfolded posture profiles, Zen Spaces, native adblock-rust, an Element Zapper, built-in Dark Reader, .user.js userscripts, Reader Mode, and two-way Firefox and Zen Browser sync.",
+        "applicationCategory": "BrowserApplication",
+        "applicationSubCategory": "Web Browser",
+        "operatingSystem": "Android 12+",
+        "isAccessibleForFree": true,
+        "license": "https://opensource.org/licenses/MIT",
+        "identifier": "app.overbay.swiftfox",
+        "url": "https://overbay.app/swiftfox/",
+        "image": "https://overbay.app/assets/icons/swiftfox-512.png",
+        "downloadUrl": "https://github.com/Waspo98/swiftfox/releases/latest",
+        "codeRepository": "https://github.com/Waspo98/swiftfox",
+        "featureList": [
+          "120Hz Android Chromium WebView scrolling with automatic Play Store engine security updates",
+          "Independent folded and unfolded foldable posture profiles for toolbars and Mobile or Desktop site defaults",
+          "Zen-style Spaces, pinned Essentials, ephemeral Private tabs, and optional per-Space cookie containers",
+          "Embedded adblock-rust JNI blocking with uBlock Origin, EasyList, and custom filter lists",
+          "Interactive Material 3 Element Zapper for one-tap temporary hiding or permanent per-site CSS rules",
+          "Decoupled Dark Reader web night mode with AMOLED black, .user.js userscripts, and Mozilla Readability Reader Mode",
+          "Two-way Firefox and Zen Browser sync via Mozilla Accounts plus Chrome HTML bookmark import and export"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Neal Overbay",
+          "url": "https://overbay.app/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://overbay.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Swiftfox",
+            "item": "https://overbay.app/swiftfox/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Why use Android WebView instead of GeckoView or Chromium source?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "On 120Hz Android phones, GeckoView text scrolling often shows visible frame jitter compared to Chromium, while maintaining a full Chromium fork takes hundreds of gigabytes of C++ builds. Using Android's built-in Chromium WebView gives Swiftfox smooth 120Hz scrolling and automatic Google Play engine security updates while leaving me free to build the UI, ad blocker, Dark Reader, and sync layers in Kotlin."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can Swiftfox install Chrome .crx or Firefox .xpi extensions?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Android WebView does not expose Chrome or Firefox extension APIs. Instead, Swiftfox builds the core tools I rely on right into the browser: native adblock-rust with EasyList and uBlock Origin lists, an interactive Element Zapper, bundled Dark Reader, per-site rules, and .user.js userscripts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Firefox and Zen Browser sync work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can sign in with your Mozilla Account inside an isolated in-app login view or pair via QR code using Desktop Firefox or Zen Browser. Swiftfox syncs bookmarks, history, synced open tabs, and Zen Spaces, Essentials, and pinned tabs directly with Mozilla's Sync servers using Mozilla application-services."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does folding or unfolding reload my open tabs?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No, unless your folded and unfolded profiles choose a different site mode for that page. Swiftfox handles configuration changes in place and keeps your warm WebView tab pool and playing media alive across posture changes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How are passwords and autofill handled?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Swiftfox uses Android System Autofill and Credential Manager so your existing password manager or passkeys work naturally, instead of building a separate in-app password vault."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Swiftfox send my browsing history to Overbay.app?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. I don't run any Swiftfox servers or analytics. Your tabs, Spaces, history, and rules stay on your phone—and if you enable Mozilla Sync, your device talks directly to Mozilla's servers."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="brand-link" href="/">
+        <img class="brand-mark" src="/assets/brand/overbay-mark.svg" alt="" width="30" height="30">
+        <span>Overbay.app</span>
+      </a>
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="/lumareader/">Luma Reader</a>
+        <a href="/allnotes/">AllNotes</a>
+        <a href="/orbitmoney/">Orbit Money</a>
+        <a href="/swiftfox/" aria-current="page">Swiftfox</a>
+        <a href="/labs/twitter/">Labs</a>
+        <a href="/privacy/">Privacy</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="nav-pill-btn" href="https://github.com/Waspo98">
+          <svg class="icon icon--sm icon--fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/></svg>
+          <span>GitHub</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg class="icon" viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="mobile-drawer" aria-label="Mobile navigation">
+      <ul>
+        <li><a href="/lumareader/">Luma Reader</a></li>
+        <li><a href="/allnotes/">AllNotes</a></li>
+        <li><a href="/orbitmoney/">Orbit Money</a></li>
+        <li><a href="/swiftfox/" aria-current="page">Swiftfox</a></li>
+        <li><a href="/labs/twitter/">Overbay Labs (Twitter)</a></li>
+        <li><a href="/privacy/">Privacy Policy</a></li>
+        <li><a href="/data-deletion/">Data Deletion</a></li>
+        <li><a href="/terms/">Terms of Service</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container page-hero-grid">
+        <div class="page-hero-copy">
+          <div class="page-hero-title">
+            <picture>
+              <source srcset="/assets/icons/swiftfox-96.webp 1x, /assets/icons/swiftfox-192.webp 2x" type="image/webp">
+              <img class="app-icon app-icon--lg" src="/assets/icons/swiftfox-96.png" srcset="/assets/icons/swiftfox-96.png 1x, /assets/icons/swiftfox-192.png 2x" alt="" width="48" height="48" decoding="async">
+            </picture>
+            <h1>Swiftfox</h1>
+          </div>
+          <p class="page-hero-lead">A 120Hz Material 3 Android browser built on Android's Chromium WebView so scrolling text stays smooth—paired with native ad blocking, an Element Zapper, Dark Reader, userscripts, foldable posture layouts, and two-way Firefox and Zen Browser sync.</p>
+
+          <dl class="spec-strip">
+            <div><dt>Package</dt><dd><code>app.overbay.swiftfox</code></dd></div>
+            <div><dt>Engine</dt><dd>120Hz Android WebView</dd></div>
+            <div><dt>Requires</dt><dd>Android 12+</dd></div>
+            <div><dt>Google Play</dt><dd>Coming soon</dd></div>
+            <div><dt>License</dt><dd>MIT Open Source</dd></div>
+          </dl>
+
+          <!-- When live on Google Play, add alongside Download APK:
+               <a class="btn btn--primary" href="https://play.google.com/store/apps/details?id=app.overbay.swiftfox">Get on Google Play</a> -->
+          <div class="btn-row">
+            <a class="btn btn--primary" href="https://github.com/Waspo98/swiftfox/releases/latest">Download APK</a>
+            <a class="btn btn--outline" href="https://github.com/Waspo98/swiftfox">Source on GitHub</a>
+            <a class="btn btn--outline" href="/privacy/swiftfox/">Privacy Policy</a>
+          </div>
+          <p class="apk-note">Signed release APK from GitHub Releases (under Assets). Future GitHub releases update in place.</p>
+          <p class="disclaimer-note">Independent open-source browser built under the MIT License. Not affiliated with or endorsed by Mozilla, Firefox, or Zen Browser.</p>
+        </div>
+
+        <div class="page-hero-stage" data-screenshot-slot="swiftfox-hero">
+          <div class="ui-specimen">
+            <div class="ui-specimen__bar">
+              <span class="specimen-app-label">
+                <picture>
+                  <source srcset="/assets/icons/swiftfox-96.webp" type="image/webp">
+                  <img class="app-icon app-icon--xs" src="/assets/icons/swiftfox-96.png" alt="" width="18" height="18" decoding="async">
+                </picture>
+                <span>Swiftfox · Personal</span>
+              </span>
+              <span class="ui-specimen__tag">Preview</span>
+            </div>
+            <div class="ui-specimen__body">
+              <div class="swiftfox-mock-app">
+                <div class="swiftfox-mock-bar">
+                  <div class="swiftfox-mock-omnibox">
+                    <span class="swiftfox-shield-dot" aria-hidden="true"></span>
+                    <span class="swiftfox-domain">en.wikipedia.org</span>
+                    <span class="swiftfox-hz-badge">120Hz</span>
+                  </div>
+                  <span class="swiftfox-posture-pill">Unfolded · Side rail</span>
+                </div>
+                <div class="swiftfox-mock-shell">
+                  <aside class="swiftfox-mock-spaces" aria-label="Sample browser Spaces">
+                    <div class="swiftfox-space-item is-active"><span class="swiftfox-space-dot" aria-hidden="true"></span>Personal</div>
+                    <div class="swiftfox-space-item">Work</div>
+                    <div class="swiftfox-space-item">Reading</div>
+                  </aside>
+                  <div class="swiftfox-mock-page">
+                    <div class="swiftfox-mock-page-head">
+                      <p class="specimen-title">National Museum of Racing</p>
+                      <span class="swiftfox-mode-tag">Desktop site</span>
+                    </div>
+                    <p class="swiftfox-mock-excerpt">Founded in 1950 in Saratoga Springs, preserving thoroughbred racing history and exhibits.</p>
+                    <div class="swiftfox-mock-banner">
+                      <strong>App banner:</strong> Install the native app for a smoother reading experience!
+                    </div>
+                  </div>
+                </div>
+                <div class="swiftfox-mock-controls">
+                  <span class="swiftfox-ctrl-chip is-on" data-sf-action="adblock">Adblock · 4 blocked</span>
+                  <span class="swiftfox-ctrl-chip" data-sf-action="darkreader">Dark Reader: Off</span>
+                  <span class="swiftfox-ctrl-chip" data-sf-action="zapper">Element Zapper</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="swiftfox-why">
+      <div class="container two-col-split">
+        <div>
+          <h2 id="swiftfox-why">Why I built a 120Hz WebView browser</h2>
+          <p>I wanted Zen Browser and Firefox's Spaces, sync, and ad-blocking tools on my foldable phone, without GeckoView's jittery scrolling text at 120Hz and without Chrome's stripped-down mobile controls.</p>
+          <p>Swiftfox builds on Android's system Chromium WebView for smooth scrolling and automatic Google Play engine security patches, while wrapping it in a Material 3 Compose shell tailored for folded one-handed use and unfolded wide-screen reading.</p>
+        </div>
+
+        <ul class="detail-list">
+          <li>
+            <h3>Independent folded &amp; unfolded layouts</h3>
+            <p>Jetpack WindowManager tracks posture so folded cover screens and unfolded inner displays keep separate toolbar layouts (Top, Bottom, Split, or Side Rail), scroll-hiding settings, and Mobile vs. Desktop site defaults. Folding never reloads tabs or stops audio unless your site mode changes.</p>
+          </li>
+          <li>
+            <h3>Zen Spaces, Essentials &amp; isolated tabs</h3>
+            <p>Organize tabs into Spaces with pinned Essentials—a slide-over drawer and card switcher when folded, or a collapsible vertical sidebar when unfolded. Private tabs run in ephemeral <code>ProfileStore</code> sessions, with optional per-Space cookie containers.</p>
+          </li>
+          <li>
+            <h3>Native adblock-rust &amp; Element Zapper</h3>
+            <p>Embeds <code>adblock-rust</code> over JNI with EasyList, EasyPrivacy, uBlock Origin lists, and custom list URLs. When a sticky banner slips through, tap Element Zapper to hide it with undo or save a permanent per-site CSS rule using a parent/child scope slider.</p>
+          </li>
+          <li>
+            <h3>Dark Reader, userscripts &amp; Reader Mode</h3>
+            <p>Toggle web-content night mode independently using the bundled Dark Reader engine (with AMOLED <code>#000000</code> and auto-skip for native dark sites), install <code>.user.js</code> scripts, set per-site overrides, or switch into Mozilla Readability Reader Mode.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="swiftfox-sync">
+      <div class="container two-col-split">
+        <div>
+          <h2 id="swiftfox-sync">Firefox &amp; Zen Browser sync—and honest limits</h2>
+          <p>Sign into your Mozilla Account in an isolated in-app view or scan a QR code from Desktop Firefox or Zen Browser to sync bookmarks, history, synced open tabs, and Zen Spaces, Essentials, and pinned items. Coming from Chrome? Import or export standard Netscape HTML bookmark files locally anytime.</p>
+          <p>Everyday features are built in too: a smart omnibox with Google default (plus DuckDuckGo, Kagi, Brave, Startpage, or custom search and <code>!bang</code> shortcuts), Picture-in-Picture and background audio playback, Blob downloads, Clean URL sharing, HTTPS-Only mode, and Android System Autofill.</p>
+        </div>
+
+        <div class="spec-note-card">
+          <h3>Technical notes &amp; honest limits</h3>
+          <ul class="spec-note-list">
+            <li><strong>Sync:</strong> Two-way Firefox &amp; Zen Browser sync via Mozilla Accounts (OAuth or QR pairing), plus local Chrome HTML bookmark import/export.</li>
+            <li><strong>Extensions:</strong> Android WebView cannot run <code>.crx</code> Chrome or <code>.xpi</code> Firefox extensions—blocking and tweaks use <code>adblock-rust</code>, Element Zapper, Dark Reader, <code>.user.js</code> userscripts, and per-site rules instead.</li>
+            <li><strong>Passwords:</strong> Uses Android System Autofill and Credential Manager rather than a separate built-in password vault.</li>
+            <li><strong>Themes:</strong> Day, Dark, and true <code>#000000</code> AMOLED chrome with Fox Amber, Midnight Indigo, Forest, Monochrome, or optional Material You colors.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="swiftfox-compare">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="swiftfox-compare">How Swiftfox compares</h2>
+          <p>Built for Android and foldable users who want Firefox and Zen workflows on top of smooth 120Hz Chromium scrolling.</p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Swiftfox</th>
+                <th>Firefox for Android</th>
+                <th>Chrome for Android</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Feature"><strong>120Hz scroll &amp; engine</strong></td>
+                <td data-label="Swiftfox">120Hz Android Chromium WebView with Play security updates</td>
+                <td data-label="Firefox for Android">GeckoView engine</td>
+                <td data-label="Chrome for Android">120Hz Chromium Blink engine</td>
+              </tr>
+              <tr>
+                <td data-label="Feature"><strong>Foldable layouts</strong></td>
+                <td data-label="Swiftfox">Independent folded &amp; unfolded toolbar, rail, and site-mode profiles</td>
+                <td data-label="Firefox for Android">Single layout with top or bottom bar</td>
+                <td data-label="Chrome for Android">Adaptive tab strip on wide screens</td>
+              </tr>
+              <tr>
+                <td data-label="Feature"><strong>Ad blocking &amp; dark mode</strong></td>
+                <td data-label="Swiftfox">Built-in <code>adblock-rust</code>, Element Zapper, and Dark Reader AMOLED</td>
+                <td data-label="Firefox for Android">Add-ons (uBlock Origin, Dark Reader <code>.xpi</code>)</td>
+                <td data-label="Chrome for Android">No mobile extension or ad-block support</td>
+              </tr>
+              <tr>
+                <td data-label="Feature"><strong>Spaces &amp; userscripts</strong></td>
+                <td data-label="Swiftfox">Zen Spaces, Essentials, per-Space containers, and <code>.user.js</code></td>
+                <td data-label="Firefox for Android">Standard tabs and collections</td>
+                <td data-label="Chrome for Android">Tab groups only; no userscripts</td>
+              </tr>
+              <tr>
+                <td data-label="Feature"><strong>Sync &amp; privacy</strong></td>
+                <td data-label="Swiftfox">Firefox &amp; Zen Sync + zero telemetry; MIT open source</td>
+                <td data-label="Firefox for Android">Mozilla Account sync; open source</td>
+                <td data-label="Chrome for Android">Google Account sync; closed ecosystem</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="swiftfox-faq">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="swiftfox-faq">Frequently asked questions</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Why use Android WebView instead of GeckoView or Chromium source?</summary>
+            <p>On 120Hz Android phones, GeckoView text scrolling often shows visible frame jitter compared to Chromium, while maintaining a full Chromium fork takes hundreds of gigabytes of C++ builds. Using Android's built-in Chromium WebView gives Swiftfox smooth 120Hz scrolling and automatic Google Play engine security updates while leaving me free to build the UI, ad blocker, Dark Reader, and sync layers in Kotlin.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can Swiftfox install Chrome .crx or Firefox .xpi extensions?</summary>
+            <p>No. Android WebView does not expose Chrome or Firefox extension APIs. Instead, Swiftfox builds the core tools I rely on right into the browser: native <code>adblock-rust</code> with EasyList and uBlock Origin lists, an interactive Element Zapper, bundled Dark Reader, per-site rules, and <code>.user.js</code> userscripts.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How does Firefox and Zen Browser sync work?</summary>
+            <p>You can sign in with your Mozilla Account inside an isolated in-app login view or pair via QR code using Desktop Firefox or Zen Browser. Swiftfox syncs bookmarks, history, synced open tabs, and Zen Spaces, Essentials, and pinned tabs directly with Mozilla's Sync servers using Mozilla <code>application-services</code>.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does folding or unfolding reload my open tabs?</summary>
+            <p>No, unless your folded and unfolded profiles choose a different site mode for that page. Swiftfox handles configuration changes in place and keeps your warm WebView tab pool and playing media alive across posture changes.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How are passwords and autofill handled?</summary>
+            <p>Swiftfox uses Android System Autofill and Credential Manager so your existing password manager or passkeys work naturally, instead of building a separate in-app password vault.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does Swiftfox send my browsing history to Overbay.app?</summary>
+            <p>No. I don't run any Swiftfox servers or analytics. Your tabs, Spaces, history, and rules stay on your phone—and if you enable Mozilla Sync, your device talks directly to Mozilla's servers.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand-link" href="/">
+            <img class="brand-mark" src="/assets/brand/overbay-mark.svg" alt="" width="30" height="30">
+            <span>Overbay.app</span>
+          </a>
+          <p>Small apps I made that stay on your own devices without ads or subscriptions.</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Apps</p>
+          <ul>
+            <li><a href="/lumareader/"><picture><source srcset="/assets/icons/lumareader-96.webp" type="image/webp"><img class="app-icon app-icon--xs" src="/assets/icons/lumareader-96.png" alt="" width="18" height="18" loading="lazy" decoding="async"></picture><span>Luma Reader</span></a></li>
+            <li><a href="/allnotes/"><picture><source srcset="/assets/icons/allnotes-96.webp" type="image/webp"><img class="app-icon app-icon--xs" src="/assets/icons/allnotes-96.png" alt="" width="18" height="18" loading="lazy" decoding="async"></picture><span>AllNotes</span></a></li>
+            <li><a href="/orbitmoney/"><picture><source srcset="/assets/icons/orbitmoney-96.webp" type="image/webp"><img class="app-icon app-icon--xs" src="/assets/icons/orbitmoney-96.png" alt="" width="18" height="18" loading="lazy" decoding="async"></picture><span>Orbit Money</span></a></li>
+            <li><a href="/swiftfox/"><picture><source srcset="/assets/icons/swiftfox-96.webp" type="image/webp"><img class="app-icon app-icon--xs" src="/assets/icons/swiftfox-96.png" alt="" width="18" height="18" loading="lazy" decoding="async"></picture><span>Swiftfox</span></a></li>
+            <li><a href="/labs/twitter/"><picture><source srcset="/assets/icons/twitter-96.webp" type="image/webp"><img class="app-icon app-icon--xs" src="/assets/icons/twitter-96.png" alt="" width="18" height="18" loading="lazy" decoding="async"></picture><span>Overbay Labs: Twitter</span></a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Legal &amp; Privacy</p>
+          <ul>
+            <li><a href="/privacy/">Privacy Policy</a></li>
+            <li><a href="/privacy/lumareader/">Luma Reader Privacy</a></li>
+            <li><a href="/privacy/allnotes/">AllNotes Privacy</a></li>
+            <li><a href="/privacy/orbitmoney/">Orbit Money Privacy</a></li>
+            <li><a href="/privacy/swiftfox/">Swiftfox Privacy</a></li>
+            <li><a href="/data-deletion/">Data Deletion</a></li>
+            <li><a href="/terms/">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Source &amp; Contact</p>
+          <ul>
+            <li><a href="https://github.com/Waspo98">GitHub (@Waspo98)</a></li>
+            <li><a href="https://github.com/Waspo98/allnotes">AllNotes Source</a></li>
+            <li><a href="https://github.com/Waspo98/Orbit-Money">Orbit Money Source</a></li>
+            <li><a href="https://github.com/Waspo98/swiftfox">Swiftfox Source</a></li>
+            <li><a href="https://github.com/Waspo98/overbay-twitter">Twitter Wrapper Source</a></li>
+            <li><a href="mailto:privacy@overbay.app">privacy@overbay.app</a></li>
+            <li><a href="mailto:legal@overbay.app">legal@overbay.app</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Neal Overbay</span>
+        <span>No cookies, ads, or analytics.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js?v=4" defer></script>
+</body>
+</html>

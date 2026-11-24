@@ -52,6 +52,9 @@
   --allnotes-ink: #3730a3;
   --orbit-bg: #eef9f5;
   --orbit-ink: #0a6351;
+  --swiftfox-bg: #fff5ec;
+  --swiftfox-ink: #b04200;
+  --swiftfox-border: rgba(176, 66, 0, 0.24);
   --labs-bg: #f1f7fc;
   --labs-ink: #0c5d91;
 
@@ -349,7 +352,7 @@ p {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: clamp(16px, 2vw, 26px);
   list-style: none;
 }
 
@@ -564,6 +567,7 @@ p {
   .has-js .mobile-drawer.is-open li:nth-child(5) { transition-delay: 125ms; }
   .has-js .mobile-drawer.is-open li:nth-child(6) { transition-delay: 150ms; }
   .has-js .mobile-drawer.is-open li:nth-child(7) { transition-delay: 175ms; }
+  .has-js .mobile-drawer.is-open li:nth-child(8) { transition-delay: 200ms; }
 }
 
 @media (min-width: 921px) {
@@ -1597,6 +1601,304 @@ html:not(.has-js) .stage-panel {
   color: var(--ink-secondary);
 }
 
+/* Swiftfox Browser Specimen */
+.swiftfox-mock-app {
+  display: grid;
+  gap: 10px;
+}
+
+.swiftfox-mock-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.swiftfox-mock-omnibox {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  padding: 5px 11px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-hairline);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-primary);
+}
+
+.swiftfox-shield-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--swiftfox-ink);
+  flex-shrink: 0;
+  transition: background var(--dur-fast) ease;
+}
+
+.swiftfox-shield-dot.is-paused {
+  background: var(--border-strong);
+}
+
+.swiftfox-domain {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.swiftfox-hz-badge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--accent-ink);
+  background: var(--accent-soft);
+  padding: 1px 6px;
+  border-radius: var(--radius-pill);
+  font-variant-numeric: tabular-nums;
+}
+
+.swiftfox-posture-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--swiftfox-bg);
+  color: var(--swiftfox-ink);
+  border: 1px solid var(--swiftfox-border);
+  white-space: nowrap;
+  transition:
+    background var(--dur-fast) ease,
+    border-color var(--dur-fast) ease,
+    transform var(--dur-fast) var(--ease-out-expo);
+}
+
+.swiftfox-posture-pill[role="button"] {
+  cursor: pointer;
+  user-select: none;
+}
+
+.swiftfox-posture-pill[role="button"]:hover {
+  background: #ffe9d6;
+  border-color: rgba(176, 66, 0, 0.42);
+}
+
+.swiftfox-posture-pill[role="button"]:active {
+  transform: scale(0.97);
+}
+
+.swiftfox-mock-shell {
+  display: grid;
+  grid-template-columns: 118px 1fr;
+  border: 1px solid var(--border-hairline);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg-page);
+}
+
+.swiftfox-mock-shell.is-folded {
+  grid-template-columns: 1fr;
+}
+
+.swiftfox-mock-spaces {
+  background: #faf8f6;
+  border-right: 1px solid var(--border-hairline);
+  padding: 10px 8px;
+  display: grid;
+  gap: 4px;
+  align-content: start;
+}
+
+.swiftfox-mock-shell.is-folded .swiftfox-mock-spaces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  border-right: none;
+  border-bottom: 1px solid var(--border-hairline);
+  padding: 7px 10px;
+}
+
+.swiftfox-space-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 8px;
+  border-radius: 7px;
+  font-size: 0.78rem;
+  color: var(--ink-secondary);
+  transition:
+    background var(--dur-fast) ease,
+    color var(--dur-fast) ease,
+    transform var(--dur-fast) var(--ease-out-expo);
+}
+
+.swiftfox-space-item[role="button"] {
+  cursor: pointer;
+  user-select: none;
+}
+
+.swiftfox-space-item[role="button"]:hover {
+  background: rgba(176, 66, 0, 0.06);
+  color: var(--ink-primary);
+}
+
+.swiftfox-space-item[role="button"]:active {
+  transform: scale(0.98);
+}
+
+.swiftfox-space-item.is-active {
+  background: var(--swiftfox-bg);
+  color: var(--swiftfox-ink);
+  font-weight: 600;
+}
+
+.swiftfox-space-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--swiftfox-ink);
+  flex-shrink: 0;
+}
+
+.swiftfox-mock-page {
+  padding: 13px 15px;
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  background: var(--bg-page);
+  color: var(--ink-primary);
+  transition: background 200ms ease, color 200ms ease;
+}
+
+.swiftfox-mock-page.is-dark-reader {
+  background: #121016;
+  color: #f3eef7;
+}
+
+.swiftfox-mock-page-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.swiftfox-mock-page-head .specimen-title {
+  margin-bottom: 0;
+  font-size: 0.96rem;
+}
+
+.swiftfox-mock-page.is-dark-reader .specimen-title {
+  color: #f3eef7;
+}
+
+.swiftfox-mode-tag {
+  font-family: var(--font-mono);
+  font-size: 0.69rem;
+  padding: 2px 7px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-hairline);
+  color: var(--ink-muted);
+  white-space: nowrap;
+}
+
+.swiftfox-mock-page.is-dark-reader .swiftfox-mode-tag {
+  background: #1c1922;
+  border-color: #2e2a36;
+  color: #c4bcd0;
+}
+
+.swiftfox-mock-excerpt {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--ink-secondary);
+}
+
+.swiftfox-mock-page.is-dark-reader .swiftfox-mock-excerpt {
+  color: #c4bcd0;
+}
+
+.swiftfox-mock-banner {
+  padding: 7px 10px;
+  border-radius: 7px;
+  background: var(--bg-subtle);
+  border: 1px dashed var(--border-strong);
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--ink-secondary);
+}
+
+.swiftfox-mock-banner[hidden] {
+  display: none;
+}
+
+.swiftfox-mock-page.is-dark-reader .swiftfox-mock-banner {
+  background: #1c1922;
+  border-color: #3e3947;
+  color: #c4bcd0;
+}
+
+.swiftfox-mock-page.is-dark-reader .swiftfox-mock-banner strong {
+  color: #f3eef7;
+}
+
+.swiftfox-mock-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.swiftfox-ctrl-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-hairline);
+  background: var(--bg-subtle);
+  color: var(--ink-secondary);
+  font-variant-numeric: tabular-nums;
+  transition:
+    background var(--dur-fast) ease,
+    color var(--dur-fast) ease,
+    border-color var(--dur-fast) ease,
+    transform var(--dur-fast) var(--ease-out-expo);
+}
+
+.swiftfox-ctrl-chip[role="button"] {
+  cursor: pointer;
+  user-select: none;
+}
+
+.swiftfox-ctrl-chip[role="button"]:hover {
+  border-color: var(--border-strong);
+  color: var(--ink-primary);
+}
+
+.swiftfox-ctrl-chip[role="button"]:active {
+  transform: scale(0.97);
+}
+
+.swiftfox-ctrl-chip.is-on {
+  background: var(--swiftfox-bg);
+  color: var(--swiftfox-ink);
+  border-color: var(--swiftfox-border);
+}
+
+.swiftfox-ctrl-chip.is-zapped {
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  border-color: rgba(13, 124, 102, 0.28);
+}
+
 /* ── Sections ── */
 .section {
   padding: 56px 0;
@@ -2407,6 +2709,12 @@ html:not(.has-js) .stage-panel {
 
 /* ── Responsive Breakpoints ── */
 @media (max-width: 1040px) {
+  .nav-menu {
+    gap: 16px;
+  }
+  .nav-menu a {
+    font-size: 0.9rem;
+  }
   .stage-panel {
     grid-template-columns: 1fr;
     gap: 28px;
@@ -2494,6 +2802,17 @@ html:not(.has-js) .stage-panel {
   .notes-mock-rail {
     border-right: none;
     border-bottom: 1px solid var(--border-hairline);
+  }
+  .swiftfox-mock-shell {
+    grid-template-columns: 1fr;
+  }
+  .swiftfox-mock-spaces {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    border-right: none;
+    border-bottom: 1px solid var(--border-hairline);
+    padding: 7px 10px;
   }
   .spec-table {
     min-width: 0;
@@ -2659,6 +2978,12 @@ html:not(.has-js) .stage-panel {
   .check-box.is-pop,
   .copy-btn__check polyline {
     animation: none !important;
+  }
+
+  .swiftfox-posture-pill[role="button"]:active,
+  .swiftfox-space-item[role="button"]:active,
+  .swiftfox-ctrl-chip[role="button"]:active {
+    transform: none !important;
   }
 
   .has-js .mobile-drawer,

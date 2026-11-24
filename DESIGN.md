@@ -18,6 +18,8 @@ colors:
   specimen-indigo-bg: "#f1f4fd"
   specimen-indigo-ink: "#3730a3"
   specimen-mint-bg: "#eef9f5"
+  specimen-amber-bg: "#fff5ec"
+  specimen-amber-ink: "#b04200"
   specimen-sky-bg: "#f1f7fc"
 typography:
   display:
@@ -154,8 +156,8 @@ Structural discipline comes from high-contrast obsidian ink, muted slate prose, 
 - Pure white canvas (`#ffffff`) anchored by flat cool-stone stage frames (`#f5f6f8`) and 1px hairline borders (`#e5e7eb`)
 - Single primary teal-emerald accent (`#0d7c66`) balanced against obsidian ink (`#111316`) and slate prose (`#525866`)
 - Self-hosted Latin typography pairing `Inter Tight` headings with `Public Sans` body copy and `JetBrains Mono` package telemetry
-- Flat macro hierarchy with soft drop shadows reserved strictly for hardware device bezels and staged UI specimen cards
-- Progressive, zero-build static architecture that remains readable without JavaScript and respects reduced-motion preferences
+- Flat macro hierarchy with soft neutral drop shadows reserved strictly for hardware device bezels, staged UI specimen cards, and tactile hover feedback
+- Tactile, zero-dependency gallery motion—sliding tab indicators, directional stage choreography, clickable sample UI specimens, pointer-responsive hardware depth, smooth FAQ disclosures, and cross-document view transitions—while staying 100% readable without JavaScript, strict-CSP safe (`style-src 'self'`), instant on legal pages, and respectful of `prefers-reduced-motion`
 
 ## Colors
 
@@ -181,12 +183,13 @@ A cool neutral grayscale anchored by obsidian ink and hairline grays frames a si
 ### Specimen Framing Tints
 - **Specimen Indigo Tint** (`#f1f4fd`) & **Specimen Indigo Ink** (`#3730a3`): Highlighted notebook rail item, section indicator dot, and callout block inside AllNotes UI specimen previews.
 - **Specimen Mint Tint** (`#eef9f5`): Liquid balance bar background inside Orbit Money ledger specimen previews.
+- **Specimen Amber Tint** (`#fff5ec`) & **Specimen Amber Ink** (`#b04200`): Active Space highlight, posture chip, and active Quick Control tags inside Swiftfox browser specimen previews.
 - **Specimen Sky Tint** (`#f1f7fc`): Media download chip background inside Overbay Labs Twitter specimen previews.
 
 ### Named Rules
 **The Single-Accent Discipline Rule.** Teal Emerald (`#0d7c66`) is reserved for primary flagship actions, active navigation bars, status dots, and focus outlines; secondary actions step back to Pure White outlines and Overbay Labs actions use Obsidian Ink (`#111316`).
 
-**The Whisper-Tint Isolation Rule.** App-specific specimen tints (`#f1f4fd`, `#eef9f5`, `#f1f7fc`) stay confined inside staged UI specimen cards and never tint full page backgrounds or outer gallery frames.
+**The Whisper-Tint Isolation Rule.** App-specific specimen tints (`#f1f4fd`, `#eef9f5`, `#fff5ec`, `#f1f7fc`) stay confined inside staged UI specimen cards and never tint full page backgrounds or outer gallery frames.
 
 ## Typography
 
@@ -213,7 +216,7 @@ A cool neutral grayscale anchored by obsidian ink and hairline grays frames a si
 
 Pages share a centered `1220px` container (`28px` horizontal padding, tightening to `20px` at `560px` and below) with legal and error pages constrained to a `760px` reading column. Sections breathe at `56px` vertical padding, anchored by an `84px` top margin above the four-column footer (`1.4fr repeat(3, 1fr)` desktop, collapsing to two columns at `920px` and one column at `560px`).
 
-Primary compositions rely on asymmetric two-column splits rather than uniform card grids: the home gallery stage pairs copy and visuals at `0.98fr / 1.42fr` (`28px` gap), core app spotlight rows alternate `1.05fr / 1fr` (`44px` gap), the Overbay Labs band pairs explanation and actions at `1.15fr / 0.85fr` (`36px` gap), app detail heroes pair summary and stage at `1.05fr / 0.95fr` (`48px` gap), and architectural deep-dives use `1fr / 1fr` (`40px` gap). Every multi-column grid stacks cleanly to a single column at `1040px`, while the comparison table converts into labeled stacked rows at `680px` and below. All content remains visible in static HTML without JavaScript, and stage panel swaps settle over `280ms` using `cubic-bezier(0.16, 1, 0.3, 1)` unless reduced motion disables transitions.
+Primary compositions rely on asymmetric two-column splits rather than uniform card grids: the home gallery stage pairs copy and visuals at `0.98fr / 1.42fr` (`28px` gap), core app spotlight rows alternate `1.05fr / 1fr` (`44px` gap), the Overbay Labs band pairs explanation and actions at `1.15fr / 0.85fr` (`36px` gap), app detail heroes pair summary and stage at `1.05fr / 0.95fr` (`48px` gap), and architectural deep-dives use `1fr / 1fr` (`40px` gap). Every multi-column grid stacks cleanly to a single column at `1040px`, while the comparison table converts into labeled stacked rows at `680px` and below. All content remains visible in static HTML (`opacity: 1`) without JavaScript. With JavaScript enabled, cross-document `@view-transition` keeps the sticky header anchored between pages, stage swaps glide over `360ms` with WAAPI height interpolation and directional copy/visual choreography (`cubic-bezier(0.16, 1, 0.3, 1)`), and below-the-fold showcase sections arrive progressively via `IntersectionObserver` (`560ms`, skipped on `.legal-main` reading pages).
 
 ### Named Rules
 **The Alternating Rhythm Rule.** Core application spotlights alternate media placement left-to-right across full-width `1px` hairline dividers (`#e5e7eb`) instead of repeating identical card boxes.
@@ -223,11 +226,15 @@ Primary compositions rely on asymmetric two-column splits rather than uniform ca
 Overbay.app operates on a flat, hairline-structured surface system where depth appears only on the software frames being showcased. Macro containers—the gallery stage, Overbay Labs band, legal summary callouts, spotlight rows, and specification tables—sit flush against the Pure White (`#ffffff`) page using Stone Stage (`#f5f6f8`) tonal contrast and `1px` `#e5e7eb` hairline borders rather than drop shadows.
 
 ### Shadow Vocabulary
-- **Device Lift** (`box-shadow: 0 18px 36px -14px rgba(17, 19, 22, 0.16), 0 4px 12px -2px rgba(17, 19, 22, 0.06)`): Reserved exclusively for foldable/phone hardware frames and UI specimen preview cards sitting inside a framing stage.
-- **Active Nav Indicator** (`box-shadow: inset 0 -2px 0 #0d7c66`): Crisp flat 2px bottom bar marking the active desktop navigation link without shifting text baseline.
+- **Device Lift** (`box-shadow: 0 18px 36px -14px rgba(17, 19, 22, 0.16), 0 4px 12px -2px rgba(17, 19, 22, 0.06)`): Reserved for foldable/phone hardware frames and UI specimen preview cards at rest inside a framing stage.
+- **Device Lift Active** (`box-shadow: 0 26px 48px -16px rgba(17, 19, 22, 0.22), 0 8px 18px -4px rgba(17, 19, 22, 0.09)`): Deepened neutral elevation applied to hardware frames and UI specimen cards when a fine pointer is active over their framing stage.
+- **Button Hover Lift** (`box-shadow: 0 8px 18px -8px rgba(17, 19, 22, 0.24)` on primary buttons, `0 8px 18px -8px rgba(17, 19, 22, 0.36)` on dark buttons, `0 4px 12px -6px rgba(17, 19, 22, 0.14)` on outline buttons): Crisp neutral hover lift without colored glow halos or layout-shifting translations.
+- **Scrolled Header Shadow** (`box-shadow: 0 4px 16px -12px rgba(17, 19, 22, 0.14)`): Whisper-quiet separation beneath the frosted sticky navigation bar once scrolled.
 
 ### Named Rules
 **The Stage-Over-Card Rule.** Macro layout frames remain completely flat (`#f5f6f8` fill + `1px` `#e5e7eb` border); diffuse drop shadows are reserved strictly for device hardware frames and UI specimen previews staged inside them.
+
+**The Stationary Hit-Target Rule.** Hover motion never slides a button, tab, or hardware bezel out from under the pointer. Pointer-driven 3D tilt, paired-device parallax depth, and daylight specular sheen are listened to on the stationary framing stage container (on fine mouse pointers only) while buttons express hover through surface, border, and neutral elevation changes.
 
 ## Shapes
 
@@ -237,34 +244,36 @@ Every primary interactive trigger—action buttons, top-bar GitHub link, segment
 
 ## Components
 
-Every interactive primitive pairs generous pill geometry with fast `160ms` state feedback and a `2px solid #0d7c66` keyboard focus outline (`3px` offset).
+Every interactive primitive pairs generous pill geometry with fast `160ms` state feedback, exponential ease-out choreography (`cubic-bezier(0.16, 1, 0.3, 1)`), and a `2px solid #0d7c66` keyboard focus outline (`3px` offset).
 
 ### Buttons
-- **Shape:** Full pill capsule (`9999px` radius; text links use `6px`), `12px 24px` padding (`10px 18px` inside hero gallery stages), `0.95rem` `Public Sans` weight `600`, and a subtle `1px` downward press (`translateY(1px)`).
-- **Primary:** Teal Emerald (`#0d7c66`) fill with Pure White (`#ffffff`) text, shifting to Teal Deep (`#0a6351`) on hover; used for flagship app CTAs.
-- **Dark:** Obsidian Ink (`#111316`) fill with Pure White (`#ffffff`) text, shifting to `#22262d` on hover; used exclusively for Overbay Labs sideload actions.
-- **Outline:** Pure White (`#ffffff`) fill with Obsidian Ink (`#111316`) text and `1px solid #d0d5dd` border, transitioning to Stone Stage (`#f5f6f8`) fill and `#111316` border on hover.
-- **Text Link:** Transparent fill with underlined Obsidian Ink (`#111316`) text (`0.25em` underline offset), shifting to Pine Ink (`#085747`) on hover.
+- **Shape:** Full pill capsule (`9999px` radius; text links use `6px`), `12px 24px` padding (`10px 18px` inside hero gallery stages), `0.95rem` `Public Sans` weight `600`, and a crisp tactile press (`translateY(1px) scale(0.985)`).
+- **Primary:** Teal Emerald (`#0d7c66`) fill with Pure White (`#ffffff`) text, shifting to Teal Deep (`#0a6351`) with neutral hover lift (`0 8px 18px -8px rgba(17, 19, 22, 0.24)`) on hover; used for flagship app CTAs.
+- **Dark:** Obsidian Ink (`#111316`) fill with Pure White (`#ffffff`) text, shifting to `#22262d` with neutral hover lift (`0 8px 18px -8px rgba(17, 19, 22, 0.36)`) on hover; used exclusively for Overbay Labs sideload actions.
+- **Outline:** Pure White (`#ffffff`) fill with Obsidian Ink (`#111316`) text and `1px solid #d0d5dd` border, transitioning to Stone Stage (`#f5f6f8`) fill, `#111316` border, and light lift on hover.
+- **Text Link:** Transparent fill with underlined Obsidian Ink (`#111316`) text (`0.25em` underline offset), shifting to Pine Ink (`#085747`) with a `4px` right nudge on trailing arrow SVGs on hover.
+- **Copy Control:** Dark pill (`#232730`, `1px solid #353a45`) inside code blocks that confirms success (`.is-copied`) with an animated SVG stroke-draw checkmark (`#14967d` border, `rgba(13, 124, 102, 0.24)` fill, `#d1fae5` text) for `1800ms`.
 
 ### Chips
 - **Style:** Full pill (`9999px` radius) with `1px solid #e5e7eb` hairline border and Pure White (`#ffffff`) background (`2px 9px` padding, `0.78rem` weight `600` `#525866` for app badges; `2px 8px` padding, `0.72rem` `JetBrains Mono` for specimen status tags).
-- **State:** Static informational chips inside gallery stage headers and specimen title bars; Labs download tags pair Specimen Sky Tint (`#f1f7fc`) fill with `#0c5d91` monospace text.
+- **State:** Static informational chips inside gallery stage headers; interactive UI specimens pair a static `6px` Teal Emerald (`#0d7c66`) indicator dot inside `Interactive preview` / `Interactive sample` pills when JS enhances them; Labs download tags pair Specimen Sky Tint (`#f1f7fc`) fill with `#0c5d91` monospace text and flip to an animated checkmark confirmation (`Saved full-res`) on click.
 
 ### Cards / Containers
 - **Corner Style:** `20px` for Stone Stage (`#f5f6f8`) gallery frames and hero media stages; `16px` for lifted UI specimen cards; `14px` for legal summary boxes and dark code snippet containers.
 - **Background:** Stone Stage (`#f5f6f8`) for flat macro frames; Pure White (`#ffffff`) for specimen interiors with Mist Surface (`#f8f9fa`) header bars; Obsidian Ink (`#111316`) for Docker/CLI code containers (`#181b20` top bar, `#262930` hairline borders, `#f3f4f6` text).
-- **Shadow Strategy:** Macro containers stay flat with `1px solid #e5e7eb` borders; only device bezels and UI specimen cards carry Device Lift shadow (`0 18px 36px -14px rgba(17, 19, 22, 0.16), 0 4px 12px -2px rgba(17, 19, 22, 0.06)`).
+- **Shadow Strategy:** Macro containers stay flat with `1px solid #e5e7eb` borders; only device bezels and UI specimen cards carry Device Lift shadow at rest and Device Lift Active shadow when a fine pointer hovers their framing stage.
 - **Internal Padding:** `28px 34px` on home gallery stages (`24px 20px` on small screens), `28px` on subpage hero stages, `20px 24px` on legal summary boxes, `18px 20px` on specimen bodies and code blocks.
 
 ### Navigation
-- **Top Bar:** Sticky `76px` three-column grid (`1fr auto 1fr`) over `rgba(255, 255, 255, 0.96)`, revealing a `1px solid #e5e7eb` bottom border on scroll. Brand link sits left (`30px` Coastal Horizon squircle mark + `Inter Tight` `1.2rem` bold); five centered `0.95rem` links use Slate Ink (`#525866`) shifting to Obsidian Ink (`#111316`) with a `2px` `#0d7c66` inset bottom bar on `aria-current="page"`; right slot holds the outlined GitHub pill (`8px 18px`, `9999px`). Below `920px`, links and GitHub pill collapse into a `42px` circular toggle button driving a `10px`-radius mobile drawer.
-- **Segmented Stage Switcher:** Horizontal `5px`-padded Pebble Track (`#f1f3f5`) pill container with `1px solid #e5e7eb` border; inactive tabs use Slate Ink (`#525866`), active tab fills Obsidian Ink (`#111316`) with Pure White (`#ffffff`) weight `600` text (`9px 20px` padding). Collapses to a 2x2 grid (`16px` radius) below `680px`.
-- **Legal Sub-Navigation:** Wrapping row of `9999px` hairline pills (`7px 14px` padding) shifting to `#f5f6f8` background and `#111316` border when active or hovered.
+- **Top Bar:** Sticky `76px` three-column grid (`1fr auto 1fr`) anchored via `view-transition-name: site-header`. On scroll, it shifts to translucent frosted white (`rgba(255, 255, 255, 0.88)` with `backdrop-filter: saturate(160%) blur(10px)`), reveals a `1px solid #e5e7eb` bottom border + whisper shadow, and drives a `2px` `#0d7c66` `scaleX` scroll progress hairline along its bottom edge. Brand link sits left (`30px` Coastal Horizon squircle mark tilting `-7deg` and scaling `1.07` on hover + `Inter Tight` `1.2rem` bold); six centered `0.95rem` links (`Luma Reader`, `AllNotes`, `Orbit Money`, `Swiftfox`, `Labs`, `Privacy`) animate a center-out `2px` underline on hover and hold a solid `#0d7c66` underline on `aria-current="page"`; right slot holds the outlined GitHub pill (`8px 18px`, `9999px`). Below `920px`, a `42px` circular toggle morphs its 3 hairline strokes into a centered `X` while expanding a `grid-template-rows` mobile drawer with staggered link fades.
+- **Segmented Stage & Gallery Switchers:** Horizontal `5px`-padded Pebble Track (`#f1f3f5`) pill container (`1px solid #e5e7eb`) on Home covering the four flagship core apps (`Luma Reader`, `AllNotes`, `Orbit Money`, `Swiftfox`) and pill row on app galleries. A real sliding Obsidian Ink (`#111316`) indicator capsule (`.tab-indicator`) glides behind the active button over `360ms` (`cubic-bezier(0.16, 1, 0.3, 1)`) using `offsetLeft`/`offsetTop`/`offsetWidth`/`offsetHeight`—working seamlessly across the `680px` 2x2 mobile grid wrap—and falls back to static solid fill when JS is disabled.
+- **Legal Sub-Navigation:** Wrapping row of `9999px` hairline pills (`6px 12px` padding) shifting smoothly to `#f5f6f8` background and `#111316` border when active or hovered.
 
-### Signature Patterns: Device Frames, Spec Tables & Accordions
-- **Device Frames:** Dark matte `#1a1d21` bezels (`10px` padding / `16px` radius on foldables up to `390px` wide; `8px` padding / `24px` radius on phones at `188px` wide) plus a Pure White light-frame variant (`1px solid #d0d5dd`, `6px` padding) carrying Device Lift shadow.
-- **Data Custody Table & Spec Strips:** Full-width border-collapsed table with Stone Stage (`#f5f6f8`) header row, `16px 18px` cells, `tabular-nums`, and monospace package subtitles; collapses below `680px` into stacked labeled attributes. Subpage hero spec strips present horizontal key-value metadata between `1px` `#e5e7eb` rules.
-- **FAQ Accordions:** Native `<details>` disclosure rows framed by `1px solid #e5e7eb` dividers, `18px 0` `Inter Tight` summary triggers (`1.08rem`, weight `600`), and monospace `+` / `−` indicators (`#5f6777` closed, `#0d7c66` open).
+### Signature Patterns: Hardware Frames, Living UI Specimens, Spec Tables & Accordions
+- **Hardware Device Frames:** Dark matte `#1a1d21` bezels (`10px` padding / `16px` radius on foldables up to `390px` wide; `7px` padding / `21px` radius on phones at `188px` wide) plus a Pure White light-frame variant (`1px solid #d0d5dd`, `6px` padding). On mouse/fine-pointer hover over their framing stage, frames respond with subtle 3D parallax tilt (max `±3°`, secondary device offset deeper for spatial separation) and a soft radial daylight specular sheen (`::after`) without moving the hover boundary.
+- **Living UI Specimens:** Sample software previews progressively enhanced into tactile mini-demos while remaining static HTML without JS: AllNotes clickable notebook rail (preserving per-tab state) and SVG stroke-draw checklists; Orbit Money precision balance roll (`540ms` `tabular-nums`) and clickable ledger rows revealing preserved raw bank memos (`Original: ...`); Swiftfox clickable Zen Spaces, Folded/Unfolded posture profile switcher, Adblock counter toggle, AMOLED Dark Reader toggle, and Element Zapper hide/undo demo; Overbay Labs Twitter sliding `#1DA1F2` feed tabs and clickable `Save video / photo` confirmation chip.
+- **Data Custody Table & Spec Strips:** Full-width border-collapsed table with Stone Stage (`#f5f6f8`) header row, `16px 18px` cells, subtle `#f8f9fa` row hover + icon scale (`1.07`), `tabular-nums`, and monospace package subtitles; collapses below `680px` into stacked labeled attributes. Subpage hero spec strips present horizontal key-value metadata between `1px` `#e5e7eb` rules.
+- **FAQ Accordions:** Native `<details>` disclosure rows framed by `1px solid #e5e7eb` dividers and `18px 0` `Inter Tight` summary triggers (`1.08rem`, weight `600`). Progressively enhanced with WAAPI height/opacity expand (`280ms`) and collapse (`210ms`) handling mid-flight reversals cleanly, paired with a rotating geometric CSS `+`/`−` icon (`#5f6777` closed → `#0d7c66` open; falls back to text `+`/`−` without JS).
 
 ## Do's and Don'ts
 
@@ -273,11 +282,13 @@ Every interactive primitive pairs generous pill geometry with fast `160ms` state
 - **Do** distinguish Google Play flagship products from Overbay Labs software by pairing flagship pages with Teal Emerald (`#0d7c66`) primary buttons and Labs pages with Obsidian Ink (`#111316`) dark action buttons plus a bordered disclaimer note.
 - **Do** reserve Device Lift shadows strictly for hardware device frames and UI specimen cards staged inside framing containers while leaving macro sections completely flat.
 - **Do** enforce `tabular-nums` across specification strips, comparison tables, stage metadata, and financial ledger previews.
-- **Do** keep all text, links, comparison tables, and FAQ disclosures readable in plain static HTML without JavaScript and preserve `prefers-reduced-motion` overrides.
+- **Do** build all motion progressively (default CSS `opacity: 1`, strict-CSP safe via CSS custom properties + WAAPI with zero inline `style=""` attributes), keep legal `Read` pages instant without entrance choreography, and replace spatial movement with crisp `120ms–160ms` opacity/color feedback under `prefers-reduced-motion: reduce`.
+- **Do** bump `/css/styles.css?v=N` and `/js/main.js?v=N` query parameters across HTML files whenever changing styles or scripts, since `_headers` serves them with `Cache-Control: immutable`.
 
 ### Don't:
 - **Don't** apply drop shadows to gallery stage frames, Labs bands, spotlight rows, or legal summary boxes.
 - **Don't** spread Teal Emerald (`#0d7c66`) across section backgrounds, hero washes, or multi-color marketing gradients.
-- **Don't** pull app-specific specimen tints (`#f1f4fd`, `#eef9f5`, `#f1f7fc`) out into page-level surfaces or global navigation chrome.
-- **Don't** load remote font CDNs, third-party analytics trackers, or external icon font packs; keep fonts self-hosted and icons as inline SVG.
+- **Don't** pull app-specific specimen tints (`#f1f4fd`, `#eef9f5`, `#fff5ec`, `#f1f7fc`) out into page-level surfaces or global navigation chrome.
+- **Don't** add decorative infinite pulsing rings on static badges or status dots, colored box-shadow glow halos, or layout-shifting hover lifts on interactive hit targets.
+- **Don't** load remote font CDNs, third-party analytics trackers, external icon packs, or animation libraries; keep fonts self-hosted, icons inline SVG, and motion vanilla CSS + WAAPI.
 - **Don't** omit `1px` hairline borders (`#e5e7eb` or `#d0d5dd`) when placing light UI specimen cards or outline pills on light surfaces.

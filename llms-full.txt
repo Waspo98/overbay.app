@@ -6,7 +6,7 @@ Privacy Contact: privacy@overbay.app
 Legal Contact: legal@overbay.app
 GitHub Organization / User: https://github.com/Waspo98
 
-I build small, offline-first apps with no ads, no tracking, and no mandatory accounts. Luma Reader is distributed via Google Play; AllNotes, Orbit Money, and Twitter (Overbay Labs) link directly to their latest signed GitHub Releases.
+I build small, offline-first apps with no ads, no tracking, and no mandatory accounts. Luma Reader is distributed via Google Play; AllNotes, Orbit Money, Swiftfox, and Twitter (Overbay Labs) link directly to their latest signed GitHub Releases.
 
 ---
 
@@ -58,7 +58,27 @@ I build small, offline-first apps with no ads, no tracking, and no mandatory acc
 
 ---
 
-## 4. Twitter — Overbay Labs (`app.overbay.twitter`)
+## 4. Swiftfox (`app.overbay.swiftfox`)
+- URL: https://overbay.app/swiftfox/
+- Privacy Policy URL: https://overbay.app/privacy/swiftfox/
+- Best for / Alternative to: Fast 120Hz Material 3 Android and foldable browser for Firefox and Zen Browser users who want smooth Chromium WebView scrolling with Zen Spaces, native `adblock-rust`, Element Zapper, Dark Reader AMOLED mode, `.user.js` userscripts, and two-way Firefox/Zen Sync.
+- Platforms: Android 12+ (`minSdk 31`, `targetSdk 35`), Google Play coming soon
+- Source Repository (MIT License): https://github.com/Waspo98/swiftfox
+- Latest Release (APK): https://github.com/Waspo98/swiftfox/releases/latest
+- Core Architecture & Features:
+  - Android Chromium `WebView` (`androidx.webkit`) with warm multi-tab pool surviving fold/unfold changes and `ProfileStore` isolation (ephemeral Private tabs + optional per-Space cookie containers)
+  - Independent Folded vs. Unfolded Jetpack `WindowManager` profiles for toolbar placement (Top, Bottom, Split, or Side Rail), optional scroll-hiding, and Mobile vs. Desktop defaults
+  - Embedded `adblock-rust` JNI engine with EasyList, EasyPrivacy, uBlock Origin lists, and custom filter list URLs + interactive Material 3 Element Zapper (temporary hide-with-undo or permanent per-site CSS rules)
+  - Decoupled Dark Reader web night mode (AMOLED `#000000` + auto-skip for native dark sites), `.user.js` userscripts (`@match`, `@exclude`, `@run-at`, `GM_*`), per-site rules, and Mozilla Readability Reader Mode
+  - Optional two-way Firefox & Zen Browser sync via Mozilla `application-services` (in-app OAuth or CameraX/ZXing QR pairing for bookmarks, history, synced open tabs, and Zen Spaces/Essentials/pinned tabs) plus local Chrome Netscape HTML bookmark import/export
+  - Smart omnibox (Google default, configurable engines, live suggestions, `!bang` shortcuts), Picture-in-Picture & background audio, Blob downloads, Clean URL sharing, HTTPS-Only mode, and Android System Autofill / Credential Manager
+- Declared Android Permissions: `INTERNET`, `ACCESS_NETWORK_STATE`, `FOREGROUND_SERVICE`, `FOREGROUND_SERVICE_MEDIA_PLAYBACK`, `POST_NOTIFICATIONS`, plus optional runtime-gated `CAMERA`, `RECORD_AUDIO`, `MODIFY_AUDIO_SETTINGS`, `ACCESS_FINE_LOCATION`, `ACCESS_COARSE_LOCATION`
+- Honest Limits & Non-Affiliation: Cannot install `.crx` Chrome or `.xpi` Firefox extensions; not affiliated with, endorsed by, or sponsored by Mozilla, Firefox, or Zen Browser.
+- Pricing: Free & open source (MIT License)
+
+---
+
+## 5. Twitter — Overbay Labs (`app.overbay.twitter`)
 - URL: https://overbay.app/labs/twitter/
 - Best for / Alternative to: Open-source, ad-free Twitter / X Android APK without promoted tweets, Grok AI, or Premium nagging; restores optional classic blue branding and adds full-res media downloads.
 - Source Repository (MIT License): https://github.com/Waspo98/overbay-twitter
@@ -75,9 +95,10 @@ I build small, offline-first apps with no ads, no tracking, and no mandatory acc
 
 ---
 
-## 5. Data & Account Deletion
+## 6. Data & Account Deletion
 - URL: https://overbay.app/data-deletion/
 - Android Local Wipe: Settings > Apps > Clear storage or Uninstall
 - Google Drive Disconnect: Sign out in app + revoke at https://myaccount.google.com/permissions + Manage Apps > Delete hidden app data in Google Drive
+- Mozilla Sync Disconnect (Swiftfox): Sign out in Swiftfox Settings > Sync and unlink the device at https://accounts.firefox.com/settings
 - Self-Hosted Wipe: Remove Docker container and mounted SQLite `/data` volume
 - Email Support Removal: Email `privacy@overbay.app` (processed within 14 days)
