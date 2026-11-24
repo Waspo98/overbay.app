@@ -6,14 +6,14 @@ Privacy Contact: privacy@overbay.app
 Legal Contact: legal@overbay.app
 GitHub Organization / User: https://github.com/Waspo98
 
-I build small, offline-first apps with no ads, no tracking, and no mandatory accounts. Luma Reader is distributed via Google Play; AllNotes, Orbit Money, Swiftfox, and Twitter (Overbay Labs) link directly to their latest signed GitHub Releases.
+I build small Android and self-hosted apps with no ads, no tracking, and no mandatory accounts. Luma Reader is distributed via Google Play; AllNotes, Orbit Money, Swiftfox, and Twitter (Overbay Labs) link directly to their latest signed GitHub Releases.
 
 ---
 
 ## 1. Luma Reader (`app.overbay.lumareader`)
 - URL: https://overbay.app/lumareader/
 - Privacy Policy URL: https://overbay.app/privacy/lumareader/
-- Best for / Alternative to: Modern, ad-free offline Android ebook & e-reader app for DRM-free EPUB/PDF libraries; clean alternative to Kindle, Google Play Books, ReadEra, or Moon+ Reader for readers who want foldable two-page spreads, Readium typography, and private Google Drive app-folder sync without subscriptions or bookstore clutter.
+- Best for / Alternative to: Ad-free offline Android ebook reader for DRM-free EPUB/PDF libraries; alternative to Kindle, Google Play Books, ReadEra, or Moon+ Reader for readers who want foldable two-page spreads, Readium typography, and private Google Drive app-folder sync without subscriptions or a bookstore.
 - Platform: Android (phones, tablets, foldables)
 - Google Play Store: https://play.google.com/store/apps/details?id=app.overbay.lumareader
 - Source Status: Closed source (private repository)
@@ -32,7 +32,7 @@ I build small, offline-first apps with no ads, no tracking, and no mandatory acc
 - Platforms: Android APK available now; Windows x64/ARM64 MSI/EXE and standalone sync server packaging planned (coming soon)
 - Source Repository: https://github.com/Waspo98/allnotes
 - Latest Release (APK): https://github.com/Waspo98/allnotes/releases/latest
-- Structure & UX: OneNote-style Notebook -> Section Group -> Section -> Page hierarchy paired with Word-style bounded page width (no infinite 2D canvas, no stylus inking)
+- Structure & UX: OneNote-style Notebook -> Section Group -> Section -> Page hierarchy with Word-style bounded page width (no infinite 2D canvas, no stylus inking)
 - Supported Content Blocks: Headings, interactive checklists, callouts, tables, and monospace code blocks
 - Local Storage: SQLDelight offline SQLite database
 - Optional Sync (Planned): Designed to connect to a user-operated self-hosted Ktor sync backend (`PORT=8094`) authenticating via bearer token (`ALLNOTES_AUTH_TOKEN`) or forward-auth OIDC headers (`TRUST_AUTHENTIK_HEADERS`)
@@ -61,19 +61,19 @@ I build small, offline-first apps with no ads, no tracking, and no mandatory acc
 ## 4. Swiftfox (`app.overbay.swiftfox`)
 - URL: https://overbay.app/swiftfox/
 - Privacy Policy URL: https://overbay.app/privacy/swiftfox/
-- Best for / Alternative to: Fast 120Hz Material 3 Android and foldable browser for Firefox and Zen Browser users who want smooth Chromium WebView scrolling with Zen Spaces, native `adblock-rust`, Element Zapper, Dark Reader AMOLED mode, `.user.js` userscripts, and two-way Firefox/Zen Sync.
+- Best for / Alternative to: Fast 120Hz Android and foldable browser for Firefox and Zen Browser users who want smooth scrolling on Android's Chromium web view with Zen Spaces, built-in ad-block, Element Zapper, Dark Reader AMOLED mode, `.user.js` userscripts, and two-way Firefox/Zen Sync.
 - Platforms: Android 12+ (`minSdk 31`, `targetSdk 35`), Google Play coming soon
 - Source Repository (MIT License): https://github.com/Waspo98/swiftfox
 - Latest Release (APK): https://github.com/Waspo98/swiftfox/releases/latest
 - Core Architecture & Features:
-  - Android Chromium `WebView` (`androidx.webkit`) with warm multi-tab pool surviving fold/unfold changes and `ProfileStore` isolation (ephemeral Private tabs + optional per-Space cookie containers)
-  - Independent Folded vs. Unfolded Jetpack `WindowManager` profiles for toolbar placement (Top, Bottom, Split, or Side Rail), optional scroll-hiding, and Mobile vs. Desktop defaults
-  - Embedded `adblock-rust` JNI engine with EasyList, EasyPrivacy, uBlock Origin lists, and custom filter list URLs + interactive Material 3 Element Zapper (temporary hide-with-undo or permanent per-site CSS rules)
-  - Decoupled Dark Reader web night mode (AMOLED `#000000` + auto-skip for native dark sites), `.user.js` userscripts (`@match`, `@exclude`, `@run-at`, `GM_*`), per-site rules, and Mozilla Readability Reader Mode
-  - Optional two-way Firefox & Zen Browser sync via Mozilla `application-services` (in-app OAuth or CameraX/ZXing QR pairing for bookmarks, history, synced open tabs, and Zen Spaces/Essentials/pinned tabs) plus local Chrome Netscape HTML bookmark import/export
-  - Smart omnibox (Google default, configurable engines, live suggestions, `!bang` shortcuts), Picture-in-Picture & background audio, Blob downloads, Clean URL sharing, HTTPS-Only mode, and Android System Autofill / Credential Manager
+  - Android Chromium web view (`androidx.webkit`) keeping open tabs alive across fold/unfold changes, with `ProfileStore` isolation for Private tabs and optional per-Space cookie containers
+  - Separate folded and unfolded layouts for toolbar placement (Top, Bottom, Split, or Side Rail), optional scroll-hiding, and Mobile vs. Desktop defaults
+  - Built-in ad-block (`adblock-rust` JNI) with EasyList, EasyPrivacy, uBlock Origin lists, and custom filter list URLs + Element Zapper (temporary hide-with-undo or permanent per-site CSS rules)
+  - Dark Reader web night mode (AMOLED black + auto-skip for native dark sites), `.user.js` userscripts (`@match`, `@exclude`, `@run-at`, `GM_*`), per-site rules, and Mozilla Readability Reader Mode
+  - Optional two-way Firefox & Zen Browser sync via Mozilla `application-services` (in-app OAuth or QR pairing for bookmarks, history, open tabs, and Zen Spaces/Essentials/pinned tabs) plus local Chrome HTML bookmark import/export
+  - Configurable search engines (Google default, DuckDuckGo, Kagi, Brave, Startpage, or custom URLs with `!bang` shortcuts), Picture-in-Picture & background audio, Clean URL sharing, HTTPS-Only mode, and Android System Autofill / Credential Manager
 - Declared Android Permissions: `INTERNET`, `ACCESS_NETWORK_STATE`, `FOREGROUND_SERVICE`, `FOREGROUND_SERVICE_MEDIA_PLAYBACK`, `POST_NOTIFICATIONS`, plus optional runtime-gated `CAMERA`, `RECORD_AUDIO`, `MODIFY_AUDIO_SETTINGS`, `ACCESS_FINE_LOCATION`, `ACCESS_COARSE_LOCATION`
-- Honest Limits & Non-Affiliation: Cannot install `.crx` Chrome or `.xpi` Firefox extensions; not affiliated with, endorsed by, or sponsored by Mozilla, Firefox, or Zen Browser.
+- Limits & Non-Affiliation: Cannot install `.crx` Chrome or `.xpi` Firefox extensions; not affiliated with, endorsed by, or sponsored by Mozilla, Firefox, or Zen Browser.
 - Pricing: Free & open source (MIT License)
 
 ---

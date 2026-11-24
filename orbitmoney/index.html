@@ -91,12 +91,12 @@
             "name": "Is Orbit Money a self-hosted alternative to Rocket Money or Mint?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, for tracking accounts, budgets, recurring bills, spending categories, and net worth. Orbit Money includes a direct Rocket Money CSV importer and optional SimpleFIN Bridge bank sync when self-hosted in Docker. Unlike Rocket Money, it does not negotiate bills or cancel subscriptions for you—you keep your data private and cancel subscriptions yourself."
+              "text": "Yes, for tracking accounts, budgets, recurring bills, spending categories, and net worth. Orbit Money includes a direct Rocket Money CSV importer and optional SimpleFIN Bridge bank sync when self-hosted in Docker. Unlike Rocket Money, it doesn't negotiate bills or cancel subscriptions for you. You keep your data private and cancel subscriptions yourself."
             }
           },
           {
             "@type": "Question",
-            "name": "Can I run Orbit Money completely offline on Android without Docker?",
+            "name": "Can I run Orbit Money offline on Android without Docker?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Yes. It runs standalone on Android with everything saved on your phone, optional fingerprint/face unlock, and optional backups to your own Google Drive."
@@ -115,7 +115,7 @@
             "name": "Does Orbit Money round off pennies?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. Balances and splits are stored in exact cents under the hood rather than imprecise decimals, so totals stay accurate down to the penny."
+              "text": "No. Balances and splits are stored in exact integer cents rather than imprecise decimals, so totals stay accurate to the penny."
             }
           },
           {
@@ -131,7 +131,7 @@
             "name": "How do I delete my Orbit Money data?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Clear app storage or uninstall on Android, delete backups in Google Drive if you turned them on, or remove your Docker data folder. Full steps live on the Data Deletion page."
+              "text": "Clear app storage or uninstall on Android, delete backups in Google Drive if you turned them on, or remove your Docker data folder. See the Data Deletion page for step-by-step instructions."
             }
           }
         ]
@@ -209,7 +209,7 @@
             <a class="btn btn--outline" href="/privacy/orbitmoney/">Privacy Policy</a>
           </div>
           <p class="apk-note">Signed release APK from GitHub Releases (under Assets). If you previously installed a debug build, uninstall it once first; future GitHub releases update in place.</p>
-          <p class="disclaimer-note">Orbit Money is a personal budgeting tool—not a bank, lender, or financial advisor.</p>
+          <p class="disclaimer-note">Orbit Money is a personal budgeting tool, not a bank, lender, or financial advisor.</p>
         </div>
 
         <div class="page-hero-stage" data-screenshot-slot="orbit-hero">
@@ -274,9 +274,9 @@
     <section class="section" aria-labelledby="orbit-modes">
       <div class="container two-col-split">
         <div>
-          <h2 id="orbit-modes">Use it on your phone—or host it at home</h2>
+          <h2 id="orbit-modes">On your phone, or hosted at home</h2>
           <p>I built Orbit Money because you shouldn't have to set up a server just to track a budget on your phone, and you shouldn't be stuck on one phone if you share expenses with a partner. It works both ways.</p>
-          <p>When you clean up ugly bank merchant names or recategorize purchases, Orbit Money keeps the original bank description tucked away underneath—so importing new CSVs later never overwrites your edits.</p>
+          <p>When you rename ugly bank merchant names or recategorize purchases, Orbit Money keeps the original bank description tucked away underneath, so importing new CSVs later never overwrites your edits.</p>
         </div>
 
         <ul class="detail-list">
@@ -290,7 +290,7 @@
           </li>
           <li>
             <h3>Rocket Money CSV &amp; optional SimpleFIN</h3>
-            <p>Import your history from Rocket Money CSV exports right out of the box, or connect a SimpleFIN Bridge token in self-hosted mode—stored encrypted in your own database.</p>
+            <p>Import your history straight from Rocket Money CSV exports, or connect a SimpleFIN Bridge token in self-hosted mode (stored encrypted in your own database).</p>
           </li>
           <li>
             <h3>Optional extras</h3>
@@ -304,7 +304,7 @@
       <div class="container">
         <div class="section-header">
           <h2 id="orbit-compare">How Orbit Money compares</h2>
-          <p>Built for people leaving Rocket Money or Mint who want a private, self-hosted finance tracker—or a fast offline Android app without setting up a server first.</p>
+          <p>How it lines up against Rocket Money, Actual Budget, and Firefly III.</p>
         </div>
 
         <div class="table-wrap">
@@ -351,7 +351,7 @@
             </tbody>
           </table>
         </div>
-        <p class="compare-note">Moving over from Rocket Money? Read the <a href="/orbitmoney/rocket-money-alternative/">self-hosted Rocket Money alternative &amp; CSV migration guide</a> for step-by-step import instructions and an honest breakdown of tradeoffs.</p>
+        <p class="compare-note">Moving over from Rocket Money? Check the <a href="/orbitmoney/rocket-money-alternative/">Rocket Money migration guide</a> for CSV import steps and what Orbit Money does and doesn't replace.</p>
       </div>
     </section>
 
@@ -360,7 +360,7 @@
         <div>
           <h2 id="orbit-docker">Self-host with Docker Compose</h2>
           <p>Run Orbit Money on any Linux box, Raspberry Pi, or NAS with one data folder on port <code>5008</code>.</p>
-          <p>Check the <a href="https://github.com/Waspo98/Orbit-Money">README on GitHub</a> for login options, SimpleFIN bank sync setup, and backup tips—or read the <a href="/orbitmoney/rocket-money-alternative/">Rocket Money migration guide</a>.</p>
+          <p>Check the <a href="https://github.com/Waspo98/Orbit-Money">README on GitHub</a> for login options, SimpleFIN setup, and backup tips, or read the <a href="/orbitmoney/rocket-money-alternative/">Rocket Money migration guide</a>.</p>
         </div>
 
         <div class="code-box">
@@ -392,10 +392,10 @@
         <div class="faq-list">
           <details class="faq-item">
             <summary>Is Orbit Money a self-hosted alternative to Rocket Money or Mint?</summary>
-            <p>Yes, for tracking accounts, budgets, recurring bills, spending categories, and net worth. Orbit Money includes a direct Rocket Money CSV importer and optional SimpleFIN Bridge bank sync when self-hosted in Docker. Unlike Rocket Money, it does not negotiate bills or cancel subscriptions for you—you keep your data private and cancel subscriptions yourself. See the <a href="/orbitmoney/rocket-money-alternative/">Rocket Money migration guide</a> for details.</p>
+            <p>Yes, for tracking accounts, budgets, recurring bills, spending categories, and net worth. Orbit Money includes a direct Rocket Money CSV importer and optional SimpleFIN Bridge bank sync when self-hosted in Docker. Unlike Rocket Money, it doesn't negotiate bills or cancel subscriptions for you. You keep your data private and cancel subscriptions yourself. See the <a href="/orbitmoney/rocket-money-alternative/">Rocket Money migration guide</a> for details.</p>
           </details>
           <details class="faq-item">
-            <summary>Can I run Orbit Money completely offline on Android without Docker?</summary>
+            <summary>Can I run Orbit Money offline on Android without Docker?</summary>
             <p>Yes. It runs standalone on Android with everything saved on your phone, optional fingerprint/face unlock, and optional backups to your own Google Drive.</p>
           </details>
           <details class="faq-item">
@@ -404,7 +404,7 @@
           </details>
           <details class="faq-item">
             <summary>Does Orbit Money round off pennies?</summary>
-            <p>No. Balances and splits are stored in exact cents under the hood rather than imprecise decimals, so totals stay accurate down to the penny.</p>
+            <p>No. Balances and splits are stored in exact integer cents rather than imprecise decimals, so totals stay accurate to the penny.</p>
           </details>
           <details class="faq-item">
             <summary>What permissions does the Android app ask for?</summary>
@@ -412,7 +412,7 @@
           </details>
           <details class="faq-item">
             <summary>How do I delete my Orbit Money data?</summary>
-            <p>Clear app storage or uninstall on Android, delete backups in Google Drive if you turned them on, or remove your Docker data folder. Full steps live on the <a href="/data-deletion/">Data Deletion page</a>.</p>
+            <p>Clear app storage or uninstall on Android, delete backups in Google Drive if you turned them on, or remove your Docker data folder. See the <a href="/data-deletion/">Data Deletion page</a> for step-by-step instructions.</p>
           </details>
         </div>
       </div>
@@ -471,6 +471,6 @@
     </div>
   </footer>
 
-  <script src="/js/main.js?v=4" defer></script>
+  <script src="/js/main.js?v=5" defer></script>
 </body>
 </html>

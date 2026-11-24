@@ -788,28 +788,28 @@
             domain: 'en.wikipedia.org',
             title: 'National Museum of Racing',
             excerpt:
-              'Founded in 1950 in Saratoga Springs, preserving thoroughbred racing history and exhibits.',
+              'Founded in 1950 in Saratoga Springs, covering thoroughbred racing history and exhibits.',
             bannerLabel: 'App banner:',
-            bannerText: 'Install the native app for a smoother reading experience!',
+            bannerText: 'Open this page in the mobile app instead.',
             blocked: 4,
           },
           Work: {
-            domain: 'developer.android.com',
-            title: 'Foldable posture states',
+            domain: 'docs.docker.com',
+            title: 'Compose file reference',
             excerpt:
-              'Keep separate toolbar placements and site modes across folded cover screens and inner displays.',
-            bannerLabel: 'Cookie prompt:',
-            bannerText: 'Manage optional telemetry preferences before reading the docs.',
+              'Define services, networks, and bind-mounted volumes in a single compose.yaml file.',
+            bannerLabel: 'Cookies:',
+            bannerText: 'We use cookies for site analytics and personalized ads.',
             blocked: 7,
           },
           Reading: {
-            domain: 'overbay.app/swiftfox',
-            title: 'Built for crisp 120Hz text',
+            domain: 'seriouseats.com',
+            title: 'Pan-Seared Cast Iron Steak',
             excerpt:
-              'Android Chromium WebView rendering paired with Dark Reader AMOLED mode, userscripts, and Reader Mode.',
-            bannerLabel: 'Overlay:',
-            bannerText: 'Subscribe to our weekly newsletter before continuing this article.',
-            blocked: 3,
+              'Dry-brining overnight in the fridge gives the crust a deep sear without steaming the meat.',
+            bannerLabel: 'Popup:',
+            bannerText: 'Sign up for our daily newsletter to keep reading this recipe.',
+            blocked: 5,
           },
         };
 

@@ -103,31 +103,31 @@
         <strong>Summary:</strong> Swiftfox keeps your tabs, Spaces, bookmarks, history, userscripts, and site rules on your own phone. I don't run Swiftfox servers, proxy your traffic, or collect browsing analytics. Optional Firefox and Zen Browser sync connects directly to Mozilla's servers.
       </div>
 
-      <h2>1. Local-First Browsing Data &amp; Profile Isolation</h2>
-      <p>Swiftfox stores your browser state locally inside private app storage on your Android device (with <code>android:allowBackup="false"</code> disabled for system cloud backups):</p>
+      <h2>1. Data Stored Locally on Your Device</h2>
+      <p>Swiftfox stores your browser state locally inside private app storage on your Android device (with Android cloud auto-backup turned off via <code>android:allowBackup="false"</code>):</p>
       <ul>
-        <li><strong>Local Database &amp; Preferences:</strong> Spaces, pinned Essentials, open tabs, bookmarks, history, downloads, per-site rules, Element Zapper selectors, installed <code>.user.js</code> scripts, and foldable posture layouts stay locally in Swiftfox's Room database and DataStore preferences.</li>
-        <li><strong>Private Tabs &amp; Container Isolation:</strong> Private tabs use an ephemeral Android WebView <code>ProfileStore</code> session (<code>swiftfox_private_session</code>) whose cookies, cache, and storage are wiped when Private browsing ends. Optional per-Space cookie containers (<code>space_&lt;id&gt;</code>) keep cookies isolated per Space on your device.</li>
-        <li><strong>Passwords &amp; Autofill:</strong> Swiftfox delegates saved logins and passkeys to Android System Autofill and Credential Manager rather than storing passwords in an in-app vault.</li>
+        <li><strong>Local Database &amp; Preferences:</strong> Spaces, pinned Essentials, open tabs, bookmarks, history, downloads, per-site rules, Element Zapper selectors, installed <code>.user.js</code> scripts, and folded/unfolded layout settings stay on your phone in Swiftfox's local database and preferences.</li>
+        <li><strong>Private Tabs &amp; Container Isolation:</strong> Private tabs use a temporary Android WebView <code>ProfileStore</code> session (<code>swiftfox_private_session</code>) whose cookies, cache, and storage are wiped when Private browsing ends. Optional per-Space cookie containers (<code>space_&lt;id&gt;</code>) keep cookies separated by Space on your device.</li>
+        <li><strong>Passwords &amp; Autofill:</strong> Swiftfox hands saved logins and passkeys off to Android System Autofill and Credential Manager instead of keeping an in-app password vault.</li>
       </ul>
 
       <h2>2. Direct Web Connections, Search &amp; Filter Updates</h2>
-      <p>When you browse the web in Swiftfox, connections go directly from Android's system Chromium WebView to the sites you visit—there is no Overbay.app middleman server or proxy.</p>
+      <p>When you browse in Swiftfox, connections go directly from Android's Chromium web view to the sites you visit. There is no Overbay.app middleman server or proxy.</p>
       <ul>
-        <li><strong>Search &amp; Suggestions:</strong> Queries and optional live search suggestions are sent only to whichever search engine you select in Settings (Google by default, or DuckDuckGo, Kagi, Brave, Startpage, or a custom URL you enter).</li>
-        <li><strong>Adblock Lists &amp; Userscripts:</strong> Periodic filter list updates for <code>adblock-rust</code> (such as EasyList, EasyPrivacy, uBlock Origin lists, or custom list URLs you add) and any <code>.user.js</code> scripts or <code>GM_xmlhttpRequest</code> calls fetch directly from their configured URLs.</li>
+        <li><strong>Search &amp; Suggestions:</strong> Queries and optional live search suggestions go only to whichever search engine you choose in Settings (Google by default, or DuckDuckGo, Kagi, Brave, Startpage, or a custom URL you enter).</li>
+        <li><strong>Ad-Block Lists &amp; Userscripts:</strong> Periodic filter list updates for the built-in ad blocker (such as EasyList, EasyPrivacy, uBlock Origin lists, or custom list URLs you add) and any <code>.user.js</code> scripts or <code>GM_xmlhttpRequest</code> calls fetch directly from their configured URLs.</li>
       </ul>
 
       <h2>3. Optional Firefox &amp; Zen Browser Sync (Mozilla Accounts)</h2>
-      <p>Sync is completely off by default. If you choose to sign in with a Mozilla Account (via the isolated in-app OAuth WebView, QR code pairing, or pairing link):</p>
+      <p>Sync is off by default. If you choose to sign in with a Mozilla Account (via the isolated in-app OAuth view, QR code pairing, or pairing link):</p>
       <ul>
-        <li>Swiftfox authenticates directly with Mozilla's Firefox Accounts and Sync 1.5 servers using Mozilla <code>application-services</code> to sync bookmarks, history, synced open tabs, and Zen Spaces/Essentials/pinned items.</li>
+        <li>Swiftfox authenticates directly with Mozilla's Firefox Accounts and Sync 1.5 servers using Mozilla <code>application-services</code> to sync bookmarks, history, open tabs, and Zen Spaces, Essentials, and pinned items.</li>
         <li>I never receive your Mozilla credentials, sync keys, or synced records. Data stored in your Mozilla Account is governed by <a href="https://www.mozilla.org/privacy/firefox/">Mozilla's Privacy Notice</a>.</li>
-        <li>Chrome Netscape HTML bookmark import and export operate strictly offline using local files you pick.</li>
+        <li>Chrome HTML bookmark import and export run offline using local files you pick.</li>
       </ul>
 
       <h2>4. Declared Android Permissions</h2>
-      <p>Swiftfox declares only the permissions needed for browser functionality and site features you explicitly use:</p>
+      <p>Swiftfox declares only the permissions needed for browsing and site features you choose to use:</p>
       <ul>
         <li><code>INTERNET</code> &amp; <code>ACCESS_NETWORK_STATE</code>: Used to load websites, check connectivity, fetch filter list updates, and sync if you sign into a Mozilla Account.</li>
         <li><code>FOREGROUND_SERVICE</code> &amp; <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>: Keeps background audio and media controls running when playing media from a webpage with the screen off or in Picture-in-Picture.</li>
@@ -138,10 +138,10 @@
       </ul>
 
       <h2>5. Analytics, Ads &amp; Data Sharing</h2>
-      <p>Swiftfox contains zero ads, ad SDKs, crash reporters, or usage telemetry. I never collect, view, sell, rent, or share your browsing history, bookmarks, or personal data.</p>
+      <p>Swiftfox contains no ads, ad SDKs, crash reporters, or usage telemetry. I never collect, view, sell, rent, or share your browsing history, bookmarks, or personal data.</p>
 
       <h2>6. Data Retention &amp; Deletion</h2>
-      <p>You can clear browsing history, cookies, site storage, or Private sessions inside Swiftfox anytime, sign out of Mozilla Sync in Settings &gt; Sync (and unlink the device at <a href="https://accounts.firefox.com/settings">accounts.firefox.com</a>), or wipe everything locally via Android Settings &gt; Apps &gt; Clear storage or uninstall. Full instructions live on the <a href="/data-deletion/">Data Deletion page</a>.</p>
+      <p>You can clear browsing history, cookies, site storage, or Private sessions inside Swiftfox anytime, sign out of Mozilla Sync in Settings &gt; Sync (and unlink the device at <a href="https://accounts.firefox.com/settings">accounts.firefox.com</a>), or wipe everything locally via Android Settings &gt; Apps &gt; Clear storage or uninstall. See the <a href="/data-deletion/">Data Deletion page</a> for step-by-step instructions.</p>
 
       <h2>7. Trademarks, Children's Privacy &amp; Contact</h2>
       <p>Swiftfox is an independent open-source project under the MIT License and is not affiliated with, endorsed by, or sponsored by Mozilla, Firefox, or Zen Browser. Swiftfox is intended for a general audience and is not directed at children under 13 (or the minimum age in your jurisdiction). Questions? Email me at <a href="mailto:privacy@overbay.app">privacy@overbay.app</a>.</p>
@@ -200,6 +200,6 @@
     </div>
   </footer>
 
-  <script src="/js/main.js?v=4" defer></script>
+  <script src="/js/main.js?v=5" defer></script>
 </body>
 </html>

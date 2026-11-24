@@ -87,7 +87,7 @@
             "name": "Can I import my Rocket Money transaction history into Orbit Money?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Orbit Money includes a Rocket Money CSV importer out of the box. Imported rows preserve the original bank description alongside any merchant or category edits you make later, so re-importing CSVs won't wipe out your cleanup work."
+              "text": "Yes. Orbit Money includes a Rocket Money CSV importer. Imported rows keep the original bank description alongside any merchant or category edits you make later, so re-importing CSVs won't wipe out your edits."
             }
           },
           {
@@ -95,7 +95,7 @@
             "name": "Does Orbit Money automatically sync with banks like Rocket Money?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "When self-hosted in Docker, Orbit Money supports optional automated bank syncing through SimpleFIN Bridge. Your SimpleFIN access URL is encrypted with AES-256-GCM inside your own SQLite database, and no third-party developer server sits in the middle."
+              "text": "When self-hosted in Docker, Orbit Money supports optional bank syncing through SimpleFIN Bridge. Your SimpleFIN access URL is encrypted with AES-256-GCM inside your own SQLite database, with no middleman server."
             }
           },
           {
@@ -103,7 +103,7 @@
             "name": "Can Orbit Money cancel subscriptions or negotiate bills for me?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. Orbit Money tracks recurring bills and monthly budgets so you can spot unwanted charges quickly, but it does not call providers to negotiate bills or auto-cancel subscriptions on your behalf."
+              "text": "No. Orbit Money tracks recurring bills and monthly budgets so you can spot unwanted charges quickly, but it doesn't call providers to negotiate bills or cancel subscriptions on your behalf."
             }
           },
           {
@@ -111,7 +111,7 @@
             "name": "Do I need a home server or Docker to leave Rocket Money for Orbit Money?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. You can run Orbit Money completely offline on Android with biometric lock and optional private Google Drive backups, or spin up the Docker container later if you want multi-device household sync and SimpleFIN bank feeds."
+              "text": "No. You can run Orbit Money offline on Android with biometric lock and optional private Google Drive backups, or spin up the Docker container later if you want multi-device household sync and SimpleFIN bank feeds."
             }
           }
         ]
@@ -179,14 +179,14 @@
           </picture>
           <h1>A self-hosted Rocket Money alternative</h1>
         </div>
-        <p class="page-hero-lead">I built Orbit Money because I liked seeing my spending, monthly budgets, recurring bills, and net worth in one place—without paying a monthly subscription or keeping years of bank transactions on a third-party cloud server.</p>
+        <p class="page-hero-lead">I built Orbit Money because I wanted my spending, monthly budgets, recurring bills, and net worth in one place without paying a monthly fee or keeping years of bank transactions on a third-party server.</p>
 
         <div class="btn-row">
-          <a class="btn btn--primary" href="/orbitmoney/">Explore Orbit Money</a>
+          <a class="btn btn--primary" href="/orbitmoney/">About Orbit Money</a>
           <a class="btn btn--outline" href="https://github.com/Waspo98/Orbit-Money/releases/latest">Download Android APK</a>
           <a class="btn btn--outline" href="https://github.com/Waspo98/Orbit-Money">Source on GitHub</a>
         </div>
-        <p class="disclaimer-note">Orbit Money is personal bookkeeping software only—not a bank, lender, or financial advisor.</p>
+        <p class="disclaimer-note">Orbit Money is personal bookkeeping software only, not a bank, lender, or financial advisor.</p>
       </div>
     </section>
 
@@ -194,7 +194,7 @@
       <div class="container">
         <div class="section-header">
           <h2 id="compare-heading">Orbit Money vs. Rocket Money</h2>
-          <p>An honest look at where Orbit Money matches Rocket Money—and the commercial concierge features it intentionally skips.</p>
+          <p>Where Orbit Money matches Rocket Money, and the paid concierge features it skips.</p>
         </div>
 
         <div class="table-wrap">
@@ -234,12 +234,12 @@
               </tr>
               <tr>
                 <td data-label="Area"><strong>Offline Android mode</strong></td>
-                <td data-label="Orbit Money">Works 100% offline with fingerprint/face lock—no server required</td>
+                <td data-label="Orbit Money">Works offline with fingerprint/face lock, no server needed</td>
                 <td data-label="Rocket Money">Requires online cloud account</td>
               </tr>
               <tr>
                 <td data-label="Area"><strong>Bill negotiation &amp; auto-cancel</strong></td>
-                <td data-label="Orbit Money">No—tracks recurring bills so you spot them, but you cancel them yourself</td>
+                <td data-label="Orbit Money">No. Tracks recurring bills so you spot them, and you cancel them yourself</td>
                 <td data-label="Rocket Money">Yes (paid/commission-based concierge service)</td>
               </tr>
             </tbody>
@@ -251,19 +251,19 @@
     <section class="section" aria-labelledby="tradeoffs-heading">
       <div class="container two-col-split">
         <div>
-          <h2 id="tradeoffs-heading">What it replaces—and what it skips</h2>
-          <p>Most people leaving Rocket Money or Mint aren't actually looking for someone to call their cable company. They just want a fast, clean view of where their money went this month, what bills are coming up, and how their net worth is trending.</p>
-          <p>If you specifically want automated bill negotiation or a concierge to cancel subscriptions on your behalf, stick with a commercial service. If you want full custody of your financial ledger with zero ads or subscription lock-in, Orbit Money was built for that job.</p>
+          <h2 id="tradeoffs-heading">What it replaces and what it skips</h2>
+          <p>Most people leaving Rocket Money or Mint aren't looking for someone to call their cable company. They just want a quick view of where their money went this month, what bills are coming up, and how their net worth is moving.</p>
+          <p>If you want bill negotiation or someone to cancel subscriptions for you, stick with a paid service. If you just want a private budget tracker with no ads or monthly fee, Orbit Money covers that.</p>
         </div>
 
         <ul class="detail-list">
           <li>
             <h3>Original bank rows never get overwritten</h3>
-            <p>When you rename a cryptic card charge or recategorize a split, Orbit Money saves your edit alongside the immutable original bank description—so re-importing CSVs later stays clean.</p>
+            <p>When you rename a cryptic card charge or recategorize a split, Orbit Money saves your edit alongside the original bank description, so re-importing CSVs later won't clobber your fixes.</p>
           </li>
           <li>
             <h3>Exact-cent math</h3>
-            <p>Every balance, budget, and split is stored in exact integer cents under the hood rather than floating-point decimals, so totals never drift by a penny.</p>
+            <p>Every balance, budget, and split is stored in exact integer cents rather than floating-point decimals, so totals never drift by a penny.</p>
           </li>
           <li>
             <h3>Your SimpleFIN key stays on your hardware</h3>
@@ -271,7 +271,7 @@
           </li>
           <li>
             <h3>No account required to try it</h3>
-            <p>Start standalone on Android with everything saved locally, or deploy one Docker container at home when you want browser access and shared household logins.</p>
+            <p>Start standalone on Android with everything saved locally, or spin up one Docker container at home when you want browser access and shared household logins.</p>
           </li>
         </ul>
       </div>
@@ -291,13 +291,13 @@
             <li>
               <div>
                 <h3>Pick phone-only or Docker self-hosting</h3>
-                <p>Install the Android APK for 100% offline budgeting (with optional fingerprint lock and Google Drive backups), or spin up the Docker Compose stack on any Linux box, Raspberry Pi, or NAS on port <code>5008</code>.</p>
+                <p>Install the Android APK for offline budgeting (with optional fingerprint lock and Google Drive backups), or run the Docker Compose stack on any Linux box, Raspberry Pi, or NAS on port <code>5008</code>.</p>
               </div>
             </li>
             <li>
               <div>
                 <h3>Import your CSV &amp; optionally add SimpleFIN</h3>
-                <p>Use Orbit Money's built-in Rocket Money CSV importer to pull in your history. In self-hosted Docker mode, you can also attach a SimpleFIN Bridge token for automated bank updates.</p>
+                <p>Use Orbit Money's Rocket Money CSV importer to bring in your history. In self-hosted Docker mode, you can also attach a SimpleFIN Bridge token for automated bank updates.</p>
               </div>
             </li>
           </ol>
@@ -342,7 +342,7 @@
           </li>
           <li>
             <h3>Choose Orbit Money for a Rocket Money-style dashboard + native Android</h3>
-            <p>Orbit Money focuses on approachable monthly budgets, recurring bills, net worth, household sharing, direct Rocket Money CSV imports, and a native offline Android app that works even without a server.</p>
+            <p>Orbit Money focuses on monthly budgets, recurring bills, net worth, household sharing, direct Rocket Money CSV import, and a native offline Android app that works without a server.</p>
           </li>
         </ul>
       </div>
@@ -356,19 +356,19 @@
         <div class="faq-list">
           <details class="faq-item">
             <summary>Can I import my Rocket Money transaction history into Orbit Money?</summary>
-            <p>Yes. Orbit Money includes a Rocket Money CSV importer out of the box. Imported rows preserve the original bank description alongside any merchant or category edits you make later, so re-importing CSVs won't wipe out your cleanup work.</p>
+            <p>Yes. Orbit Money includes a Rocket Money CSV importer. Imported rows keep the original bank description alongside any merchant or category edits you make later, so re-importing CSVs won't wipe out your edits.</p>
           </details>
           <details class="faq-item">
             <summary>Does Orbit Money automatically sync with banks like Rocket Money?</summary>
-            <p>When self-hosted in Docker, Orbit Money supports optional automated bank syncing through SimpleFIN Bridge. Your SimpleFIN access URL is encrypted with AES-256-GCM inside your own SQLite database, and no third-party developer server sits in the middle.</p>
+            <p>When self-hosted in Docker, Orbit Money supports optional bank syncing through SimpleFIN Bridge. Your SimpleFIN access URL is encrypted with AES-256-GCM inside your own SQLite database, with no middleman server.</p>
           </details>
           <details class="faq-item">
             <summary>Can Orbit Money cancel subscriptions or negotiate bills for me?</summary>
-            <p>No. Orbit Money tracks recurring bills and monthly budgets so you can spot unwanted charges quickly, but it does not call providers to negotiate bills or auto-cancel subscriptions on your behalf.</p>
+            <p>No. Orbit Money tracks recurring bills and monthly budgets so you can spot unwanted charges quickly, but it doesn't call providers to negotiate bills or cancel subscriptions on your behalf.</p>
           </details>
           <details class="faq-item">
             <summary>Do I need a home server or Docker to leave Rocket Money for Orbit Money?</summary>
-            <p>No. You can run Orbit Money completely offline on Android with biometric lock and optional private Google Drive backups, or spin up the Docker container later if you want multi-device household sync and SimpleFIN bank feeds.</p>
+            <p>No. You can run Orbit Money offline on Android with biometric lock and optional private Google Drive backups, or spin up the Docker container later if you want multi-device household sync and SimpleFIN bank feeds.</p>
           </details>
         </div>
       </div>
@@ -427,6 +427,6 @@
     </div>
   </footer>
 
-  <script src="/js/main.js?v=4" defer></script>
+  <script src="/js/main.js?v=5" defer></script>
 </body>
 </html>
